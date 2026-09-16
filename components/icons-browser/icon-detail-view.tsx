@@ -3,16 +3,16 @@
 import * as React from "react";
 import Link from "next/link";
 import { IconDefinition } from "@/lib/icons/schema";
-import { toPixelComponentName, toPXComponentName, generateSvgString, generateReactNativeCode } from "@/lib/compiler";
+import { toPXComponentName, generateSvgString, generateReactNativeCode } from "@/lib/compiler";
 import { PXIconBase } from "@/components/icons/px-icon-base";
 import { PixelGridPreview } from "./pixel-grid-preview";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { toast } from "sonner";
 import { PXIconCopy, PXIconCheck, PXIconArrowLeft } from "@/components/icons";
 import { SyntaxHighlighter, CodeWrapButton } from "@/components/ui/syntax-highlighter";
 import { cn } from "@/lib/utils";
+import { useOrigin } from "@/lib/hooks/use-origin";
 
 interface IconDetailViewProps {
   icon: IconDefinition;
@@ -30,10 +30,7 @@ export function IconDetailView({ icon, relatedIcons }: IconDetailViewProps) {
   const hasFilled = Boolean(icon.filled && icon.filled.length > 0);
   const hasAnimation = Boolean(icon.animation);
 
-  const [origin, setOrigin] = React.useState("https://pxui.dev");
-  React.useEffect(() => {
-    setOrigin(window.location.origin);
-  }, []);
+  const origin = useOrigin();
   const shadcnCmd = `npx shadcn@latest add ${origin}/r/px-${icon.name}.json`;
 
   const reactImportCode = `import { ${componentName} } from "@pxui/react";

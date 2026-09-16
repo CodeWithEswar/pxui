@@ -51,7 +51,7 @@ export const PXIconWifiDefinition: PXIconDefinition = {
  */
 export const PXIconWifi = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconWifiDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconWifiDefinition} {...props} />;
   }
 );
 

@@ -1,5 +1,6 @@
 import crypto from "crypto";
 import { PXIconDefinition, PXPlatform, PXVariant } from "../../../icons/schemas/icon.schema";
+import { PXAnimationDefinition } from "../../../icons/schemas/animation.schema";
 import { parseAndAnalyzePath, PathBounds } from "../../validators/geometry/path-parser";
 
 export interface NormalizedIcon {
@@ -20,7 +21,7 @@ export interface NormalizedIcon {
   geometryHash: string;
   variants: PXVariant[];
   animated: boolean;
-  animation?: any;
+  animation?: PXAnimationDefinition;
   platforms: PXPlatform[];
   status: string;
   introduced: string;

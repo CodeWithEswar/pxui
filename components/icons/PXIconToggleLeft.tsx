@@ -48,7 +48,7 @@ export const PXIconToggleLeftDefinition: PXIconDefinition = {
  */
 export const PXIconToggleLeft = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconToggleLeftDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconToggleLeftDefinition} {...props} />;
   }
 );
 

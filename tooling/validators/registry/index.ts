@@ -1,6 +1,12 @@
 import { QualityGateIssue } from "../types";
 
-export function validateRegistryItem(item: any): QualityGateIssue[] {
+export interface RegistryItemInput {
+  name?: string;
+  type?: string;
+  files?: Array<{ path?: string; content?: string }>;
+}
+
+export function validateRegistryItem(item: RegistryItemInput): QualityGateIssue[] {
   const issues: QualityGateIssue[] = [];
   const slug = item.name || "unknown";
 

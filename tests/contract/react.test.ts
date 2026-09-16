@@ -2,7 +2,6 @@ import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import fs from "fs";
 import path from "path";
-import * as React from "react";
 import { PXIconHome, PXIconSearch, PXIconBell, PXIconHomeDefinition } from "../../packages/react/src";
 
 describe("PXUI React Package Contract (@pxui/react)", () => {

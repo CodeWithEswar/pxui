@@ -7,6 +7,7 @@ import { PXIconCheck, PXIconCopy, PXIconDownload, PXIconSun, PXIconMoon } from "
 import { SyntaxHighlighter, CodeWrapButton } from "@/components/ui/syntax-highlighter";
 import { copyToClipboard } from "@/lib/clipboard";
 import { useTheme } from "next-themes";
+import { useOrigin } from "@/lib/hooks/use-origin";
 import { cn } from "@/lib/utils";
 
 interface SpecCodeSurfaceProps {
@@ -19,24 +20,12 @@ export function SpecCodeSurface({ icon }: SpecCodeSurfaceProps) {
   const { resolvedTheme } = useTheme();
   const [activeTab, setActiveTab] = React.useState<CodeTab>("react");
   const [copied, setCopied] = React.useState<string | null>(null);
-  const [codeTheme, setCodeTheme] = React.useState<"dark" | "light">("dark");
+  const [userSelectedTheme, setUserSelectedTheme] = React.useState<"dark" | "light" | null>(null);
+  const codeTheme = userSelectedTheme ?? (resolvedTheme === "light" ? "light" : "dark");
   const [isWrapped, setIsWrapped] = React.useState(false);
-  const userSelectedThemeRef = React.useRef(false);
-
-  React.useEffect(() => {
-    if (!userSelectedThemeRef.current && (resolvedTheme === "light" || resolvedTheme === "dark")) {
-      setCodeTheme(resolvedTheme);
-    }
-  }, [resolvedTheme]);
 
   const componentName = toPXComponentName(icon.name);
-
-  const [origin, setOrigin] = React.useState("https://pxui.dev");
-  React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      setOrigin(window.location.origin);
-    }
-  }, []);
+  const origin = useOrigin();
 
   const reactSnippet = `import { ${componentName} } from "@pxui/react";
 
@@ -143,8 +132,7 @@ export function Example() {
             <button
               type="button"
               onClick={() => {
-                userSelectedThemeRef.current = true;
-                setCodeTheme("dark");
+                setUserSelectedTheme("dark");
               }}
               className={cn(
                 "inline-flex items-center justify-center gap-1 px-2 rounded transition-all cursor-pointer self-stretch",
@@ -160,8 +148,7 @@ export function Example() {
             <button
               type="button"
               onClick={() => {
-                userSelectedThemeRef.current = true;
-                setCodeTheme("light");
+                setUserSelectedTheme("light");
               }}
               className={cn(
                 "inline-flex items-center justify-center gap-1 px-2 rounded transition-all cursor-pointer self-stretch",

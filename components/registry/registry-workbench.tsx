@@ -11,7 +11,6 @@ import {
   PXIconCheck,
   PXIconSearch,
   PXIconArrowRight,
-  PACKAGE_MANAGERS,
   PackageManagerSwitcher,
   HighlightedShadcnCommand,
   getShadcnAddCommand,
@@ -20,35 +19,29 @@ import {
 import { SyntaxHighlighter, CodeWrapButton } from "@/components/ui/syntax-highlighter";
 import { copyToClipboard } from "@/lib/clipboard";
 import { useTheme } from "next-themes";
+import { useOrigin } from "@/lib/hooks/use-origin";
 import { cn } from "@/lib/utils";
 
 export function RegistryWorkbench() {
   const { resolvedTheme } = useTheme();
-  const [workbenchTheme, setWorkbenchTheme] = React.useState<"dark" | "light">("dark");
+  const workbenchTheme = resolvedTheme === "light" ? "light" : "dark";
   const [selectedIconName, setSelectedIconName] = React.useState("home");
   const [searchQuery, setSearchQuery] = React.useState("");
   const [copiedId, setCopiedId] = React.useState<string | null>(null);
   const [showRawJson, setShowRawJson] = React.useState(false);
   const [jsonWrapped, setJsonWrapped] = React.useState(false);
   const [installMethod, setInstallMethod] = React.useState<"single" | "multi" | "bundle">("single");
-  const [packageManager, setPackageManager] = React.useState<PackageManager>("pnpm");
-
-  const [origin, setOrigin] = React.useState("https://pxui.dev");
-  React.useEffect(() => {
+  const [packageManager, setPackageManager] = React.useState<PackageManager>(() => {
     if (typeof window !== "undefined") {
-      setOrigin(window.location.origin);
       const saved = localStorage.getItem("pxui_preferred_pm") as PackageManager;
       if (saved && ["pnpm", "npm", "yarn", "bun"].includes(saved)) {
-        setPackageManager(saved);
+        return saved;
       }
     }
-  }, []);
+    return "pnpm";
+  });
 
-  React.useEffect(() => {
-    if (resolvedTheme === "light" || resolvedTheme === "dark") {
-      setWorkbenchTheme(resolvedTheme);
-    }
-  }, [resolvedTheme]);
+  const origin = useOrigin();
 
   const handleSelectPkg = (pkg: PackageManager) => {
     setPackageManager(pkg);

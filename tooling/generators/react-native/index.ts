@@ -45,7 +45,7 @@ export const ${componentName}: React.FC<${componentName}Props> = ({
   filled = false,
 }) => {
   const dimension = typeof size === 'string' ? parseInt(size, 10) || 24 : size;
-
+${icon.filledPaths && icon.filledPaths.length > 0 ? "" : "  void filled;\n"}
   return (
     <Svg width={dimension} height={dimension} viewBox="0 0 24 24">
 ${icon.filledPaths && icon.filledPaths.length > 0 ? `      {filled ? (\n  ${filledPaths}\n      ) : (\n  ${paths}\n      )}` : paths}

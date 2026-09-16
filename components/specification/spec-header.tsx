@@ -7,7 +7,6 @@ import { IconDefinition } from "@/lib/icons/schema";
 import { toPXComponentName } from "@/lib/compiler";
 import {
   PXIconArrowLeft,
-  PXIconCheck,
   PXIconCopy,
   PXIconTerminal,
   PXIconMaximize,
@@ -20,9 +19,9 @@ import {
 import { ThemeToggle } from "@/components/theme-toggle";
 import { PXUIMark } from "@/components/brand";
 import { copyToClipboard as safeCopyToClipboard } from "@/lib/clipboard";
-import { IconCopyDialog, type CopyDialogTab } from "@/components/icons";
 import { CommandSearch } from "@/components/navigation/command-search";
-import { cn } from "@/lib/utils";
+import { useOrigin } from "@/lib/hooks/use-origin";
+import { IconCopyDialog, type CopyDialogTab } from "@/components/icons/icon-copy-dialog";
 
 interface SpecHeaderProps {
   icon: IconDefinition;
@@ -41,19 +40,14 @@ export function SpecHeader({
 }: SpecHeaderProps) {
   const router = useRouter();
   const componentName = toPXComponentName(icon.name);
-  const [copiedAction, setCopiedAction] = React.useState<string | null>(null);
   const [isMoreOpen, setIsMoreOpen] = React.useState(false);
+  const [searchModalOpen, setSearchModalOpen] = React.useState(false);
+  const [copiedAction, setCopiedAction] = React.useState<string | null>(null);
   const [isCopyDialogOpen, setIsCopyDialogOpen] = React.useState(false);
   const [copyDialogTab, setCopyDialogTab] = React.useState<CopyDialogTab>("react");
-  const [searchModalOpen, setSearchModalOpen] = React.useState(false);
   const moreRef = React.useRef<HTMLDivElement>(null);
 
-  const [origin, setOrigin] = React.useState("https://pxui.dev");
-  React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      setOrigin(window.location.origin);
-    }
-  }, []);
+  const origin = useOrigin();
 
   // Handle back to catalog while restoring preserved context
   const handleBackToCatalog = React.useCallback(() => {
@@ -86,7 +80,6 @@ export function SpecHeader({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const componentSnippet = `<${componentName} size={24} />`;
   const importSnippet = `import { ${componentName} } from "@pxui/react";`;
   const registryCmd = `npx shadcn@latest add ${origin}/r/px-${icon.name}.json`;
   const rawSvg = `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">${icon.paths.map((p) => `<path d="${p.d}"${p.fillRule ? ` fill-rule="${p.fillRule}" clip-rule="${p.fillRule}"` : ""}/>`).join("")}</svg>`;
@@ -352,6 +345,13 @@ export function SpecHeader({
           <ThemeToggle className="h-8 w-8 rounded-md border border-[#e6dfd8] dark:border-[#2e2c28] bg-white dark:bg-[#201e1b] hover:bg-[#f5f0e8] dark:hover:bg-[#282622] text-[#141413] dark:text-[#faf9f5] shrink-0 box-border p-0 inline-flex items-center justify-center shadow-2xs transition-all" />
         </div>
       </div>
+
+      <IconCopyDialog
+        icon={icon}
+        isOpen={isCopyDialogOpen}
+        onClose={() => setIsCopyDialogOpen(false)}
+        initialTab={copyDialogTab}
+      />
     </header>
   );
 }

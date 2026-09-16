@@ -5,13 +5,10 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { PXIconArrowRight, PXIconTerminal, PXIconSparkles } from "@/components/icons";
 import { toast } from "sonner";
+import { useOrigin } from "@/lib/hooks/use-origin";
 
 export function FinalCta() {
-  const [origin, setOrigin] = React.useState("https://pxui.dev");
-
-  React.useEffect(() => {
-    setOrigin(window.location.origin);
-  }, []);
+  const origin = useOrigin();
 
   const cliSnippet = `npx shadcn@latest add ${origin}/r/px-home.json`;
 

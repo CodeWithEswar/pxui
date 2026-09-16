@@ -49,7 +49,7 @@ export const PXIconGitCommitDefinition: PXIconDefinition = {
  */
 export const PXIconGitCommit = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconGitCommitDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconGitCommitDefinition} {...props} />;
   }
 );
 

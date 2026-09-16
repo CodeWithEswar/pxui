@@ -1,5 +1,3 @@
-import fs from "fs";
-import path from "path";
 import { CANONICAL_ICONS } from "../../icons/source";
 import { ICON_CATEGORIES } from "../../icons/categories";
 import { ICON_FAMILIES } from "../../icons/families";

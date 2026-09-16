@@ -51,7 +51,7 @@ export const PXIconBriefcaseDefinition: PXIconDefinition = {
  */
 export const PXIconBriefcase = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconBriefcaseDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconBriefcaseDefinition} {...props} />;
   }
 );
 

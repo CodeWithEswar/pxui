@@ -3,7 +3,7 @@
 import * as React from "react";
 import { IconDefinition } from "@/lib/icons/schema";
 import { ICONS_CATALOG } from "@/lib/icons/catalog";
-import { toPixelComponentName, toPXComponentName, generateSvgString, generateReactNativeCode } from "@/lib/compiler";
+import { toPXComponentName, generateSvgString, generateReactNativeCode } from "@/lib/compiler";
 import { PXIconBase } from "@/components/icons/px-icon-base";
 import { PixelGridPreview } from "./pixel-grid-preview";
 import {
@@ -21,6 +21,7 @@ import { toast } from "sonner";
 import { PXIconCopy, PXIconCheck, PXIconSparkles } from "@/components/icons";
 import { SyntaxHighlighter, CodeWrapButton } from "@/components/ui/syntax-highlighter";
 import { cn } from "@/lib/utils";
+import { useOrigin } from "@/lib/hooks/use-origin";
 
 interface IconInspectorProps {
   icon: IconDefinition | null;
@@ -37,13 +38,16 @@ export function IconInspector({ icon, open, onOpenChange, onSelectIcon }: IconIn
   const [previewSize, setPreviewSize] = React.useState<16 | 20 | 24 | 32 | 48 | 64>(24);
   const [copiedTab, setCopiedTab] = React.useState<string | null>(null);
   const [codeWrapped, setCodeWrapped] = React.useState(false);
+  const origin = useOrigin();
 
   // Reset states when icon changes
-  React.useEffect(() => {
+  const [prevIconName, setPrevIconName] = React.useState(icon?.name);
+  if (icon?.name !== prevIconName) {
+    setPrevIconName(icon?.name);
     setFilled(false);
     setAnimated(false);
     setSimulateReducedMotion(false);
-  }, [icon?.name]);
+  }
 
   if (!icon) return null;
 
@@ -52,11 +56,6 @@ export function IconInspector({ icon, open, onOpenChange, onSelectIcon }: IconIn
   const hasAnimation = Boolean(icon.animation);
   const isEffectivelyAnimated = animated && !simulateReducedMotion;
 
-  // Dynamic origin or configurable registry base URL with stable initial state
-  const [origin, setOrigin] = React.useState("https://pxui.dev");
-  React.useEffect(() => {
-    setOrigin(window.location.origin);
-  }, []);
   const registryBase = process.env.NEXT_PUBLIC_REGISTRY_BASE_URL || origin;
   const shadcnCmd = `npx shadcn@latest add ${registryBase}/r/px-${icon.name}.json`;
 

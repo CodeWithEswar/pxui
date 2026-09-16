@@ -1,10 +1,32 @@
 "use client";
 
 import * as React from "react";
-import { IconDefinition, PixelIconProps } from "@/lib/icons/schema";
+import type { IconDefinition } from "@/lib/icons/schema";
+import type { PXIconDefinition } from "@pxui/core";
 
-export interface PixelIconBaseProps extends PixelIconProps {
-  definition: IconDefinition;
+export type IconPathItem = {
+  d: string;
+  fillRule?: "nonzero" | "evenodd" | "inherit";
+  clipRule?: "nonzero" | "evenodd" | "inherit";
+};
+
+export interface PixelIconBaseProps extends Omit<React.SVGProps<SVGSVGElement>, "ref"> {
+  definition: IconDefinition | PXIconDefinition;
+  size?: number | string;
+  color?: string;
+  strokeWidth?: number | string;
+  filled?: boolean;
+  animated?: boolean;
+  animation?: {
+    cssClass?: string;
+    frames?: readonly { durationMs: number; transform?: string; opacity?: number }[];
+  };
+  duration?: number;
+  delay?: number;
+  loop?: boolean;
+  trigger?: "auto" | "hover" | "click";
+  title?: string;
+  "aria-label"?: string;
 }
 
 export const PixelIconBase = React.forwardRef<SVGSVGElement, PixelIconBaseProps>(
@@ -32,15 +54,21 @@ export const PixelIconBase = React.forwardRef<SVGSVGElement, PixelIconBaseProps>
     // Resolve width/height from number or string (e.g. 24, "24px", "1.5rem")
     const dimension = typeof size === "number" ? `${size}px` : size;
 
-    const rawPaths: Array<{ d: string; fillRule?: any; clipRule?: any }> =
-      (definition as any)?.geometry?.paths || (definition as any)?.paths || [];
-    const rawFilled: Array<{ d: string; fillRule?: any; clipRule?: any }> | undefined =
-      (definition as any)?.geometry?.filled || (definition as any)?.filled;
-    const paths: Array<{ d: string; fillRule?: any; clipRule?: any }> =
+    const def = definition as unknown as {
+      geometry?: { paths?: readonly IconPathItem[]; filled?: readonly IconPathItem[] };
+      paths?: readonly IconPathItem[];
+      filled?: readonly IconPathItem[];
+      animation?: { cssClass?: string };
+    };
+
+    const rawPaths: readonly IconPathItem[] = def.geometry?.paths || def.paths || [];
+    const rawFilled: readonly IconPathItem[] | undefined = def.geometry?.filled || def.filled;
+    const paths: readonly IconPathItem[] =
       filled && rawFilled && rawFilled.length > 0 ? rawFilled : rawPaths;
 
-    const hasAnimation = animated && Boolean(definition.animation);
-    const animationClass = hasAnimation ? definition.animation?.cssClass || "" : "";
+    const activeAnimation = animation || def.animation;
+    const hasAnimation = animated && Boolean(activeAnimation);
+    const animationClass = hasAnimation ? activeAnimation?.cssClass || "" : "";
 
     const isMeaningful = Boolean(ariaLabel || title);
 
@@ -65,6 +93,8 @@ export const PixelIconBase = React.forwardRef<SVGSVGElement, PixelIconBaseProps>
         width={dimension}
         height={dimension}
         fill={color}
+        strokeWidth={strokeWidth}
+        data-trigger={trigger !== "auto" ? trigger : undefined}
         className={`pixel-crisp inline-block shrink-0 select-none ${animationClass} ${className}`.trim()}
         role={isMeaningful ? "img" : undefined}
         aria-hidden={isMeaningful ? undefined : true}

@@ -3,7 +3,6 @@
 import * as React from "react";
 import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import { ICONS_CATALOG } from "@/lib/icons/catalog";
 import { IconDefinition } from "@/lib/icons/schema";
 import { toPXComponentName, generateSvgString } from "@/lib/compiler";
@@ -15,7 +14,6 @@ import {
   PXIconCheck,
   PXIconCopy,
   PXIconTerminal,
-  PXIconArrowRight,
   PXIconSliders,
   PXIconCode,
   PXIconSun,
@@ -23,6 +21,7 @@ import {
 } from "@/components/icons";
 import { PXUIMark } from "@/components/brand";
 import { copyToClipboard } from "@/lib/clipboard";
+import { useOrigin } from "@/lib/hooks/use-origin";
 import { cn } from "@/lib/utils";
 
 interface CommandSearchProps {
@@ -69,19 +68,16 @@ export function CommandSearch({
   const [stageTheme, setStageTheme] = React.useState<"dark" | "light">("dark");
   const [copiedId, setCopiedId] = React.useState<string | null>(null);
   const [toastMessage, setToastMessage] = React.useState<string | null>(null);
-  const [mounted, setMounted] = React.useState(false);
-
   const inputRef = React.useRef<HTMLInputElement>(null);
   const listRef = React.useRef<HTMLDivElement>(null);
   const itemRefs = React.useRef<Map<number, HTMLDivElement>>(new Map());
 
-  const [origin, setOrigin] = React.useState("https://pxui.dev");
-  React.useEffect(() => {
-    setMounted(true);
-    if (typeof window !== "undefined") {
-      setOrigin(window.location.origin);
-    }
-  }, []);
+  const origin = useOrigin();
+  const mounted = React.useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
 
   // Global hotkeys: ⌘K, Ctrl+K, and '/'
   React.useEffect(() => {
@@ -103,14 +99,22 @@ export function CommandSearch({
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [setOpen]);
 
-  // Focus search input on open & reset selection
-  React.useEffect(() => {
+  // Adjust selection and search query during render when modal opens
+  const [prevOpen, setPrevOpen] = React.useState(open);
+  if (open !== prevOpen) {
+    setPrevOpen(open);
     if (open) {
       setSelectedIndex(0);
       setSearchQuery("");
       setSelectedCategory("all");
       setCopiedId(null);
       setToastMessage(null);
+    }
+  }
+
+  // Focus search input on open
+  React.useEffect(() => {
+    if (open) {
       const timer = setTimeout(() => {
         inputRef.current?.focus();
       }, 50);
@@ -165,23 +169,22 @@ export function CommandSearch({
     });
   }, [searchQuery, selectedCategory]);
 
-  // Ensure selectedIndex is always within bounds
-  React.useEffect(() => {
-    if (selectedIndex >= filteredIcons.length) {
-      setSelectedIndex(Math.max(0, filteredIcons.length - 1));
-    }
-  }, [filteredIcons.length, selectedIndex]);
+  // Safe selected index bounded by current filtered results
+  const safeSelectedIndex =
+    filteredIcons.length > 0
+      ? Math.min(Math.max(0, selectedIndex), filteredIcons.length - 1)
+      : 0;
 
-  const activeIcon = filteredIcons[selectedIndex] || filteredIcons[0] || null;
+  const activeIcon = filteredIcons[safeSelectedIndex] || null;
 
   // Auto-scroll active item into view
   React.useEffect(() => {
     if (!open) return;
-    const el = itemRefs.current.get(selectedIndex);
+    const el = itemRefs.current.get(safeSelectedIndex);
     if (el) {
       el.scrollIntoView({ block: "nearest", behavior: "smooth" });
     }
-  }, [selectedIndex, open]);
+  }, [safeSelectedIndex, open]);
 
   const handleSelect = React.useCallback(
     (icon: IconDefinition) => {
@@ -430,7 +433,7 @@ export function CommandSearch({
               </div>
             ) : (
               filteredIcons.map((icon, idx) => {
-                const isSelected = idx === selectedIndex;
+                const isSelected = idx === safeSelectedIndex;
                 const compName = toPXComponentName(icon.name);
 
                 return (

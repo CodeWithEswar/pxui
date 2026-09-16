@@ -51,7 +51,7 @@ export const PXIconPowerDefinition: PXIconDefinition = {
  */
 export const PXIconPower = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconPowerDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconPowerDefinition} {...props} />;
   }
 );
 

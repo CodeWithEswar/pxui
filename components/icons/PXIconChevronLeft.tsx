@@ -48,7 +48,7 @@ export const PXIconChevronLeftDefinition: PXIconDefinition = {
  */
 export const PXIconChevronLeft = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconChevronLeftDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconChevronLeftDefinition} {...props} />;
   }
 );
 

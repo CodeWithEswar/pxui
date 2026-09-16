@@ -45,7 +45,7 @@ export function CatalogToolbar({
           className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-soft pointer-events-none"
         />
         <Input
-          ref={searchInputRef as any}
+          ref={searchInputRef}
           type="text"
           value={query}
           onChange={(e) => onQueryChange(e.target.value)}
@@ -129,11 +129,11 @@ export function CatalogToolbar({
           <span className="text-[10px] font-mono uppercase text-muted-soft px-1.5 select-none">
             SIZE
           </span>
-          {[20, 24, 32].map((sz) => (
+          {([20, 24, 32] as const).map((sz) => (
             <button
               key={sz}
               type="button"
-              onClick={() => onTileScaleChange(sz as any)}
+              onClick={() => onTileScaleChange(sz)}
               className={cn(
                 "px-2 py-0.5 rounded text-[10px] font-mono transition-all cursor-pointer",
                 tileScale === sz

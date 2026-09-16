@@ -54,7 +54,7 @@ export const PXIconCheckboxIndeterminateDefinition: PXIconDefinition = {
  */
 export const PXIconCheckboxIndeterminate = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconCheckboxIndeterminateDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconCheckboxIndeterminateDefinition} {...props} />;
   }
 );
 

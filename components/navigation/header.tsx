@@ -19,7 +19,6 @@ import {
 } from "@/components/icons";
 import { CommandSearch } from "./command-search";
 import { MobileMenuSheet } from "./mobile-menu-sheet";
-import { PixelSquare, GridCoordinateLabel } from "@/components/landing/technical-mark";
 import { cn } from "@/lib/utils";
 
 export function Header() {

@@ -11,7 +11,6 @@ interface TechnicalMarkProps extends React.HTMLAttributes<HTMLDivElement> {
  * Crosshair '+' drafting marker at grid intersections
  */
 export function CrosshairMark({ className, size = 9, ...props }: TechnicalMarkProps) {
-  const half = Math.floor(size / 2);
   return (
     <div
       aria-hidden="true"

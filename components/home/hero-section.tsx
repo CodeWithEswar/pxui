@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import {
   PXIconHome,
   PXIconSearch,
@@ -19,7 +19,6 @@ import {
   PXIconCheck,
 } from "@/components/icons";
 import { PXUIMark } from "@/components/brand";
-import { toast } from "sonner";
 
 export function HeroSection() {
   const [copied, setCopied] = React.useState(false);
@@ -75,7 +74,7 @@ export function NotificationBadge() {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-            <a href="/icons">
+            <Link href="/icons">
               <Button
                 size="default"
                 className="h-10 px-6 rounded-md font-sans text-sm font-medium bg-primary text-primary-foreground hover:bg-[#a9583e] active:bg-[#8e432d] shadow-2xs gap-2"
@@ -83,7 +82,7 @@ export function NotificationBadge() {
                 <PXIconArrowRight size={16} />
                 Open Icon Workspace
               </Button>
-            </a>
+            </Link>
 
             <a href="#registry">
               <Button

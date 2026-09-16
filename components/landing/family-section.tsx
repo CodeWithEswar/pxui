@@ -7,7 +7,6 @@ import {
   PXIconPlus,
   PXIconMinus,
   PXIconEdit,
-  PXIconArchive,
 } from "@/components/icons";
 
 const FAMILY_VARIANTS = [

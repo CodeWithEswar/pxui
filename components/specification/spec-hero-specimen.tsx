@@ -29,7 +29,6 @@ export function SpecHeroSpecimen({
   const [showBaseline, setShowBaseline] = React.useState(false);
   const [showOpticalCenter, setShowOpticalCenter] = React.useState(false);
   const [showSafeArea, setShowSafeArea] = React.useState(false);
-  const [showCells, setShowCells] = React.useState(false);
   const [pixelInspect, setPixelInspect] = React.useState(false);
 
   // Zoom state: 1x, 2x, 4x, 8x, Fit

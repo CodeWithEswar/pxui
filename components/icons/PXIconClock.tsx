@@ -51,7 +51,7 @@ export const PXIconClockDefinition: PXIconDefinition = {
  */
 export const PXIconClock = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconClockDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconClockDefinition} {...props} />;
   }
 );
 

@@ -50,7 +50,7 @@ export const PXIconExternalLinkDefinition: PXIconDefinition = {
  */
 export const PXIconExternalLink = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconExternalLinkDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconExternalLinkDefinition} {...props} />;
   }
 );
 

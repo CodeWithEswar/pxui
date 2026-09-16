@@ -54,7 +54,7 @@ export const PXIconSubtractDefinition: PXIconDefinition = {
  */
 export const PXIconSubtract = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconSubtractDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconSubtractDefinition} {...props} />;
   }
 );
 

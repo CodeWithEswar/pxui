@@ -3,7 +3,6 @@
 import * as React from "react";
 import { DocsSidebar } from "./docs-sidebar";
 import { PXIconMenu, PXIconX } from "@/components/icons";
-import { cn } from "@/lib/utils";
 
 export function DocsMobileNav() {
   const [isOpen, setIsOpen] = React.useState(false);

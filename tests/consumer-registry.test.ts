@@ -72,7 +72,7 @@ describe("PXUI Registry Consumer Verification", () => {
     assert.ok(Array.isArray(registry.items));
     assert.ok(registry.items.length >= 101);
 
-    const homeItem = registry.items.find((i: any) => i.name === "px-home" || i.name === "home");
+    const homeItem = registry.items.find((i: { name: string; title: string }) => i.name === "px-home" || i.name === "home");
     assert.ok(homeItem, "Should have 'px-home' item in registry");
     assert.strictEqual(homeItem.title, "PXIconHome");
   });

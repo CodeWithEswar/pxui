@@ -50,7 +50,7 @@ export const PXIconShieldCheckDefinition: PXIconDefinition = {
  */
 export const PXIconShieldCheck = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconShieldCheckDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconShieldCheckDefinition} {...props} />;
   }
 );
 

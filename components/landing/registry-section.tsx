@@ -3,16 +3,13 @@
 import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { PXIconTerminal, PXIconCheck, PXIconCopy, PXIconSearch, PACKAGE_MANAGERS } from "@/components/icons";
+import { PXIconCheck, PXIconCopy, PXIconSearch, PACKAGE_MANAGERS } from "@/components/icons";
 import { toast } from "sonner";
+import { useOrigin } from "@/lib/hooks/use-origin";
 
 export function RegistrySection() {
   const [copiedPkg, setCopiedPkg] = React.useState<string | null>(null);
-  const [origin, setOrigin] = React.useState("https://pxui.dev");
-
-  React.useEffect(() => {
-    setOrigin(window.location.origin);
-  }, []);
+  const origin = useOrigin();
 
   const getCmd = (pkg: "npm" | "pnpm" | "bun" | "yarn") => {
     switch (pkg) {

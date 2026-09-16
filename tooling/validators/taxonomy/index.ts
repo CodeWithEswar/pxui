@@ -10,7 +10,7 @@ export function validateTaxonomy(
   const issues: QualityGateIssue[] = [];
 
   // 1. Category validation
-  if (!ICON_CATEGORIES.includes(category as any)) {
+  if (!ICON_CATEGORIES.includes(category as (typeof ICON_CATEGORIES)[number])) {
     issues.push({
       gate: "taxonomy",
       severity: "BLOCKING",

@@ -55,8 +55,9 @@ export function parseAndAnalyzePath(
   d: string,
   slug: string,
   pathIndex: number,
-  grid: number = 24
+  _grid: number = 24
 ): PathParseResult {
+  void _grid;
   const issues: QualityGateIssue[] = [];
   const coordinates: number[] = [];
   let minX = Infinity;

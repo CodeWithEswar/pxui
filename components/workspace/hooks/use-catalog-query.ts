@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { IconDefinition } from "@/lib/icons/schema";
 import { ICONS_CATALOG } from "@/lib/icons/catalog";
 import { searchIcons } from "@/lib/search/search-engine";
 

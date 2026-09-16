@@ -220,7 +220,7 @@ export async function runPipeline() {
 
   // Root registry
   const rootReg = generateRootRegistry(normalizedIcons);
-  rootReg.items.unshift(baseRegistryItem as any);
+  (rootReg.items as unknown[]).unshift(baseRegistryItem);
   fs.writeFileSync(path.join(PKG_REGISTRY, "registry.json"), JSON.stringify(rootReg, null, 2), "utf-8");
   fs.writeFileSync(path.join(PUBLIC_R, "registry.json"), JSON.stringify(rootReg, null, 2), "utf-8");
 

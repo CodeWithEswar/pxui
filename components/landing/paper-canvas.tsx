@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { GridSignal } from "./grid-signal";
 
 interface PaperCanvasProps {
   className?: string;

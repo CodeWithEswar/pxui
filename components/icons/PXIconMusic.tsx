@@ -51,7 +51,7 @@ export const PXIconMusicDefinition: PXIconDefinition = {
  */
 export const PXIconMusic = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconMusicDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconMusicDefinition} {...props} />;
   }
 );
 

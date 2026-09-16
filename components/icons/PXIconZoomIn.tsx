@@ -49,7 +49,7 @@ export const PXIconZoomInDefinition: PXIconDefinition = {
  */
 export const PXIconZoomIn = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconZoomInDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconZoomInDefinition} {...props} />;
   }
 );
 

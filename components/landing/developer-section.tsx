@@ -94,7 +94,7 @@ function CodeLine({
 function ReactCodeHighlighted({ isWrapped }: { isWrapped: boolean }) {
   const lines = [
     <>
-      <span className="text-[#ff7b72] font-medium">import</span> <span className="text-[#8b949e]">{'{'}</span> <span className="text-[#4ec9b0] font-medium">PXIconSearch</span><span className="text-[#8b949e]">,</span> <span className="text-[#4ec9b0] font-medium">PXIconBell</span> <span className="text-[#8b949e]">{'}'}</span> <span className="text-[#ff7b72] font-medium">from</span> <span className="text-[#ce9178]">"@pxui/react"</span><span className="text-[#8b949e]">;</span>
+      <span className="text-[#ff7b72] font-medium">import</span> <span className="text-[#8b949e]">{'{'}</span> <span className="text-[#4ec9b0] font-medium">PXIconSearch</span><span className="text-[#8b949e]">,</span> <span className="text-[#4ec9b0] font-medium">PXIconBell</span> <span className="text-[#8b949e]">{'}'}</span> <span className="text-[#ff7b72] font-medium">from</span> <span className="text-[#ce9178]">&quot;@pxui/react&quot;</span><span className="text-[#8b949e]">;</span>
     </>,
     <>&nbsp;</>,
     <>
@@ -104,16 +104,16 @@ function ReactCodeHighlighted({ isWrapped }: { isWrapped: boolean }) {
       {"  "}<span className="text-[#ff7b72] font-medium">return</span> <span className="text-[#8b949e]">(</span>
     </>,
     <>
-      {"    "}<span className="text-[#808080]">&lt;</span><span className="text-[#569cd6]">div</span> <span className="text-[#9cdcfe]">className</span><span className="text-[#8b949e]">=</span><span className="text-[#ce9178]">"flex items-center gap-2 px-3 py-1.5 border rounded-lg"</span><span className="text-[#808080]">&gt;</span>
+      {"    "}<span className="text-[#808080]">&lt;</span><span className="text-[#569cd6]">div</span> <span className="text-[#9cdcfe]">className</span><span className="text-[#8b949e]">=</span><span className="text-[#ce9178]">&quot;flex items-center gap-2 px-3 py-1.5 border rounded-lg&quot;</span><span className="text-[#808080]">&gt;</span>
     </>,
     <>
-      {"      "}<span className="text-[#808080]">&lt;</span><span className="text-[#4ec9b0] font-medium">PXIconSearch</span> <span className="text-[#9cdcfe]">size</span><span className="text-[#8b949e]">={'{'}</span><span className="text-[#b5cea8]">18</span><span className="text-[#8b949e]">{'}'}</span> <span className="text-[#9cdcfe]">className</span><span className="text-[#8b949e]">=</span><span className="text-[#ce9178]">"text-muted-foreground"</span> <span className="text-[#808080]">/&gt;</span>
+      {"      "}<span className="text-[#808080]">&lt;</span><span className="text-[#4ec9b0] font-medium">PXIconSearch</span> <span className="text-[#9cdcfe]">size</span><span className="text-[#8b949e]">={'{'}</span><span className="text-[#b5cea8]">18</span><span className="text-[#8b949e]">{'}'}</span> <span className="text-[#9cdcfe]">className</span><span className="text-[#8b949e]">=</span><span className="text-[#ce9178]">&quot;text-muted-foreground&quot;</span> <span className="text-[#808080]">/&gt;</span>
     </>,
     <>
-      {"      "}<span className="text-[#808080]">&lt;</span><span className="text-[#569cd6]">input</span> <span className="text-[#9cdcfe]">type</span><span className="text-[#8b949e]">=</span><span className="text-[#ce9178]">"text"</span> <span className="text-[#9cdcfe]">placeholder</span><span className="text-[#8b949e]">=</span><span className="text-[#ce9178]">"Search resources..."</span> <span className="text-[#9cdcfe]">className</span><span className="text-[#8b949e]">=</span><span className="text-[#ce9178]">"bg-transparent text-sm"</span> <span className="text-[#808080]">/&gt;</span>
+      {"      "}<span className="text-[#808080]">&lt;</span><span className="text-[#569cd6]">input</span> <span className="text-[#9cdcfe]">type</span><span className="text-[#8b949e]">=</span><span className="text-[#ce9178]">&quot;text&quot;</span> <span className="text-[#9cdcfe]">placeholder</span><span className="text-[#8b949e]">=</span><span className="text-[#ce9178]">&quot;Search resources...&quot;</span> <span className="text-[#9cdcfe]">className</span><span className="text-[#8b949e]">=</span><span className="text-[#ce9178]">&quot;bg-transparent text-sm&quot;</span> <span className="text-[#808080]">/&gt;</span>
     </>,
     <>
-      {"      "}<span className="text-[#808080]">&lt;</span><span className="text-[#4ec9b0] font-medium">PXIconBell</span> <span className="text-[#9cdcfe]">size</span><span className="text-[#8b949e]">={'{'}</span><span className="text-[#b5cea8]">18</span><span className="text-[#8b949e]">{'}'}</span> <span className="text-[#9cdcfe] font-medium">animated</span> <span className="text-[#9cdcfe]">className</span><span className="text-[#8b949e]">=</span><span className="text-[#ce9178]">"text-primary"</span> <span className="text-[#808080]">/&gt;</span>
+      {"      "}<span className="text-[#808080]">&lt;</span><span className="text-[#4ec9b0] font-medium">PXIconBell</span> <span className="text-[#9cdcfe]">size</span><span className="text-[#8b949e]">={'{'}</span><span className="text-[#b5cea8]">18</span><span className="text-[#8b949e]">{'}'}</span> <span className="text-[#9cdcfe] font-medium">animated</span> <span className="text-[#9cdcfe]">className</span><span className="text-[#8b949e]">=</span><span className="text-[#ce9178]">&quot;text-primary&quot;</span> <span className="text-[#808080]">/&gt;</span>
     </>,
     <>
       {"    "}<span className="text-[#808080]">&lt;/</span><span className="text-[#569cd6]">div</span><span className="text-[#808080]">&gt;</span>
@@ -140,13 +140,13 @@ function ReactCodeHighlighted({ isWrapped }: { isWrapped: boolean }) {
 function NativeCodeHighlighted({ isWrapped }: { isWrapped: boolean }) {
   const lines = [
     <>
-      <span className="text-[#ff7b72] font-medium">import</span> <span className="text-[#4ec9b0] font-medium">React</span> <span className="text-[#ff7b72] font-medium">from</span> <span className="text-[#ce9178]">"react"</span><span className="text-[#8b949e]">;</span>
+      <span className="text-[#ff7b72] font-medium">import</span> <span className="text-[#4ec9b0] font-medium">React</span> <span className="text-[#ff7b72] font-medium">from</span> <span className="text-[#ce9178]">&quot;react&quot;</span><span className="text-[#8b949e]">;</span>
     </>,
     <>
-      <span className="text-[#ff7b72] font-medium">import</span> <span className="text-[#8b949e]">{'{'}</span> <span className="text-[#4ec9b0] font-medium">View</span><span className="text-[#8b949e]">,</span> <span className="text-[#4ec9b0] font-medium">TextInput</span> <span className="text-[#8b949e]">{'}'}</span> <span className="text-[#ff7b72] font-medium">from</span> <span className="text-[#ce9178]">"react-native"</span><span className="text-[#8b949e]">;</span>
+      <span className="text-[#ff7b72] font-medium">import</span> <span className="text-[#8b949e]">{'{'}</span> <span className="text-[#4ec9b0] font-medium">View</span><span className="text-[#8b949e]">,</span> <span className="text-[#4ec9b0] font-medium">TextInput</span> <span className="text-[#8b949e]">{'}'}</span> <span className="text-[#ff7b72] font-medium">from</span> <span className="text-[#ce9178]">&quot;react-native&quot;</span><span className="text-[#8b949e]">;</span>
     </>,
     <>
-      <span className="text-[#ff7b72] font-medium">import</span> <span className="text-[#8b949e]">{'{'}</span> <span className="text-[#4ec9b0] font-medium">PXIconSearch</span><span className="text-[#8b949e]">,</span> <span className="text-[#4ec9b0] font-medium">PXIconBell</span> <span className="text-[#8b949e]">{'}'}</span> <span className="text-[#ff7b72] font-medium">from</span> <span className="text-[#ce9178]">"@pxui/react-native"</span><span className="text-[#8b949e]">;</span>
+      <span className="text-[#ff7b72] font-medium">import</span> <span className="text-[#8b949e]">{'{'}</span> <span className="text-[#4ec9b0] font-medium">PXIconSearch</span><span className="text-[#8b949e]">,</span> <span className="text-[#4ec9b0] font-medium">PXIconBell</span> <span className="text-[#8b949e]">{'}'}</span> <span className="text-[#ff7b72] font-medium">from</span> <span className="text-[#ce9178]">&quot;@pxui/react-native&quot;</span><span className="text-[#8b949e]">;</span>
     </>,
     <>&nbsp;</>,
     <>
@@ -156,16 +156,16 @@ function NativeCodeHighlighted({ isWrapped }: { isWrapped: boolean }) {
       {"  "}<span className="text-[#ff7b72] font-medium">return</span> <span className="text-[#8b949e]">(</span>
     </>,
     <>
-      {"    "}<span className="text-[#808080]">&lt;</span><span className="text-[#4ec9b0] font-medium">View</span> <span className="text-[#9cdcfe]">style</span><span className="text-[#8b949e]">={'{'}{'{'}</span> <span className="text-[#9cdcfe]">flexDirection</span><span className="text-[#8b949e]">:</span> <span className="text-[#ce9178]">"row"</span><span className="text-[#8b949e]">,</span> <span className="text-[#9cdcfe]">alignItems</span><span className="text-[#8b949e]">:</span> <span className="text-[#ce9178]">"center"</span><span className="text-[#8b949e]">,</span> <span className="text-[#9cdcfe]">padding</span><span className="text-[#8b949e]">:</span> <span className="text-[#b5cea8]">8</span> <span className="text-[#8b949e]">{'}'}{'}'}</span><span className="text-[#808080]">&gt;</span>
+      {"    "}<span className="text-[#808080]">&lt;</span><span className="text-[#4ec9b0] font-medium">View</span> <span className="text-[#9cdcfe]">style</span><span className="text-[#8b949e]">={'{'}{'{'}</span> <span className="text-[#9cdcfe]">flexDirection</span><span className="text-[#8b949e]">:</span> <span className="text-[#ce9178]">&quot;row&quot;</span><span className="text-[#8b949e]">,</span> <span className="text-[#9cdcfe]">alignItems</span><span className="text-[#8b949e]">:</span> <span className="text-[#ce9178]">&quot;center&quot;</span><span className="text-[#8b949e]">,</span> <span className="text-[#9cdcfe]">padding</span><span className="text-[#8b949e]">:</span> <span className="text-[#b5cea8]">8</span> <span className="text-[#8b949e]">{'}'}{'}'}</span><span className="text-[#808080]">&gt;</span>
     </>,
     <>
-      {"      "}<span className="text-[#808080]">&lt;</span><span className="text-[#4ec9b0] font-medium">PXIconSearch</span> <span className="text-[#9cdcfe]">size</span><span className="text-[#8b949e]">={'{'}</span><span className="text-[#b5cea8]">20</span><span className="text-[#8b949e]">{'}'}</span> <span className="text-[#9cdcfe]">color</span><span className="text-[#8b949e]">=</span><span className="text-[#ce9178]">"#6c6a64"</span> <span className="text-[#808080]">/&gt;</span>
+      {"      "}<span className="text-[#808080]">&lt;</span><span className="text-[#4ec9b0] font-medium">PXIconSearch</span> <span className="text-[#9cdcfe]">size</span><span className="text-[#8b949e]">={'{'}</span><span className="text-[#b5cea8]">20</span><span className="text-[#8b949e]">{'}'}</span> <span className="text-[#9cdcfe]">color</span><span className="text-[#8b949e]">=</span><span className="text-[#ce9178]">&quot;#6c6a64&quot;</span> <span className="text-[#808080]">/&gt;</span>
     </>,
     <>
-      {"      "}<span className="text-[#808080]">&lt;</span><span className="text-[#4ec9b0] font-medium">TextInput</span> <span className="text-[#9cdcfe]">placeholder</span><span className="text-[#8b949e]">=</span><span className="text-[#ce9178]">"Search..."</span> <span className="text-[#9cdcfe]">style</span><span className="text-[#8b949e]">={'{'}{'{'}</span> <span className="text-[#9cdcfe]">flex</span><span className="text-[#8b949e]">:</span> <span className="text-[#b5cea8]">1</span><span className="text-[#8b949e]">,</span> <span className="text-[#9cdcfe]">marginHorizontal</span><span className="text-[#8b949e]">:</span> <span className="text-[#b5cea8]">8</span> <span className="text-[#8b949e]">{'}'}{'}'}</span> <span className="text-[#808080]">/&gt;</span>
+      {"      "}<span className="text-[#808080]">&lt;</span><span className="text-[#4ec9b0] font-medium">TextInput</span> <span className="text-[#9cdcfe]">placeholder</span><span className="text-[#8b949e]">=</span><span className="text-[#ce9178]">&quot;Search...&quot;</span> <span className="text-[#9cdcfe]">style</span><span className="text-[#8b949e]">={'{'}{'{'}</span> <span className="text-[#9cdcfe]">flex</span><span className="text-[#8b949e]">:</span> <span className="text-[#b5cea8]">1</span><span className="text-[#8b949e]">,</span> <span className="text-[#9cdcfe]">marginHorizontal</span><span className="text-[#8b949e]">:</span> <span className="text-[#b5cea8]">8</span> <span className="text-[#8b949e]">{'}'}{'}'}</span> <span className="text-[#808080]">/&gt;</span>
     </>,
     <>
-      {"      "}<span className="text-[#808080]">&lt;</span><span className="text-[#4ec9b0] font-medium">PXIconBell</span> <span className="text-[#9cdcfe]">size</span><span className="text-[#8b949e]">={'{'}</span><span className="text-[#b5cea8]">20</span><span className="text-[#8b949e]">{'}'}</span> <span className="text-[#9cdcfe]">color</span><span className="text-[#8b949e]">=</span><span className="text-[#ce9178]">"#cc785c"</span> <span className="text-[#808080]">/&gt;</span>
+      {"      "}<span className="text-[#808080]">&lt;</span><span className="text-[#4ec9b0] font-medium">PXIconBell</span> <span className="text-[#9cdcfe]">size</span><span className="text-[#8b949e]">={'{'}</span><span className="text-[#b5cea8]">20</span><span className="text-[#8b949e]">{'}'}</span> <span className="text-[#9cdcfe]">color</span><span className="text-[#8b949e]">=</span><span className="text-[#ce9178]">&quot;#cc785c&quot;</span> <span className="text-[#808080]">/&gt;</span>
     </>,
     <>
       {"    "}<span className="text-[#808080]">&lt;/</span><span className="text-[#4ec9b0] font-medium">View</span><span className="text-[#808080]">&gt;</span>
@@ -202,14 +202,14 @@ function CliCodeHighlighted({ isWrapped }: { isWrapped: boolean }) {
       <span className="text-[#6e7681] italic"># 2. Or add individual component recipes via CLI</span>
     </>,
     <>
-      <span className="text-[#ff7b72] font-medium">npx</span> <span className="text-[#4ec9b0] font-medium">@pxui/cli</span> <span className="text-[#9cdcfe]">add</span> <span className="text-[#ce9178]">search-bar</span>
+      <span className="text-[#ff7b72] font-medium">npx</span> <span className="text-[#4ec9b0] font-medium">@pxui/cli</span> <span className="text-[#9cdcfe]">add</span> <span className="text-[#ce9178]">&quot;search-bar&quot;</span>
     </>,
     <>&nbsp;</>,
     <>
       <span className="text-[#6e7681] italic"># 3. Import and render with zero-bloat path primitives</span>
     </>,
     <>
-      <span className="text-[#ff7b72] font-medium">import</span> <span className="text-[#8b949e]">{'{'}</span> <span className="text-[#4ec9b0] font-medium">PXIconSearch</span> <span className="text-[#8b949e]">{'}'}</span> <span className="text-[#ff7b72] font-medium">from</span> <span className="text-[#ce9178]">"@pxui/react"</span><span className="text-[#8b949e]">;</span>
+      <span className="text-[#ff7b72] font-medium">import</span> <span className="text-[#8b949e]">{'{'}</span> <span className="text-[#4ec9b0] font-medium">PXIconSearch</span> <span className="text-[#8b949e]">{'}'}</span> <span className="text-[#ff7b72] font-medium">from</span> <span className="text-[#ce9178]">&quot;@pxui/react&quot;</span><span className="text-[#8b949e]">;</span>
     </>,
   ];
 
@@ -227,18 +227,13 @@ function CliCodeHighlighted({ isWrapped }: { isWrapped: boolean }) {
 export function DeveloperSection() {
   const [activeTab, setActiveTab] = React.useState<"react" | "native" | "cli">("react");
   const [viewMode, setViewMode] = React.useState<"code" | "preview">("code");
-  const [isWordWrap, setIsWordWrap] = React.useState(false);
+  const [isWordWrap, setIsWordWrap] = React.useState(
+    () => typeof window !== "undefined" && window.innerWidth < 768
+  );
   const [copied, setCopied] = React.useState(false);
   const [searchQuery, setSearchQuery] = React.useState("");
   const [isBellRinging, setIsBellRinging] = React.useState(false);
   const [bellRingCount, setBellRingCount] = React.useState(0);
-
-  // Enable word-wrap by default on mobile screens (<768px)
-  React.useEffect(() => {
-    if (typeof window !== "undefined" && window.innerWidth < 768) {
-      setIsWordWrap(true);
-    }
-  }, []);
 
   const getRawCode = () => {
     if (activeTab === "react") return RAW_REACT_CODE;

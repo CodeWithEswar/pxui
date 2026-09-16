@@ -55,7 +55,7 @@ export const PXIconFilterDefinition: PXIconDefinition = {
  */
 export const PXIconFilter = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconFilterDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconFilterDefinition} {...props} />;
   }
 );
 

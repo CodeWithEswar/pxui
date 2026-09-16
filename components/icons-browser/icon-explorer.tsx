@@ -4,12 +4,11 @@ import * as React from "react";
 import { IconDefinition } from "@/lib/icons/schema";
 import { ICONS_CATALOG } from "@/lib/icons/catalog";
 import { searchIcons } from "@/lib/search/search-engine";
-import { toPixelComponentName, toPXComponentName } from "@/lib/compiler";
+import { toPXComponentName } from "@/lib/compiler";
 import { PXIconBase } from "@/components/icons/px-icon-base";
 import { IconInspector } from "./icon-inspector";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { PXIconSearch, PXIconX, PXIconSparkles } from "@/components/icons";
 
 interface IconExplorerProps {

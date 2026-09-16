@@ -5,7 +5,6 @@ import {
   PXIconSearch,
   PXIconBell,
   PXIconCheck,
-  PXIconShieldCheck,
 } from "@/components/icons";
 
 const SIZES = [16, 20, 24, 32, 48] as const;

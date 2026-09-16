@@ -52,7 +52,7 @@ export const PXIconAddCircleDefinition: PXIconDefinition = {
  */
 export const PXIconAddCircle = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconAddCircleDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconAddCircleDefinition} {...props} />;
   }
 );
 

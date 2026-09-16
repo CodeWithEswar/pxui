@@ -20,7 +20,6 @@ import {
   PXIconCreditCard,
   PXIconShield,
   PXIconLock,
-  PXIconSliders,
 } from "@/components/icons";
 
 const CATEGORY_STRIPS = [

@@ -20,6 +20,7 @@ import {
 import { SyntaxHighlighter, CodeWrapButton } from "@/components/ui/syntax-highlighter";
 import { useTheme } from "next-themes";
 import { InspectorTab } from "./hooks/use-icon-selection";
+import { useOrigin } from "@/lib/hooks/use-origin";
 
 interface InspectorContentProps {
   icon: IconDefinition;
@@ -76,19 +77,16 @@ export function InspectorContent({
   const [codeLang, setCodeLang] = React.useState<"react" | "react-native" | "registry" | "svg">("react");
 
   // Reset toggles when icon changes
-  React.useEffect(() => {
+  const [prevIconName, setPrevIconName] = React.useState(icon.name);
+  if (icon.name !== prevIconName) {
+    setPrevIconName(icon.name);
     setFilled(false);
     setAnimated(Boolean(icon.animation));
     setActiveFrame(null);
     setIsPlaying(true);
-  }, [icon.name]);
+  }
 
-  const [origin, setOrigin] = React.useState("https://pxui.dev");
-  React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      setOrigin(window.location.origin);
-    }
-  }, []);
+  const origin = useOrigin();
 
   const handleCopy = async (text: string, id: string) => {
     try {
@@ -494,7 +492,7 @@ export function Example() {
             >
               {icon.paths.map((p, idx) => (
                 <div key={idx} className={pathsWrap ? "break-all" : "truncate"}>
-                  d="{p.d}"
+                  d=&quot;{p.d}&quot;
                 </div>
               ))}
             </pre>
@@ -507,16 +505,18 @@ export function Example() {
         <div className="space-y-3 font-mono">
           {/* Lang Sub-Tabs */}
           <div className="flex items-center gap-1 border border-[#e6dfd8] dark:border-[#2e2c28] p-1 rounded-md bg-[#faf9f5] dark:bg-[#141413]">
-            {[
-              { id: "react", label: "React 19" },
-              { id: "react-native", label: "Native" },
-              { id: "registry", label: "Registry" },
-              { id: "svg", label: "SVG" },
-            ].map((lang) => (
+            {(
+              [
+                { id: "react", label: "React 19" },
+                { id: "react-native", label: "Native" },
+                { id: "registry", label: "Registry" },
+                { id: "svg", label: "SVG" },
+              ] as const
+            ).map((lang) => (
               <button
                 key={lang.id}
                 type="button"
-                onClick={() => setCodeLang(lang.id as any)}
+                onClick={() => setCodeLang(lang.id)}
                 className={cn(
                   "flex-1 py-1 rounded text-[11px] font-mono transition-all cursor-pointer",
                   codeLang === lang.id

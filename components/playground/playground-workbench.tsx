@@ -11,9 +11,6 @@ import {
   PXIconCheck,
   PXIconSearch,
   PXIconRefresh,
-  PXIconSparkles,
-  PXIconSun,
-  PXIconMoon,
   PXIconPlus,
   PXIconMinus,
 } from "@/components/icons";

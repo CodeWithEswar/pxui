@@ -3,7 +3,7 @@
 import * as React from "react";
 import { IconDefinition } from "@/lib/icons/schema";
 import { toPXComponentName } from "@/lib/compiler";
-import { PXIconBase, PXIconCheck, PXIconCopy, PXIconTerminal, PXIconX, IconCopyDialog, type CopyDialogTab } from "@/components/icons";
+import { PXIconBase, PXIconCopy, PXIconTerminal, PXIconX, IconCopyDialog, type CopyDialogTab } from "@/components/icons";
 import { cn } from "@/lib/utils";
 
 interface InspectorIdentityProps {
@@ -16,13 +16,6 @@ export function InspectorIdentity({ icon, onClose, className }: InspectorIdentit
   const componentName = toPXComponentName(icon.name);
   const [isCopyDialogOpen, setIsCopyDialogOpen] = React.useState(false);
   const [dialogTab, setDialogTab] = React.useState<CopyDialogTab>("react");
-
-  const [origin, setOrigin] = React.useState("https://pxui.dev");
-  React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      setOrigin(window.location.origin);
-    }
-  }, []);
 
   const openCopyDialog = (tab: CopyDialogTab = "react") => {
     setDialogTab(tab);

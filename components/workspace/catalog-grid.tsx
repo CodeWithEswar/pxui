@@ -6,7 +6,6 @@ import { SpecimenTile } from "./specimen-tile";
 import { Button } from "@/components/ui/button";
 import { PXIconSearch } from "@/components/icons";
 import { DensityMode } from "./hooks/use-density-preference";
-import { cn } from "@/lib/utils";
 
 interface CatalogGridProps {
   icons: IconDefinition[];
@@ -108,7 +107,7 @@ export function CatalogGrid({
           )}
           {query && (
             <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-card border border-border text-foreground text-[11px] font-mono">
-              "{query}"
+              &quot;{query}&quot;
               {onClearQuery && (
                 <button
                   type="button"

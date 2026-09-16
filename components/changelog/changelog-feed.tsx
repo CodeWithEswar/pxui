@@ -1,15 +1,7 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
-import {
-  PXIconSparkles,
-  PXIconCheck,
-  PXIconArrowRight,
-  PXIconTerminal,
-  PXIconSliders,
-  PXIconCode,
-} from "@/components/icons";
+import { PXIconTerminal } from "@/components/icons";
 import { cn } from "@/lib/utils";
 
 interface ReleaseEntry {

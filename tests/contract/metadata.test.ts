@@ -25,7 +25,7 @@ describe("PXUI Metadata Package Contract (@pxui/metadata)", () => {
     assert.ok(Array.isArray(records));
     assert.ok(records.length >= 100, `Expected records >= 100, got ${records.length}`);
 
-    const home = records.find((r: any) => r.slug === "px-home");
+    const home = records.find((r: { slug: string; componentName: string; aliases: string[] }) => r.slug === "px-home");
     assert.ok(home);
     assert.strictEqual(home.componentName, "PXIconHome");
     assert.ok(home.aliases.includes("house"));

@@ -50,7 +50,7 @@ export const PXIconThumbsUpDefinition: PXIconDefinition = {
  */
 export const PXIconThumbsUp = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconThumbsUpDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconThumbsUpDefinition} {...props} />;
   }
 );
 

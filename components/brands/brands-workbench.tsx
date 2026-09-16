@@ -1,14 +1,12 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
 import { IconDefinition } from "@/lib/icons/schema";
 import { PXIconBase } from "@/components/icons/px-icon-base";
 import {
   PXIconSearch,
   PXIconCopy,
   PXIconCheck,
-  PXIconArrowRight,
   PXIconCode,
 } from "@/components/icons";
 import { SyntaxHighlighter, CodeWrapButton } from "@/components/ui/syntax-highlighter";

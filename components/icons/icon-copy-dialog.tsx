@@ -30,6 +30,7 @@ import { SyntaxHighlighter, CodeWrapButton } from "@/components/ui/syntax-highli
 import { copyToClipboard } from "@/lib/clipboard";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
+import { useOrigin } from "@/lib/hooks/use-origin";
 
 export type CopyDialogTab = "react" | "native" | "shadcn" | "svg";
 
@@ -51,32 +52,35 @@ export function IconCopyDialog({
   const [copiedId, setCopiedId] = React.useState<string | null>(null);
   const [selectedSize, setSelectedSize] = React.useState<number>(24);
   const [useFilled, setUseFilled] = React.useState(false);
-  const [packageManager, setPackageManager] = React.useState<PackageManager>("pnpm");
+  const [packageManager, setPackageManager] = React.useState<PackageManager>(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("pxui_preferred_pm") as PackageManager;
+      if (saved && ["pnpm", "npm", "yarn", "bun"].includes(saved)) {
+        return saved;
+      }
+    }
+    return "pnpm";
+  });
   const [codeTheme, setCodeTheme] = React.useState<"dark" | "light">("dark");
   const [codeWrap, setCodeWrap] = React.useState(false);
   const userSelectedThemeRef = React.useRef(false);
-  const [mounted, setMounted] = React.useState(false);
 
   const componentName = toPXComponentName(icon.name);
-  const [origin, setOrigin] = React.useState("https://pxui.dev");
+  const origin = useOrigin();
+  const mounted = React.useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
 
-  React.useEffect(() => {
-    setMounted(true);
-    if (typeof window !== "undefined") {
-      setOrigin(window.location.origin);
-      const saved = localStorage.getItem("pxui_preferred_pm") as PackageManager;
-      if (saved && ["pnpm", "npm", "yarn", "bun"].includes(saved)) {
-        setPackageManager(saved);
-      }
-    }
-  }, []);
-
-  React.useEffect(() => {
+  const [prevIsOpen, setPrevIsOpen] = React.useState(isOpen);
+  if (isOpen !== prevIsOpen) {
+    setPrevIsOpen(isOpen);
     if (isOpen) {
       setActiveTab(initialTab);
       setCopiedId(null);
     }
-  }, [isOpen, initialTab]);
+  }
 
   // Synchronize code theme with resolvedTheme when user has not manually toggled
   React.useEffect(() => {

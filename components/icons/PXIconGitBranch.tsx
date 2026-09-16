@@ -50,7 +50,7 @@ export const PXIconGitBranchDefinition: PXIconDefinition = {
  */
 export const PXIconGitBranch = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconGitBranchDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconGitBranchDefinition} {...props} />;
   }
 );
 

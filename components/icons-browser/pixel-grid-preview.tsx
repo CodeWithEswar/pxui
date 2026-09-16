@@ -15,9 +15,6 @@ interface PixelGridPreviewProps {
 export function PixelGridPreview({ icon, filled = false, animated = false }: PixelGridPreviewProps) {
   const [showGrid, setShowGrid] = React.useState(true);
   const [bgMode, setBgMode] = React.useState<"dark" | "light" | "checker">("dark");
-  const [zoom, setZoom] = React.useState<1 | 2 | 4 | 8>(8);
-
-  const canvasSize = 24 * zoom; // e.g. 24 * 8 = 192px
 
   const bgStyles = {
     dark: "bg-[#181715] text-[#faf9f5] border-[#2e2c28]",

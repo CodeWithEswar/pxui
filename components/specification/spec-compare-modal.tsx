@@ -41,12 +41,14 @@ export function SpecCompareModal({
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, onClose]);
 
-  // Reset candidate search on open
-  React.useEffect(() => {
+  // Adjust candidate search query when modal opens
+  const [prevIsOpen, setPrevIsOpen] = React.useState(isOpen);
+  if (isOpen !== prevIsOpen) {
+    setPrevIsOpen(isOpen);
     if (isOpen) {
       setSearchQuery("");
     }
-  }, [isOpen]);
+  }
 
   if (!isOpen) return null;
 

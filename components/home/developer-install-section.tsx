@@ -5,14 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { PXIconCopy, PXIconCheck, PXIconTerminal, PACKAGE_MANAGERS } from "@/components/icons";
 import { toast } from "sonner";
+import { useOrigin } from "@/lib/hooks/use-origin";
 
 export function DeveloperInstallSection() {
   const [copied, setCopied] = React.useState<string | null>(null);
-  const [origin, setOrigin] = React.useState("https://pxui.dev");
-
-  React.useEffect(() => {
-    setOrigin(window.location.origin);
-  }, []);
+  const origin = useOrigin();
 
   const commands = {
     npm: `npx shadcn@latest add ${origin}/r/px-home.json`,

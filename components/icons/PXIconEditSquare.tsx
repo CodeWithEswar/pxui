@@ -53,7 +53,7 @@ export const PXIconEditSquareDefinition: PXIconDefinition = {
  */
 export const PXIconEditSquare = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconEditSquareDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconEditSquareDefinition} {...props} />;
   }
 );
 

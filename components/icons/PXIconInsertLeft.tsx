@@ -51,7 +51,7 @@ export const PXIconInsertLeftDefinition: PXIconDefinition = {
  */
 export const PXIconInsertLeft = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconInsertLeftDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconInsertLeftDefinition} {...props} />;
   }
 );
 

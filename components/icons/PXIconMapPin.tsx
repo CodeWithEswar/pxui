@@ -56,7 +56,7 @@ export const PXIconMapPinDefinition: PXIconDefinition = {
  */
 export const PXIconMapPin = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconMapPinDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconMapPinDefinition} {...props} />;
   }
 );
 

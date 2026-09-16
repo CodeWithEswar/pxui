@@ -2,8 +2,7 @@
 
 import * as React from "react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { PXIconSearch, PXIconBell, PXIconSettings, PXIconSliders } from "@/components/icons";
+import { PXIconSearch, PXIconBell, PXIconSettings } from "@/components/icons";
 
 export function GeometrySection() {
   const [showGrid, setShowGrid] = React.useState(true);

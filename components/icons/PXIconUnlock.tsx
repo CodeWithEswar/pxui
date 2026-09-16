@@ -50,7 +50,7 @@ export const PXIconUnlockDefinition: PXIconDefinition = {
  */
 export const PXIconUnlock = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconUnlockDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconUnlockDefinition} {...props} />;
   }
 );
 

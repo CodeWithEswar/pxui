@@ -52,7 +52,7 @@ export const PXIconSelectionCheckDefinition: PXIconDefinition = {
  */
 export const PXIconSelectionCheck = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconSelectionCheckDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconSelectionCheckDefinition} {...props} />;
   }
 );
 

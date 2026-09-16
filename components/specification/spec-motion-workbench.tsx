@@ -72,15 +72,15 @@ function getFramePose(animType: string, frame: number): {
 }
 
 export function SpecMotionWorkbench({ icon }: SpecMotionWorkbenchProps) {
-  if (!icon.animation) {
-    return null;
-  }
-
   const [isPlaying, setIsPlaying] = React.useState(true);
   const [activeFrame, setActiveFrame] = React.useState<number | null>(null);
   const [reducedMotion, setReducedMotion] = React.useState(false);
   const [speed, setSpeed] = React.useState<1 | 0.5 | 2>(1);
   const [stageTheme, setStageTheme] = React.useState<"auto" | "dark" | "light">("auto");
+
+  if (!icon.animation) {
+    return null;
+  }
 
   const frames = [1, 2, 3, 4, 5];
   const animType = icon.animation.type || "spin";

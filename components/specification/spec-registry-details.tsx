@@ -6,8 +6,6 @@ import { toPXComponentName, generateRegistryItemJson } from "@/lib/compiler";
 import {
   PXIconCheck,
   PXIconCopy,
-  PXIconTerminal,
-  PACKAGE_MANAGERS,
   PackageManagerSwitcher,
   HighlightedShadcnCommand,
   getShadcnAddCommand,
@@ -17,6 +15,7 @@ import { SyntaxHighlighter, CodeWrapButton } from "@/components/ui/syntax-highli
 import { copyToClipboard } from "@/lib/clipboard";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
+import { useOrigin } from "@/lib/hooks/use-origin";
 
 interface SpecRegistryDetailsProps {
   icon: IconDefinition;
@@ -28,23 +27,18 @@ export function SpecRegistryDetails({ icon }: SpecRegistryDetailsProps) {
   const [copiedCmd, setCopiedCmd] = React.useState(false);
   const [copiedJson, setCopiedJson] = React.useState(false);
   const [jsonWrapped, setJsonWrapped] = React.useState(false);
-  const [packageManager, setPackageManager] = React.useState<PackageManager>("pnpm");
-
-  const componentName = toPXComponentName(icon.name);
-
-  const [origin, setOrigin] = React.useState("https://pxui.dev");
-  const [mounted, setMounted] = React.useState(false);
-
-  React.useEffect(() => {
-    setMounted(true);
+  const [packageManager, setPackageManager] = React.useState<PackageManager>(() => {
     if (typeof window !== "undefined") {
-      setOrigin(window.location.origin);
       const saved = localStorage.getItem("pxui_preferred_pm") as PackageManager;
       if (saved && ["pnpm", "npm", "yarn", "bun"].includes(saved)) {
-        setPackageManager(saved);
+        return saved;
       }
     }
-  }, []);
+    return "pnpm";
+  });
+
+  const componentName = toPXComponentName(icon.name);
+  const origin = useOrigin();
 
   const handleSelectPkg = (pkg: PackageManager) => {
     setPackageManager(pkg);

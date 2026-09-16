@@ -54,7 +54,7 @@ export const PXIconCloseTabDefinition: PXIconDefinition = {
  */
 export const PXIconCloseTab = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconCloseTabDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconCloseTabDefinition} {...props} />;
   }
 );
 

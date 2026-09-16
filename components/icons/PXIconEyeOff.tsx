@@ -51,7 +51,7 @@ export const PXIconEyeOffDefinition: PXIconDefinition = {
  */
 export const PXIconEyeOff = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconEyeOffDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconEyeOffDefinition} {...props} />;
   }
 );
 

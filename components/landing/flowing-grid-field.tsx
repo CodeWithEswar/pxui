@@ -139,6 +139,7 @@ export function FlowingGridField({ className }: { className?: string }) {
       if (!isVisible) return;
 
       const dt = Math.min((now - lastTime) / 1000, 0.1);
+      void dt;
       lastTime = now;
 
       ctx.clearRect(0, 0, width, height);

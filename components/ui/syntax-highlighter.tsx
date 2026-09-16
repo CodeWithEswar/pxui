@@ -153,7 +153,7 @@ export function SyntaxHighlighter({
     let match: RegExpExecArray | null;
 
     while ((match = tokenRegex.exec(line)) !== null) {
-      const [full, jsonKey, str, tag, tagEnd, kw, attr, num, punct] = match;
+      const [, jsonKey, str, tag, tagEnd, kw, attr, num, punct] = match;
       const matchIndex = match.index;
 
       // Plain text before token

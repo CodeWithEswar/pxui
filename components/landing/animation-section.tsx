@@ -9,7 +9,6 @@ import {
   PXIconDownload,
   PXIconPlay,
   PXIconPause,
-  PXIconSparkles,
 } from "@/components/icons";
 
 const ANIM_SPECIMENS = [

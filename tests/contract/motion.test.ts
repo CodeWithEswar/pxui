@@ -13,7 +13,7 @@ describe("PXUI Stepped Motion & Reduced-Motion Contract Gate (Section 9.30, 9.31
       const anim = icon.animation || (icon.animations && icon.animations[0]);
       assert.ok(anim, `Animated icon ${icon.name} must have valid animation metadata`);
       assert.ok(
-        anim.type || anim.steps || (anim as any).keyframes,
+        anim.type || anim.steps || (anim as { keyframes?: unknown }).keyframes,
         `Icon ${icon.name} must specify animation type or discrete stepped keyframes`
       );
     }

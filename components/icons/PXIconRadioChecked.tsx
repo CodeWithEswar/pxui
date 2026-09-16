@@ -52,7 +52,7 @@ export const PXIconRadioCheckedDefinition: PXIconDefinition = {
  */
 export const PXIconRadioChecked = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconRadioCheckedDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconRadioCheckedDefinition} {...props} />;
   }
 );
 

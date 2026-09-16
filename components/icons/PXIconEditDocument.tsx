@@ -52,7 +52,7 @@ export const PXIconEditDocumentDefinition: PXIconDefinition = {
  */
 export const PXIconEditDocument = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconEditDocumentDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconEditDocumentDefinition} {...props} />;
   }
 );
 

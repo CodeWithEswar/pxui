@@ -16,13 +16,7 @@ export function SpecMetadataTaxonomy({ icon }: SpecMetadataTaxonomyProps) {
   const [rawWrapped, setRawWrapped] = React.useState(false);
   const componentName = toPXComponentName(icon.name);
   const { resolvedTheme } = useTheme();
-  const [codeTheme, setCodeTheme] = React.useState<"dark" | "light">("dark");
-
-  React.useEffect(() => {
-    if (resolvedTheme === "light" || resolvedTheme === "dark") {
-      setCodeTheme(resolvedTheme);
-    }
-  }, [resolvedTheme]);
+  const codeTheme: "dark" | "light" = resolvedTheme === "light" ? "light" : "dark";
 
   return (
     <section id="metadata" className="scroll-mt-24 space-y-6">

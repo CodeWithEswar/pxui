@@ -3,7 +3,6 @@
 import * as React from "react";
 import Link from "next/link";
 import { ICONS_CATALOG } from "@/lib/icons/catalog";
-import { IconDefinition } from "@/lib/icons/schema";
 import { toPXComponentName } from "@/lib/compiler";
 import { PXIconBase } from "@/components/icons/px-icon-base";
 import {

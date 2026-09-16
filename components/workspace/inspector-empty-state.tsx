@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { PXIconSliders } from "@/components/icons";
 import { PXUIMark } from "@/components/brand";
 
 export function InspectorEmptyState() {

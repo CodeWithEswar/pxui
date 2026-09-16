@@ -3,11 +3,24 @@
 import * as React from "react";
 import type { PXIconProps } from "@pxui/core";
 
+export type IconPathItem = {
+  d: string;
+  fillRule?: "nonzero" | "evenodd" | "inherit";
+  clipRule?: "nonzero" | "evenodd" | "inherit";
+};
+
 export interface PXIconBaseProps extends PXIconProps {
   definition: {
-    paths: { d: string; fillRule?: string; clipRule?: string }[];
-    filled?: { d: string; fillRule?: string; clipRule?: string }[];
-    animation?: any;
+    paths?: readonly IconPathItem[];
+    filled?: readonly IconPathItem[];
+    geometry?: {
+      paths?: readonly IconPathItem[];
+      filled?: readonly IconPathItem[];
+    };
+    animation?: {
+      cssClass?: string;
+      frames?: readonly { durationMs: number; transform?: string; opacity?: number }[];
+    };
     grid?: number;
   };
   strokeWidth?: number | string;
@@ -40,11 +53,11 @@ export const PXIconBase = React.forwardRef<SVGSVGElement, PXIconBaseProps>(
   ) => {
     const dimension = typeof size === "number" ? `${size}px` : size;
 
-    const rawPaths: Array<{ d: string; fillRule?: any; clipRule?: any }> =
-      (definition as any)?.geometry?.paths || (definition as any)?.paths || [];
-    const rawFilled: Array<{ d: string; fillRule?: any; clipRule?: any }> | undefined =
-      (definition as any)?.geometry?.filled || (definition as any)?.filled;
-    const paths: Array<{ d: string; fillRule?: any; clipRule?: any }> =
+    const rawPaths: readonly IconPathItem[] =
+      definition.geometry?.paths || definition.paths || [];
+    const rawFilled: readonly IconPathItem[] | undefined =
+      definition.geometry?.filled || definition.filled;
+    const paths: readonly IconPathItem[] =
       filled && rawFilled && rawFilled.length > 0 ? rawFilled : rawPaths;
 
     const hasAnimation = animated && Boolean(definition.animation);
@@ -71,6 +84,7 @@ export const PXIconBase = React.forwardRef<SVGSVGElement, PXIconBaseProps>(
         width={dimension}
         height={dimension}
         fill={color}
+        strokeWidth={strokeWidth}
         className={`pixel-crisp inline-block shrink-0 select-none ${className}`.trim()}
         role={isMeaningful ? "img" : undefined}
         aria-hidden={isMeaningful ? undefined : true}
@@ -88,8 +102,8 @@ export const PXIconBase = React.forwardRef<SVGSVGElement, PXIconBaseProps>(
           <path
             key={idx}
             d={p.d}
-            fillRule={p.fillRule as any}
-            clipRule={p.clipRule as any}
+            fillRule={p.fillRule}
+            clipRule={p.clipRule}
           />
         ))}
       </svg>

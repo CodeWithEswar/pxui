@@ -51,7 +51,7 @@ export const PXIconInsertBelowDefinition: PXIconDefinition = {
  */
 export const PXIconInsertBelow = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconInsertBelowDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconInsertBelowDefinition} {...props} />;
   }
 );
 

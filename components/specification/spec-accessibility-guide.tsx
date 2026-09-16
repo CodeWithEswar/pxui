@@ -16,18 +16,12 @@ interface SpecAccessibilityGuideProps {
 export function SpecAccessibilityGuide({ icon }: SpecAccessibilityGuideProps) {
   const componentName = toPXComponentName(icon.name);
   const { resolvedTheme } = useTheme();
-  const [codeTheme, setCodeTheme] = React.useState<"dark" | "light">("dark");
+  const codeTheme = resolvedTheme === "light" ? "light" : "dark";
   const [copiedSnippet, setCopiedSnippet] = React.useState<string | null>(null);
   const [wrapState, setWrapState] = React.useState<Record<string, boolean>>({});
 
   const isWrap = (id: string) => !!wrapState[id];
   const toggleWrap = (id: string) => setWrapState(prev => ({ ...prev, [id]: !prev[id] }));
-
-  React.useEffect(() => {
-    if (resolvedTheme === "light" || resolvedTheme === "dark") {
-      setCodeTheme(resolvedTheme);
-    }
-  }, [resolvedTheme]);
 
   const decorativeSnippet = `<${componentName} aria-hidden="true" />`;
   const semanticSnippet = `<${componentName} aria-label="${icon.title || icon.name}" role="img" />`;

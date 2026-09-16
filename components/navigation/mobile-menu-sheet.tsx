@@ -14,7 +14,7 @@ import {
 } from "@/components/icons";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
-import { PixelSquare, GridCoordinateLabel } from "@/components/landing/technical-mark";
+import { GridCoordinateLabel } from "@/components/landing/technical-mark";
 
 interface MobileMenuSheetProps {
   open: boolean;
@@ -178,6 +178,7 @@ export function MobileMenuSheet({ open, onClose, onOpenSearch }: MobileMenuSheet
                         {item.num}
                       </span>
                       <span className="font-sans font-medium text-sm text-foreground group-hover:text-primary transition-colors flex items-center gap-1.5">
+                        <Icon size={14} className="text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
                         {item.label}
                       </span>
                     </div>

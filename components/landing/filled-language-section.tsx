@@ -8,7 +8,6 @@ import {
   PXIconBell,
   PXIconShieldCheck,
   PXIconUser,
-  PXIconSparkles,
 } from "@/components/icons";
 
 const FILLED_SPECIMENS = [

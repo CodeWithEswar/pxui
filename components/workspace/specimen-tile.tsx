@@ -71,7 +71,7 @@ export const SpecimenTile = React.memo(function SpecimenTile({
           }
         }}
         aria-label={`${componentName} pixel icon, ${icon.category} category`}
-        aria-selected={isSelected}
+        aria-pressed={isSelected}
         className={cn(
           "group relative flex flex-col justify-between rounded-lg border transition-all duration-150 cursor-pointer text-left select-none outline-none overflow-hidden",
           minHeightClass,
