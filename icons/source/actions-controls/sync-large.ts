@@ -1,0 +1,31 @@
+import { defineIcon } from "../../schemas/icon.schema";
+
+export const syncLarge = defineIcon({
+  name: "PXIconSyncLarge",
+  slug: "px-sync-large",
+  title: "Sync Large",
+  description: "Pixel icon for sync; large-emphasis variant.",
+  category: "actions-controls",
+  family: "sync",
+  aliases: ['sync-expanded', 'synchronize-large'],
+  tags: ['sync', 'large', 'action', 'control', 'ui'],
+  geometry: {
+    grid: 24,
+    paths: [
+      {
+        d: "M2 8h2v6H2V8zm2-2h2v2H4V6zm2-2h10v2H6V4zm9-2h2v2h-2V2zm1 2h5v2h-5V4zm-1 2h2v2h-2V6z M20 10h2v6h-2v-6zm-2 6h2v2h-2v-2zm-10 2h10v2H8v-2zm-1 2h2v2H7v-2zm-4-2h5v2H3v-2zm4-2h2v2H7v-2z",
+        fillRule: "evenodd",
+      },
+    ],
+    bounds: { minX: 2, minY: 2, maxX: 22, maxY: 22 },
+  },
+  animation: {
+    type: "spin",
+    family: "loop",
+    trigger: "always",
+  },
+  status: "experimental",
+  introducedVersion: "1.0.0",
+});
+
+export default syncLarge;

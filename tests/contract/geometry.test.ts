@@ -246,6 +246,61 @@ describe("PXUI Canonical Geometry & Pin-to-Pin Engine", () => {
     assert.ok(saveSquare.geometry.paths[0].d.includes(innerSave));
   });
 
+  it("should verify Batch 007 Share, Refresh, and Sync family size hierarchy", () => {
+    for (const fam of ["share", "refresh", "sync"]) {
+      const small = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === `px-${fam}-small`)!);
+      const base = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === `px-${fam}`)!);
+      const large = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === `px-${fam}-large`)!);
+
+      assert.ok(
+        small.occupiedCellCount < base.occupiedCellCount,
+        `${fam}-small (${small.occupiedCellCount}) should be < ${fam}-base (${base.occupiedCellCount})`
+      );
+      assert.ok(
+        base.occupiedCellCount < large.occupiedCellCount,
+        `${fam}-base (${base.occupiedCellCount}) should be < ${fam}-large (${large.occupiedCellCount})`
+      );
+    }
+  });
+
+  it("should verify Batch 007 directional pairs reflection symmetry", () => {
+    const hPairs = [["share-left", "share-right"], ["refresh-left", "refresh-right"], ["sync-left", "sync-right"]];
+    for (const [l, r] of hPairs) {
+      const left = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === `px-${l}`)!);
+      const right = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === `px-${r}`)!);
+      assert.strictEqual(left.occupiedCellCount, right.occupiedCellCount, `${l} and ${r} cell count mismatch`);
+    }
+
+    const vPairs = [["share-up", "share-down"], ["refresh-up", "refresh-down"], ["sync-up", "sync-down"]];
+    for (const [u, d] of vPairs) {
+      const up = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === `px-${u}`)!);
+      const down = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === `px-${d}`)!);
+      assert.strictEqual(up.occupiedCellCount, down.occupiedCellCount, `${u} and ${d} cell count mismatch`);
+    }
+  });
+
+  it("should verify Batch 007 container consistency and inner glyph equality", () => {
+    for (const fam of ["share", "refresh", "sync"]) {
+      const circle = CANONICAL_ICONS.find((i) => i.slug === `px-${fam}-circle`);
+      const square = CANONICAL_ICONS.find((i) => i.slug === `px-${fam}-square`);
+      assert.ok(circle && square, `Missing container pair for ${fam}`);
+
+      const innerC = circle.geometry.paths[0].d.split(" M")[1];
+      const innerS = square.geometry.paths[0].d.split(" M")[1];
+      assert.strictEqual(innerC, innerS, `Inner glyph mismatch between ${fam}-circle and ${fam}-square`);
+    }
+  });
+
+  it("should verify Refresh and Sync semantic differentiation", () => {
+    const refresh = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === "px-refresh")!);
+    const sync = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === "px-sync")!);
+
+    // Refresh is an open cyclic loop with 1 arrowhead, whereas Sync has 180-deg rotational symmetry with 2 opposing flows
+    assert.strictEqual(sync.symmetry.rotational180, true, "Sync must exhibit 180-deg rotational symmetry");
+    assert.strictEqual(refresh.symmetry.rotational180, false, "Refresh must be unidirectional cycle, not 180-deg symmetrical");
+    assert.notStrictEqual(refresh.subpaths[0].d, sync.subpaths[0].d, "Refresh and Sync paths must be distinct");
+  });
+
   it("should tokenize path and resolve subpaths accurately", () => {
     const cmds = tokenizePath("M10 4h4v6z");
     assert.strictEqual(cmds.length, 4);

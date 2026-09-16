@@ -1,0 +1,31 @@
+import { defineIcon } from "../../schemas/icon.schema";
+
+export const refreshCircle = defineIcon({
+  name: "PXIconRefreshCircle",
+  slug: "px-refresh-circle",
+  title: "Refresh Circle",
+  description: "Pixel icon for refresh; circular container.",
+  category: "actions-controls",
+  family: "refresh",
+  aliases: ['reload-circle', 'renew-circle'],
+  tags: ['refresh', 'circle', 'action', 'control', 'ui'],
+  geometry: {
+    grid: 24,
+    paths: [
+      {
+        d: "M8 2h8v1h2v1h2v1h1v3h1v8h-1v3h-1v1h-2v1h-2v1H8v-1H6v-1H4v-1H3v-3H2V8h1V5h1V4h2V3h2V2z M9 7h4v2H9V7zm3-1h2v2h-2V6zm1 1h3v2h-3V7zm-1 1h2v2h-2V8z M7 9h2v5H7V9zm2 5h2v2H9v-2zm2 2h4v2h-4v-2zm4-2h2v2h-2v-2zm2-4h2v4h-2v-4z",
+        fillRule: "evenodd",
+      },
+    ],
+    bounds: { minX: 2, minY: 2, maxX: 22, maxY: 22 },
+  },
+  animation: {
+    type: "spin",
+    family: "loop",
+    trigger: "always",
+  },
+  status: "experimental",
+  introducedVersion: "1.0.0",
+});
+
+export default refreshCircle;

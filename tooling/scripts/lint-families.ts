@@ -64,6 +64,11 @@ export function runFamilyLint(): {
     ["insert-left", "insert-right"],
     ["close-panel-left", "close-panel-right"],
     ["toggle-left", "toggle-right"],
+    ["copy-left", "copy-right"],
+    ["save-left", "save-right"],
+    ["share-left", "share-right"],
+    ["refresh-left", "refresh-right"],
+    ["sync-left", "sync-right"],
   ];
 
   for (const [leftName, rightName] of horizontalPairs) {
@@ -108,6 +113,11 @@ export function runFamilyLint(): {
     ["chevron-up", "chevron-down"],
     ["insert-above", "insert-below"],
     ["close-panel-top", "close-panel-bottom"],
+    ["copy-up", "copy-down"],
+    ["save-up", "save-down"],
+    ["share-up", "share-down"],
+    ["refresh-up", "refresh-down"],
+    ["sync-up", "sync-down"],
   ];
 
   for (const [upName, downName] of verticalPairs) {
@@ -136,7 +146,7 @@ export function runFamilyLint(): {
   }
 
   // 3. Container Families Consistency (Section 27)
-  const containerPrefixes = ["add", "close", "check", "remove", "subtract", "clear", "edit"];
+  const containerPrefixes = ["add", "close", "check", "remove", "subtract", "clear", "edit", "copy", "save", "share", "refresh", "sync"];
   for (const prefix of containerPrefixes) {
     const circle = analysisCache.get(`${prefix}-circle`);
     const square = analysisCache.get(`${prefix}-square`);

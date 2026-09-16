@@ -289,8 +289,14 @@ export const ICON_FAMILIES: Record<string, PXFamilyDefinition> = {
   "refresh": {
     id: "refresh",
     name: "Refresh",
-    description: "Dual circular pixel arrows for reloading or synchronizing data.",
+    description: "One continuous cyclic arrow indicating refresh or reload operations.",
     rootIcon: "refresh",
+  },
+  "sync": {
+    id: "sync",
+    name: "Sync",
+    description: "Two opposing directional flows representing bidirectional data exchange.",
+    rootIcon: "sync",
   },
   "power": {
     id: "power",

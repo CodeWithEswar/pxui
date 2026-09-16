@@ -223,5 +223,51 @@ describe("PXUI Search Engine", () => {
     const r3 = searchIcons(ICONS_CATALOG, { query: "commit" });
     assert.ok(r3.some((r) => r.name === "save"));
   });
+
+  // Batch D.07 (0071–0100): Share, Refresh, Sync Families Search Acceptance
+  it("should prioritize share family for 'share'", () => {
+    const results = searchIcons(ICONS_CATALOG, { query: "share" });
+    assert.strictEqual(results[0]?.name, "share");
+    const top4 = results.slice(0, 4).map((r) => r.name);
+    assert.ok(top4.includes("share-circle"));
+    assert.ok(top4.includes("share-square"));
+  });
+
+  it("should find share by 'distribute' and 'nodes'", () => {
+    const r1 = searchIcons(ICONS_CATALOG, { query: "distribute" });
+    assert.ok(r1.some((r) => r.name === "share"));
+    const r2 = searchIcons(ICONS_CATALOG, { query: "nodes" });
+    assert.ok(r2.some((r) => r.name === "share"));
+  });
+
+  it("should prioritize refresh family for 'refresh'", () => {
+    const results = searchIcons(ICONS_CATALOG, { query: "refresh" });
+    assert.strictEqual(results[0]?.name, "refresh");
+    const top4 = results.slice(0, 4).map((r) => r.name);
+    assert.ok(top4.includes("refresh-circle"));
+    assert.ok(top4.includes("refresh-square"));
+  });
+
+  it("should find refresh by 'reload' and 'retry'", () => {
+    const r1 = searchIcons(ICONS_CATALOG, { query: "reload" });
+    assert.ok(r1.some((r) => r.name === "refresh"));
+    const r2 = searchIcons(ICONS_CATALOG, { query: "retry" });
+    assert.ok(r2.some((r) => r.name === "refresh"));
+  });
+
+  it("should prioritize sync family for 'sync'", () => {
+    const results = searchIcons(ICONS_CATALOG, { query: "sync" });
+    assert.strictEqual(results[0]?.name, "sync");
+    const top4 = results.slice(0, 4).map((r) => r.name);
+    assert.ok(top4.includes("sync-circle"));
+    assert.ok(top4.includes("sync-square"));
+  });
+
+  it("should find sync by 'synchronize' and 'bidirectional'", () => {
+    const r1 = searchIcons(ICONS_CATALOG, { query: "synchronize" });
+    assert.ok(r1.some((r) => r.name === "sync"));
+    const r2 = searchIcons(ICONS_CATALOG, { query: "bidirectional" });
+    assert.ok(r2.some((r) => r.name === "sync"));
+  });
 });
 

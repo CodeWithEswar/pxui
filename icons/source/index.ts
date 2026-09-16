@@ -88,6 +88,41 @@ import { saveUp as PXIconSaveUpDef } from "./actions-controls/save-up";
 import { saveDown as PXIconSaveDownDef } from "./actions-controls/save-down";
 import { saveActive as PXIconSaveActiveDef } from "./actions-controls/save-active";
 
+// Production Batch 07 (0071–0100): Share, Refresh, Sync Families
+import { share as PXIconShareDef } from "./actions-controls/share";
+import { shareCircle as PXIconShareCircleDef } from "./actions-controls/share-circle";
+import { shareSquare as PXIconShareSquareDef } from "./actions-controls/share-square";
+import { shareSmall as PXIconShareSmallDef } from "./actions-controls/share-small";
+import { shareLarge as PXIconShareLargeDef } from "./actions-controls/share-large";
+import { shareLeft as PXIconShareLeftDef } from "./actions-controls/share-left";
+import { shareRight as PXIconShareRightDef } from "./actions-controls/share-right";
+import { shareUp as PXIconShareUpDef } from "./actions-controls/share-up";
+import { shareDown as PXIconShareDownDef } from "./actions-controls/share-down";
+import { shareActive as PXIconShareActiveDef } from "./actions-controls/share-active";
+
+import { refresh as PXIconRefreshDef } from "./actions-controls/refresh";
+import { refreshCircle as PXIconRefreshCircleDef } from "./actions-controls/refresh-circle";
+import { refreshSquare as PXIconRefreshSquareDef } from "./actions-controls/refresh-square";
+import { refreshSmall as PXIconRefreshSmallDef } from "./actions-controls/refresh-small";
+import { refreshLarge as PXIconRefreshLargeDef } from "./actions-controls/refresh-large";
+import { refreshLeft as PXIconRefreshLeftDef } from "./actions-controls/refresh-left";
+import { refreshRight as PXIconRefreshRightDef } from "./actions-controls/refresh-right";
+import { refreshUp as PXIconRefreshUpDef } from "./actions-controls/refresh-up";
+import { refreshDown as PXIconRefreshDownDef } from "./actions-controls/refresh-down";
+import { refreshActive as PXIconRefreshActiveDef } from "./actions-controls/refresh-active";
+
+import { sync as PXIconSyncDef } from "./actions-controls/sync";
+import { syncCircle as PXIconSyncCircleDef } from "./actions-controls/sync-circle";
+import { syncSquare as PXIconSyncSquareDef } from "./actions-controls/sync-square";
+import { syncSmall as PXIconSyncSmallDef } from "./actions-controls/sync-small";
+import { syncLarge as PXIconSyncLargeDef } from "./actions-controls/sync-large";
+import { syncLeft as PXIconSyncLeftDef } from "./actions-controls/sync-left";
+import { syncRight as PXIconSyncRightDef } from "./actions-controls/sync-right";
+import { syncUp as PXIconSyncUpDef } from "./actions-controls/sync-up";
+import { syncDown as PXIconSyncDownDef } from "./actions-controls/sync-down";
+import { syncActive as PXIconSyncActiveDef } from "./actions-controls/sync-active";
+
+
 import { home as PXIconHomeDef } from "./navigation/home";
 import { search as PXIconSearchDef } from "./navigation/search";
 import { settings as PXIconSettingsDef } from "./actions/settings";
@@ -97,8 +132,6 @@ import { minus as PXIconMinusDef } from "./actions/minus";
 import { trash as PXIconTrashDef } from "./actions/trash";
 import { download as PXIconDownloadDef } from "./actions/download";
 import { upload as PXIconUploadDef } from "./actions/upload";
-import { share as PXIconShareDef } from "./actions/share";
-import { refresh as PXIconRefreshDef } from "./actions/refresh";
 import { power as PXIconPowerDef } from "./actions/power";
 import { sliders as PXIconSlidersDef } from "./actions/sliders";
 import { toggleLeft as PXIconToggleLeftDef } from "./actions/toggle-left";
@@ -270,6 +303,41 @@ export const CANONICAL_ICONS: PXIconDefinition[] = [
   PXIconSaveDownDef,
   PXIconSaveActiveDef,
 
+  // Production Batch 07: Share, Refresh, Sync Families (0071–0100)
+  PXIconShareDef,
+  PXIconShareCircleDef,
+  PXIconShareSquareDef,
+  PXIconShareSmallDef,
+  PXIconShareLargeDef,
+  PXIconShareLeftDef,
+  PXIconShareRightDef,
+  PXIconShareUpDef,
+  PXIconShareDownDef,
+  PXIconShareActiveDef,
+
+  PXIconRefreshDef,
+  PXIconRefreshCircleDef,
+  PXIconRefreshSquareDef,
+  PXIconRefreshSmallDef,
+  PXIconRefreshLargeDef,
+  PXIconRefreshLeftDef,
+  PXIconRefreshRightDef,
+  PXIconRefreshUpDef,
+  PXIconRefreshDownDef,
+  PXIconRefreshActiveDef,
+
+  PXIconSyncDef,
+  PXIconSyncCircleDef,
+  PXIconSyncSquareDef,
+  PXIconSyncSmallDef,
+  PXIconSyncLargeDef,
+  PXIconSyncLeftDef,
+  PXIconSyncRightDef,
+  PXIconSyncUpDef,
+  PXIconSyncDownDef,
+  PXIconSyncActiveDef,
+
+
   PXIconHomeDef,
   PXIconSearchDef,
   PXIconSettingsDef,
@@ -279,8 +347,6 @@ export const CANONICAL_ICONS: PXIconDefinition[] = [
   PXIconTrashDef,
   PXIconDownloadDef,
   PXIconUploadDef,
-  PXIconShareDef,
-  PXIconRefreshDef,
   PXIconPowerDef,
   PXIconSlidersDef,
   PXIconToggleLeftDef,
