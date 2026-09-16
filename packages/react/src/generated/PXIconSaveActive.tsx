@@ -27,7 +27,6 @@ export const PXIconSaveActiveDefinition: PXIconDefinition = {
   "tags": [
     "save",
     "active",
-    "state",
     "action",
     "control",
     "ui"

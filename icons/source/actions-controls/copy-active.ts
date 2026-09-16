@@ -8,7 +8,7 @@ export const copyActive = defineIcon({
   category: "actions-controls",
   family: "copy",
   aliases: ["duplicate-active", "clone-active", "copy-on", "copied"],
-  tags: ["copy", "active", "state", "action", "control", "ui"],
+  tags: ["copy", "active", "action", "control", "ui"],
   geometry: {
     grid: 24,
     paths: [

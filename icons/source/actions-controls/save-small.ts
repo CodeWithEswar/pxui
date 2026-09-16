@@ -8,7 +8,7 @@ export const saveSmall = defineIcon({
   category: "actions-controls",
   family: "save",
   aliases: ["store-small", "persist-small", "disk-small", "save-compact"],
-  tags: ["save", "small", "compact", "action", "control", "ui"],
+  tags: ["save", "small", "action", "control", "ui"],
   geometry: {
     grid: 24,
     paths: [

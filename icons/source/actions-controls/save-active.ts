@@ -8,7 +8,7 @@ export const saveActive = defineIcon({
   category: "actions-controls",
   family: "save",
   aliases: ["store-active", "persist-active", "disk-active", "saved"],
-  tags: ["save", "active", "state", "action", "control", "ui"],
+  tags: ["save", "active", "action", "control", "ui"],
   geometry: {
     grid: 24,
     paths: [

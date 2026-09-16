@@ -2047,7 +2047,6 @@
     "tags": [
       "copy",
       "small",
-      "compact",
       "action",
       "control",
       "ui"
@@ -2270,7 +2269,6 @@
     "tags": [
       "copy",
       "active",
-      "state",
       "action",
       "control",
       "ui"
@@ -2421,7 +2419,6 @@
     "tags": [
       "save",
       "small",
-      "compact",
       "action",
       "control",
       "ui"
@@ -2648,7 +2645,6 @@
     "tags": [
       "save",
       "active",
-      "state",
       "action",
       "control",
       "ui"

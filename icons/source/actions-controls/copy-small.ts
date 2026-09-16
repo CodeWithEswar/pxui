@@ -8,7 +8,7 @@ export const copySmall = defineIcon({
   category: "actions-controls",
   family: "copy",
   aliases: ["duplicate-small", "clone-small", "copy-compact"],
-  tags: ["copy", "small", "compact", "action", "control", "ui"],
+  tags: ["copy", "small", "action", "control", "ui"],
   geometry: {
     grid: 24,
     paths: [

@@ -27,7 +27,6 @@ export const PXIconCopyActiveDefinition: PXIconDefinition = {
   "tags": [
     "copy",
     "active",
-    "state",
     "action",
     "control",
     "ui"
