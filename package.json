@@ -2,11 +2,17 @@
   "name": "pxui",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "verify": "npm run lint && npm run typecheck && npm run icons:validate && npm run check:generated && npm run validate:determinism && npm test && npm run build",
     "icons:validate": "tsx tooling/scripts/validate-icons.ts",
     "icons:generate": "tsx tooling/scripts/generate-all.ts",
     "generate": "tsx tooling/scripts/generate-all.ts",
