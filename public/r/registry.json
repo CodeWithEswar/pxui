@@ -21,7 +21,7 @@
         },
         {
           "path": "lib/icons/schema.ts",
-          "content": "export type IconCategory =\n  | \"Actions & Controls\"\n  | \"Arrows & Navigation\"\n  | \"Files & Folders\"\n  | \"Communication\"\n  | \"People & Social\"\n  | \"Devices & Hardware\"\n  | \"Development & Code\"\n  | \"Business & Finance\"\n  | \"Commerce\"\n  | \"Media & Creative\"\n  | \"Maps & Travel\"\n  | \"Buildings & Objects\"\n  | \"Health & Fitness\"\n  | \"Weather & Nature\"\n  | \"Security & Privacy\"\n  | \"Time & Calendar\"\n  | \"Education\"\n  | \"AI & Emerging Tech\"\n  | \"Brands & Technology\"\n  | \"Miscellaneous & Symbols\";\n\nexport type AnimationFamily =\n  | \"state\"\n  | \"directional\"\n  | \"attention\"\n  | \"reveal\"\n  | \"signal\"\n  | \"loop\";\n\nexport type AnimationType =\n  | \"spin\"\n  | \"pulse\"\n  | \"bounce\"\n  | \"wiggle\"\n  | \"blink\"\n  | \"ring\"\n  | \"shake\"\n  | \"beat\";\n\nexport type AnimationName =\n  | \"spin\"\n  | \"pulse\"\n  | \"bounce\"\n  | \"wiggle\"\n  | \"blink\"\n  | \"ring\"\n  | \"shake\"\n  | \"beat\"\n  | \"open\"\n  | \"close\"\n  | \"check\"\n  | \"error\"\n  | \"success\"\n  | \"download\"\n  | \"upload\"\n  | \"appear\"\n  | \"disappear\"\n  | \"loading\"\n  | string;\n\nexport interface AnimationDefinition {\n  family: AnimationFamily;\n  type: AnimationType;\n  cssClass: string;\n  description: string;\n  duration?: number;\n  trigger?: \"auto\" | \"hover\" | \"click\" | \"focus\" | \"controlled\" | \"always\" | \"mount\";\n}\n\nexport interface BrandDefinition {\n  brand: string;\n  owner: string;\n  source?: string;\n  guidelinesUrl?: string;\n}\n\nexport interface IconPathDefinition {\n  d: string;\n  fillRule?: \"nonzero\" | \"evenodd\";\n  clipRule?: \"nonzero\" | \"evenodd\";\n}\n\nexport interface IconDefinition {\n  name: string; // lowercase-kebab-case, e.g. \"home\", \"search\"\n  componentName?: string; // Public framework component name, e.g. \"PXIconHome\"\n  slug?: string; // Registry, URL and artifact identifier, e.g. \"px-home\"\n  title: string;\n  description?: string;\n  category: IconCategory;\n  family?: string; // Related geometric/semantic family (Section 7.19)\n  tags: string[];\n  aliases?: string[];\n  grid: 24;\n  paths: IconPathDefinition[];\n  filled?: IconPathDefinition[];\n  variants?: string[]; // Supported canonical variants, e.g. [\"outline\", \"filled\"]\n  animation?: AnimationDefinition;\n  brand?: BrandDefinition;\n  platforms?: string[]; // Supported generated targets (Section 7.27)\n  status?: \"draft\" | \"experimental\" | \"stable\" | \"deprecated\"; // Lifecycle state (Section 7.28)\n  introduced?: string; // First PXUI release containing icon (Section 7.29)\n  introducedVersion: string;\n  deprecated?: boolean; // Deprecation state (Section 7.30)\n  replacedBy?: string; // Migration target when deprecated\n}\n\n/**\n * PixelIconProps conforming strictly to Section 3.11.1 of the design system specification.\n */\nexport interface PixelIconProps extends React.SVGProps<SVGSVGElement> {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  animated?: boolean;\n  animation?: AnimationName;\n  duration?: number;\n  delay?: number;\n  loop?: boolean;\n  trigger?: \"auto\" | \"hover\" | \"click\" | \"focus\" | \"controlled\";\n  filled?: boolean;\n  title?: string;\n  className?: string;\n  \"aria-label\"?: string;\n}\n\n/**\n * Backward compatibility alias for PXIconProps\n */\nexport type PXIconProps = PixelIconProps;\n",
+          "content": "export type IconCategory =\n  | \"Actions & Controls\"\n  | \"Arrows & Navigation\"\n  | \"Files & Folders\"\n  | \"Communication\"\n  | \"People & Social\"\n  | \"Devices & Hardware\"\n  | \"Development & Code\"\n  | \"Business & Finance\"\n  | \"Commerce\"\n  | \"Media & Creative\"\n  | \"Maps & Travel\"\n  | \"Buildings & Objects\"\n  | \"Health & Fitness\"\n  | \"Weather & Nature\"\n  | \"Security & Privacy\"\n  | \"Time & Calendar\"\n  | \"Education\"\n  | \"AI & Emerging Tech\"\n  | \"Brands & Technology\"\n  | \"Miscellaneous & Symbols\";\n\nexport type AnimationFamily =\n  | \"state\"\n  | \"directional\"\n  | \"attention\"\n  | \"reveal\"\n  | \"signal\"\n  | \"loop\";\n\nexport type AnimationType =\n  | \"spin\"\n  | \"pulse\"\n  | \"bounce\"\n  | \"wiggle\"\n  | \"blink\"\n  | \"ring\"\n  | \"shake\"\n  | \"beat\";\n\nexport type AnimationName =\n  | \"spin\"\n  | \"pulse\"\n  | \"bounce\"\n  | \"wiggle\"\n  | \"blink\"\n  | \"ring\"\n  | \"shake\"\n  | \"beat\"\n  | \"open\"\n  | \"close\"\n  | \"check\"\n  | \"error\"\n  | \"success\"\n  | \"download\"\n  | \"upload\"\n  | \"appear\"\n  | \"disappear\"\n  | \"loading\"\n  | string;\n\nexport interface AnimationDefinition {\n  family: AnimationFamily;\n  type: AnimationType;\n  cssClass: string;\n  description: string;\n  duration?: number;\n  trigger?: \"auto\" | \"hover\" | \"click\" | \"focus\" | \"controlled\" | \"always\" | \"mount\";\n}\n\nexport interface BrandDefinition {\n  brand: string;\n  owner: string;\n  source?: string;\n  guidelinesUrl?: string;\n}\n\nexport interface IconPathDefinition {\n  d: string;\n  fillRule?: \"nonzero\" | \"evenodd\";\n  clipRule?: \"nonzero\" | \"evenodd\";\n}\n\nexport interface IconDefinition {\n  name: string; // lowercase-kebab-case, e.g. \"home\", \"search\"\n  componentName?: string; // Public framework component name, e.g. \"PXIconHome\"\n  slug?: string; // Registry, URL and artifact identifier, e.g. \"px-home\"\n  title: string;\n  description?: string;\n  category: IconCategory;\n  family?: string; // Related geometric/semantic family (Section 7.19)\n  tags: string[];\n  aliases?: string[];\n  grid: 24;\n  paths: IconPathDefinition[];\n  geometry?: {\n    grid: number;\n    paths: IconPathDefinition[];\n    bounds?: {\n      minX: number;\n      minY: number;\n      maxX: number;\n      maxY: number;\n    };\n  };\n  filled?: IconPathDefinition[];\n  variants?: string[]; // Supported canonical variants, e.g. [\"outline\", \"filled\"]\n  animation?: AnimationDefinition;\n  brand?: BrandDefinition;\n  platforms?: string[]; // Supported generated targets (Section 7.27)\n  status?: \"draft\" | \"experimental\" | \"stable\" | \"deprecated\"; // Lifecycle state (Section 7.28)\n  introduced?: string; // First PXUI release containing icon (Section 7.29)\n  introducedVersion: string;\n  deprecated?: boolean; // Deprecation state (Section 7.30)\n  replacedBy?: string; // Migration target when deprecated\n}\n\n/**\n * PixelIconProps conforming strictly to Section 3.11.1 of the design system specification.\n */\nexport interface PixelIconProps extends React.SVGProps<SVGSVGElement> {\n  size?: number | string;\n  color?: string;\n  strokeWidth?: number;\n  animated?: boolean;\n  animation?: AnimationName;\n  duration?: number;\n  delay?: number;\n  loop?: boolean;\n  trigger?: \"auto\" | \"hover\" | \"click\" | \"focus\" | \"controlled\";\n  filled?: boolean;\n  title?: string;\n  className?: string;\n  \"aria-label\"?: string;\n}\n\n/**\n * Backward compatibility alias for PXIconProps\n */\nexport type PXIconProps = PixelIconProps;\n",
           "type": "registry:lib",
           "target": "lib/icons/schema.ts"
         }
@@ -1740,7 +1740,7 @@
       "files": [
         {
           "path": "components/pxui/px-edit.tsx",
-          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEdit\",\n  \"slug\": \"px-edit\",\n  \"title\": \"Edit\",\n  \"description\": \"Modifies or updates an existing item, value, object, or piece of content.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"modify\",\n    \"change\",\n    \"update\",\n    \"revise\",\n    \"pencil\",\n    \"write\"\n  ],\n  \"tags\": [\n    \"editing\",\n    \"action\",\n    \"content\",\n    \"toolbar\",\n    \"modify\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M3 21h2v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h2V3h-2v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v2H3v2z\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEdit - Edit\n * Modifies or updates an existing item, value, object, or piece of content.\n * Canonical: PXIconEdit\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEdit = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditDefinition} {...props} />;\n  }\n);\n\nPXIconEdit.displayName = \"PXIconEdit\";\n\nexport default PXIconEdit;\n",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEdit\",\n  \"slug\": \"px-edit\",\n  \"title\": \"Edit\",\n  \"description\": \"Modifies or updates an existing item, value, object, or piece of content.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"modify\",\n    \"change\",\n    \"update\",\n    \"revise\",\n    \"pencil\",\n    \"write\"\n  ],\n  \"tags\": [\n    \"editing\",\n    \"action\",\n    \"content\",\n    \"toolbar\",\n    \"modify\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M17 4h2v1h-2z M16 5h1v1h-1z M18 5h1v1h-1z M14 6h4v2h-4z M12 8h4v2h-4z M10 10h4v2h-4z M8 12h4v2h-4z M6 14h4v2h-4z M5 16h1v1h-1z M7 16h1v1h-1z M4 17h2v2h-2z\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEdit - Edit\n * Modifies or updates an existing item, value, object, or piece of content.\n * Canonical: PXIconEdit\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEdit = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditDefinition} {...props} />;\n  }\n);\n\nPXIconEdit.displayName = \"PXIconEdit\";\n\nexport default PXIconEdit;\n",
           "type": "registry:ui",
           "target": "components/pxui/px-edit.tsx"
         }
@@ -1784,7 +1784,7 @@
       "files": [
         {
           "path": "components/pxui/px-edit-circle.tsx",
-          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit-circle.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditCircleDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEditCircle\",\n  \"slug\": \"px-edit-circle\",\n  \"title\": \"Edit Circle\",\n  \"description\": \"Represents an editing or modification action inside a circular control.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"modify-circle\",\n    \"pencil-circle\",\n    \"update-circle\"\n  ],\n  \"tags\": [\n    \"edit\",\n    \"modify\",\n    \"circle\",\n    \"control\",\n    \"pencil\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M8 2h8v1h2v1h2v1h1v3h1v8h-1v3h-1v1h-2v1h-2v1H8v-1H6v-1H4v-1H3v-3H2V8h1V5h1V4h2V3h2V2z M7 17h2v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h2V7h-2v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v2H7v2z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEditCircle - Edit Circle\n * Represents an editing or modification action inside a circular control.\n * Canonical: PXIconEditCircle\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEditCircle = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditCircleDefinition} {...props} />;\n  }\n);\n\nPXIconEditCircle.displayName = \"PXIconEditCircle\";\n\nexport default PXIconEditCircle;\n",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit-circle.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditCircleDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEditCircle\",\n  \"slug\": \"px-edit-circle\",\n  \"title\": \"Edit Circle\",\n  \"description\": \"Represents an editing or modification action inside a circular control.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"modify-circle\",\n    \"pencil-circle\",\n    \"update-circle\"\n  ],\n  \"tags\": [\n    \"edit\",\n    \"modify\",\n    \"circle\",\n    \"control\",\n    \"pencil\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M8 2h8v1h2v1h2v1h1v3h1v8h-1v3h-1v1h-2v1h-2v1H8v-1H6v-1H4v-1H3v-3H2V8h1V5h1V4h2V3h2V2z M15 7h2v1h-2z M14 8h1v1h-1z M16 8h1v1h-1z M12 9h4v2h-4z M10 11h4v2h-4z M9 13h1v1h-1z M11 13h1v1h-1z M8 14h2v1h-2z M7 15h2v2h-2z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEditCircle - Edit Circle\n * Represents an editing or modification action inside a circular control.\n * Canonical: PXIconEditCircle\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEditCircle = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditCircleDefinition} {...props} />;\n  }\n);\n\nPXIconEditCircle.displayName = \"PXIconEditCircle\";\n\nexport default PXIconEditCircle;\n",
           "type": "registry:ui",
           "target": "components/pxui/px-edit-circle.tsx"
         }
@@ -1825,7 +1825,7 @@
       "files": [
         {
           "path": "components/pxui/px-edit-square.tsx",
-          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit-square.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditSquareDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEditSquare\",\n  \"slug\": \"px-edit-square\",\n  \"title\": \"Edit Square\",\n  \"description\": \"Represents an editing action within a square or modular interface control.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"modify-square\",\n    \"pencil-square\",\n    \"update-square\"\n  ],\n  \"tags\": [\n    \"edit\",\n    \"modify\",\n    \"square\",\n    \"control\",\n    \"pencil\",\n    \"module\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M5 3h14v2h2v14h-2v2H5v-2H3V5h2V3z M7 17h2v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h2V7h-2v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v2H7v2z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEditSquare - Edit Square\n * Represents an editing action within a square or modular interface control.\n * Canonical: PXIconEditSquare\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEditSquare = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditSquareDefinition} {...props} />;\n  }\n);\n\nPXIconEditSquare.displayName = \"PXIconEditSquare\";\n\nexport default PXIconEditSquare;\n",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit-square.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditSquareDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEditSquare\",\n  \"slug\": \"px-edit-square\",\n  \"title\": \"Edit Square\",\n  \"description\": \"Represents an editing action within a square or modular interface control.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"modify-square\",\n    \"pencil-square\",\n    \"update-square\"\n  ],\n  \"tags\": [\n    \"edit\",\n    \"modify\",\n    \"square\",\n    \"control\",\n    \"pencil\",\n    \"module\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M5 3h14v2h2v14h-2v2H5v-2H3V5h2V3z M15 7h2v1h-2z M14 8h1v1h-1z M16 8h1v1h-1z M12 9h4v2h-4z M10 11h4v2h-4z M9 13h1v1h-1z M11 13h1v1h-1z M8 14h2v1h-2z M7 15h2v2h-2z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEditSquare - Edit Square\n * Represents an editing action within a square or modular interface control.\n * Canonical: PXIconEditSquare\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEditSquare = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditSquareDefinition} {...props} />;\n  }\n);\n\nPXIconEditSquare.displayName = \"PXIconEditSquare\";\n\nexport default PXIconEditSquare;\n",
           "type": "registry:ui",
           "target": "components/pxui/px-edit-square.tsx"
         }
@@ -1867,7 +1867,7 @@
       "files": [
         {
           "path": "components/pxui/px-edit-text.tsx",
-          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit-text.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditTextDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEditText\",\n  \"slug\": \"px-edit-text\",\n  \"title\": \"Edit Text\",\n  \"description\": \"Modifies text, labels, copy, or other textual content.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"text-edit\",\n    \"modify-text\",\n    \"copy-edit\",\n    \"rewrite\"\n  ],\n  \"tags\": [\n    \"text\",\n    \"typography\",\n    \"content\",\n    \"writing\",\n    \"label\",\n    \"editor\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M3 6h15v2H3V6zm0 5h10v2H3v-2zm0 5h6v2H3v-2z M13 21h3v-1h1v-1h1v-1h1v-1h2v-2h-1v-1h-2v2h-1v1h-1v1h-1v1h-2v2z\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEditText - Edit Text\n * Modifies text, labels, copy, or other textual content.\n * Canonical: PXIconEditText\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEditText = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditTextDefinition} {...props} />;\n  }\n);\n\nPXIconEditText.displayName = \"PXIconEditText\";\n\nexport default PXIconEditText;\n",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit-text.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditTextDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEditText\",\n  \"slug\": \"px-edit-text\",\n  \"title\": \"Edit Text\",\n  \"description\": \"Modifies text, labels, copy, or other textual content.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"text-edit\",\n    \"modify-text\",\n    \"copy-edit\",\n    \"rewrite\"\n  ],\n  \"tags\": [\n    \"text\",\n    \"typography\",\n    \"content\",\n    \"writing\",\n    \"label\",\n    \"editor\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M3 6h15v2H3V6zm0 5h9v2H3v-2zm0 5h6v2H3v-2z M19 11h2v1h-2z M18 12h1v1h-1z M20 12h1v1h-1z M16 13h4v2h-4z M14 15h4v2h-4z M13 17h1v1h-1z M15 17h1v1h-1z M12 18h2v1h-2z M11 19h2v2h-2z\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEditText - Edit Text\n * Modifies text, labels, copy, or other textual content.\n * Canonical: PXIconEditText\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEditText = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditTextDefinition} {...props} />;\n  }\n);\n\nPXIconEditText.displayName = \"PXIconEditText\";\n\nexport default PXIconEditText;\n",
           "type": "registry:ui",
           "target": "components/pxui/px-edit-text.tsx"
         }
@@ -1910,7 +1910,7 @@
       "files": [
         {
           "path": "components/pxui/px-edit-document.tsx",
-          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit-document.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditDocumentDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEditDocument\",\n  \"slug\": \"px-edit-document\",\n  \"title\": \"Edit Document\",\n  \"description\": \"Modifies the contents or properties of a document or file.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"edit-file\",\n    \"document-edit\",\n    \"modify-document\",\n    \"file-pencil\"\n  ],\n  \"tags\": [\n    \"document\",\n    \"file\",\n    \"content\",\n    \"editor\",\n    \"modify\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M4 3h10v1h1v1h1v1h1v6h-2V7h-1V6h-1V5H6v14h5v2H4V3zm10 0v3h3l-3-3z M13 21h3v-1h1v-1h1v-1h1v-1h2v-2h-1v-1h-2v2h-1v1h-1v1h-1v1h-2v2z\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEditDocument - Edit Document\n * Modifies the contents or properties of a document or file.\n * Canonical: PXIconEditDocument\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEditDocument = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditDocumentDefinition} {...props} />;\n  }\n);\n\nPXIconEditDocument.displayName = \"PXIconEditDocument\";\n\nexport default PXIconEditDocument;\n",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit-document.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditDocumentDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEditDocument\",\n  \"slug\": \"px-edit-document\",\n  \"title\": \"Edit Document\",\n  \"description\": \"Modifies the contents or properties of a document or file.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"edit-file\",\n    \"document-edit\",\n    \"modify-document\",\n    \"file-pencil\"\n  ],\n  \"tags\": [\n    \"document\",\n    \"file\",\n    \"content\",\n    \"editor\",\n    \"modify\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M4 3h10v1h1v1h1v1h1v5h-2V7h-1V6h-1V5H6v14h4v2H4V3zm10 0v3h3l-3-3z M19 11h2v1h-2z M18 12h1v1h-1z M20 12h1v1h-1z M16 13h4v2h-4z M14 15h4v2h-4z M13 17h1v1h-1z M15 17h1v1h-1z M12 18h2v1h-2z M11 19h2v2h-2z\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEditDocument - Edit Document\n * Modifies the contents or properties of a document or file.\n * Canonical: PXIconEditDocument\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEditDocument = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditDocumentDefinition} {...props} />;\n  }\n);\n\nPXIconEditDocument.displayName = \"PXIconEditDocument\";\n\nexport default PXIconEditDocument;\n",
           "type": "registry:ui",
           "target": "components/pxui/px-edit-document.tsx"
         }
@@ -1952,7 +1952,7 @@
       "files": [
         {
           "path": "components/pxui/px-edit-image.tsx",
-          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit-image.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditImageDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEditImage\",\n  \"slug\": \"px-edit-image\",\n  \"title\": \"Edit Image\",\n  \"description\": \"Edits or modifies an image, photograph, artwork, or media asset.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"image-edit\",\n    \"photo-edit\",\n    \"modify-image\",\n    \"picture-edit\"\n  ],\n  \"tags\": [\n    \"image\",\n    \"photo\",\n    \"media\",\n    \"creative\",\n    \"editor\",\n    \"asset\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M3 4h15v1h1v1h1v6h-2V6H5v12h6v2H3V4zm3 3h3v3H6V7zm0 9l3-4 2 2 2-3 2 3v2H6v-2z M13 21h3v-1h1v-1h1v-1h1v-1h2v-2h-1v-1h-2v2h-1v1h-1v1h-1v1h-2v2z\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEditImage - Edit Image\n * Edits or modifies an image, photograph, artwork, or media asset.\n * Canonical: PXIconEditImage\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEditImage = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditImageDefinition} {...props} />;\n  }\n);\n\nPXIconEditImage.displayName = \"PXIconEditImage\";\n\nexport default PXIconEditImage;\n",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit-image.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditImageDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEditImage\",\n  \"slug\": \"px-edit-image\",\n  \"title\": \"Edit Image\",\n  \"description\": \"Edits or modifies an image, photograph, artwork, or media asset.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"image-edit\",\n    \"photo-edit\",\n    \"modify-image\",\n    \"picture-edit\"\n  ],\n  \"tags\": [\n    \"image\",\n    \"photo\",\n    \"media\",\n    \"creative\",\n    \"editor\",\n    \"asset\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M3 4h15v1h1v1h1v5h-2V6H5v12h5v2H3V4zm3 3h3v3H6V7zm0 9h3v-2h2v2h1v-1h1v1H6v0z M19 11h2v1h-2z M18 12h1v1h-1z M20 12h1v1h-1z M16 13h4v2h-4z M14 15h4v2h-4z M13 17h1v1h-1z M15 17h1v1h-1z M12 18h2v1h-2z M11 19h2v2h-2z\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEditImage - Edit Image\n * Edits or modifies an image, photograph, artwork, or media asset.\n * Canonical: PXIconEditImage\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEditImage = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditImageDefinition} {...props} />;\n  }\n);\n\nPXIconEditImage.displayName = \"PXIconEditImage\";\n\nexport default PXIconEditImage;\n",
           "type": "registry:ui",
           "target": "components/pxui/px-edit-image.tsx"
         }
@@ -1995,7 +1995,7 @@
       "files": [
         {
           "path": "components/pxui/px-edit-code.tsx",
-          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit-code.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditCodeDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEditCode\",\n  \"slug\": \"px-edit-code\",\n  \"title\": \"Edit Code\",\n  \"description\": \"Modifies source code, markup, configuration, or programmable content.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"code-edit\",\n    \"modify-code\",\n    \"source-edit\",\n    \"program-edit\"\n  ],\n  \"tags\": [\n    \"code\",\n    \"developer\",\n    \"source\",\n    \"programming\",\n    \"editor\",\n    \"markup\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M7 7h2v2H7V7zm-2 2h2v2H5V9zm-2 2h2v2H3v-2zm2 2h2v2H5v-2zm2 2h2v2H7v-2z M15 7h2v2h-2V7zm2 2h2v2h-2V9z M13 21h3v-1h1v-1h1v-1h1v-1h2v-2h-1v-1h-2v2h-1v1h-1v1h-1v1h-2v2z\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEditCode - Edit Code\n * Modifies source code, markup, configuration, or programmable content.\n * Canonical: PXIconEditCode\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEditCode = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditCodeDefinition} {...props} />;\n  }\n);\n\nPXIconEditCode.displayName = \"PXIconEditCode\";\n\nexport default PXIconEditCode;\n",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit-code.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditCodeDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEditCode\",\n  \"slug\": \"px-edit-code\",\n  \"title\": \"Edit Code\",\n  \"description\": \"Modifies source code, markup, configuration, or programmable content.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"code-edit\",\n    \"modify-code\",\n    \"source-edit\",\n    \"program-edit\"\n  ],\n  \"tags\": [\n    \"code\",\n    \"developer\",\n    \"source\",\n    \"programming\",\n    \"editor\",\n    \"markup\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M7 7h2v2H7V7zm-2 2h2v2H5V9zm-2 2h2v2H3v-2zm2 2h2v2H5v-2zm2 2h2v2H7v-2z M13 7h2v2h-2V7zm2 2h2v2h-2V9zm2 2h2v2h-2v-2zm-2 2h2v2h-2v-2zm-2 2h2v2h-2v-2z M19 11h2v1h-2z M18 12h1v1h-1z M20 12h1v1h-1z M16 13h4v2h-4z M14 15h4v2h-4z M13 17h1v1h-1z M15 17h1v1h-1z M12 18h2v1h-2z M11 19h2v2h-2z\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEditCode - Edit Code\n * Modifies source code, markup, configuration, or programmable content.\n * Canonical: PXIconEditCode\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEditCode = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditCodeDefinition} {...props} />;\n  }\n);\n\nPXIconEditCode.displayName = \"PXIconEditCode\";\n\nexport default PXIconEditCode;\n",
           "type": "registry:ui",
           "target": "components/pxui/px-edit-code.tsx"
         }
@@ -2038,7 +2038,7 @@
       "files": [
         {
           "path": "components/pxui/px-edit-table.tsx",
-          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit-table.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditTableDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEditTable\",\n  \"slug\": \"px-edit-table\",\n  \"title\": \"Edit Table\",\n  \"description\": \"Modifies rows, columns, cells, or values in tabular or grid-based content.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"table-edit\",\n    \"grid-edit\",\n    \"edit-cell\",\n    \"edit-cells\",\n    \"modify-table\"\n  ],\n  \"tags\": [\n    \"table\",\n    \"grid\",\n    \"row\",\n    \"column\",\n    \"cell\",\n    \"cells\",\n    \"data\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M3 4h15v1h1v1h1v6h-2V6H5v12h6v2H3V4zm2 5h11v2H5V9zm5-3v5h2V6h-2zm0 7v5h2v-5h-2z M13 21h3v-1h1v-1h1v-1h1v-1h2v-2h-1v-1h-2v2h-1v1h-1v1h-1v1h-2v2z\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEditTable - Edit Table\n * Modifies rows, columns, cells, or values in tabular or grid-based content.\n * Canonical: PXIconEditTable\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEditTable = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditTableDefinition} {...props} />;\n  }\n);\n\nPXIconEditTable.displayName = \"PXIconEditTable\";\n\nexport default PXIconEditTable;\n",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit-table.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditTableDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEditTable\",\n  \"slug\": \"px-edit-table\",\n  \"title\": \"Edit Table\",\n  \"description\": \"Modifies rows, columns, cells, or values in tabular or grid-based content.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"table-edit\",\n    \"grid-edit\",\n    \"edit-cell\",\n    \"edit-cells\",\n    \"modify-table\"\n  ],\n  \"tags\": [\n    \"table\",\n    \"grid\",\n    \"row\",\n    \"column\",\n    \"cell\",\n    \"cells\",\n    \"data\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M3 4h15v1h1v1h1v5h-2V6H5v12h5v2H3V4zm2 5h11v2H5V9zm5-3v5h2V6h-2zm0 7v5h2v-5h-2z M19 11h2v1h-2z M18 12h1v1h-1z M20 12h1v1h-1z M16 13h4v2h-4z M14 15h4v2h-4z M13 17h1v1h-1z M15 17h1v1h-1z M12 18h2v1h-2z M11 19h2v2h-2z\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEditTable - Edit Table\n * Modifies rows, columns, cells, or values in tabular or grid-based content.\n * Canonical: PXIconEditTable\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEditTable = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditTableDefinition} {...props} />;\n  }\n);\n\nPXIconEditTable.displayName = \"PXIconEditTable\";\n\nexport default PXIconEditTable;\n",
           "type": "registry:ui",
           "target": "components/pxui/px-edit-table.tsx"
         }
@@ -2083,7 +2083,7 @@
       "files": [
         {
           "path": "components/pxui/px-edit-selection.tsx",
-          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit-selection.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditSelectionDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEditSelection\",\n  \"slug\": \"px-edit-selection\",\n  \"title\": \"Edit Selection\",\n  \"description\": \"Modifies the currently selected object, region, layer, or group.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"edit-selection\",\n    \"modify-selection\",\n    \"selected-edit\",\n    \"edit-region\"\n  ],\n  \"tags\": [\n    \"selection\",\n    \"editor\",\n    \"design\",\n    \"region\",\n    \"object\",\n    \"transform\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M3 3h5v2H5v3H3V3zm13 0h5v5h-2V5h-3V3zM3 16h2v3h3v2H3v-5zm16 0h2v5h-5v-2h3v-3z M7 17h2v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h2V7h-2v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v2H7v2z\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEditSelection - Edit Selection\n * Modifies the currently selected object, region, layer, or group.\n * Canonical: PXIconEditSelection\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEditSelection = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditSelectionDefinition} {...props} />;\n  }\n);\n\nPXIconEditSelection.displayName = \"PXIconEditSelection\";\n\nexport default PXIconEditSelection;\n",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit-selection.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditSelectionDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEditSelection\",\n  \"slug\": \"px-edit-selection\",\n  \"title\": \"Edit Selection\",\n  \"description\": \"Modifies the currently selected object, region, layer, or group.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"edit-selection\",\n    \"modify-selection\",\n    \"selected-edit\",\n    \"edit-region\"\n  ],\n  \"tags\": [\n    \"selection\",\n    \"editor\",\n    \"design\",\n    \"region\",\n    \"object\",\n    \"transform\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M3 3h5v2H5v3H3V3zm13 0h5v5h-2V5h-3V3zM3 16h2v3h3v2H3v-5z M19 11h2v1h-2z M18 12h1v1h-1z M20 12h1v1h-1z M16 13h4v2h-4z M14 15h4v2h-4z M13 17h1v1h-1z M15 17h1v1h-1z M12 18h2v1h-2z M11 19h2v2h-2z\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEditSelection - Edit Selection\n * Modifies the currently selected object, region, layer, or group.\n * Canonical: PXIconEditSelection\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEditSelection = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditSelectionDefinition} {...props} />;\n  }\n);\n\nPXIconEditSelection.displayName = \"PXIconEditSelection\";\n\nexport default PXIconEditSelection;\n",
           "type": "registry:ui",
           "target": "components/pxui/px-edit-selection.tsx"
         }
@@ -2126,7 +2126,7 @@
       "files": [
         {
           "path": "components/pxui/px-edit-locked.tsx",
-          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit-locked.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditLockedDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEditLocked\",\n  \"slug\": \"px-edit-locked\",\n  \"title\": \"Edit Locked\",\n  \"description\": \"Indicates that editable content exists but modification is currently locked or permission-restricted.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"read-only\",\n    \"editing-locked\",\n    \"cannot-edit\",\n    \"protected-edit\"\n  ],\n  \"tags\": [\n    \"edit\",\n    \"lock\",\n    \"permission\",\n    \"read-only\",\n    \"restricted\",\n    \"protected\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M3 19h2v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h2V7h-2v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v2H3v2z M15 11h4v3h-1v-2h-2v2h-1v-3zm-1 3h6v6h-6v-6z\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEditLocked - Edit Locked\n * Indicates that editable content exists but modification is currently locked or permission-restricted.\n * Canonical: PXIconEditLocked\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEditLocked = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditLockedDefinition} {...props} />;\n  }\n);\n\nPXIconEditLocked.displayName = \"PXIconEditLocked\";\n\nexport default PXIconEditLocked;\n",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/edit-locked.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconEditLockedDefinition: PXIconDefinition = {\n  \"name\": \"PXIconEditLocked\",\n  \"slug\": \"px-edit-locked\",\n  \"title\": \"Edit Locked\",\n  \"description\": \"Indicates that editable content exists but modification is currently locked or permission-restricted.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"edit\",\n  \"aliases\": [\n    \"read-only\",\n    \"editing-locked\",\n    \"cannot-edit\",\n    \"protected-edit\"\n  ],\n  \"tags\": [\n    \"edit\",\n    \"lock\",\n    \"permission\",\n    \"read-only\",\n    \"restricted\",\n    \"protected\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M11 4h2v1h-2z M10 5h1v1h-1z M12 5h1v1h-1z M8 6h4v2H8z M6 8h4v2H6z M5 10h1v1H5z M7 10h1v1H7z M4 11h2v1H4z M3 12h2v2H3z M15 9h4v2h1v3h-2v-2h-2v2h-2v-3h1V9z M13 14h8v7h-8v-7zm3 2h2v3h-2v-3z\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconEditLocked - Edit Locked\n * Indicates that editable content exists but modification is currently locked or permission-restricted.\n * Canonical: PXIconEditLocked\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconEditLocked = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconEditLockedDefinition} {...props} />;\n  }\n);\n\nPXIconEditLocked.displayName = \"PXIconEditLocked\";\n\nexport default PXIconEditLocked;\n",
           "type": "registry:ui",
           "target": "components/pxui/px-edit-locked.tsx"
         }
@@ -2153,6 +2153,837 @@
         "animated": false,
         "hasFilled": false,
         "source": "icons/source/actions-controls/edit-locked.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-copy",
+      "type": "registry:ui",
+      "title": "PXIconCopy",
+      "description": "Pixel icon for copy; base form.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-copy.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/copy.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconCopyDefinition: PXIconDefinition = {\n  \"name\": \"PXIconCopy\",\n  \"slug\": \"px-copy\",\n  \"title\": \"Copy\",\n  \"description\": \"Pixel icon for copy; base form.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"copy\",\n  \"aliases\": [\n    \"duplicate\",\n    \"clone\",\n    \"replicate\",\n    \"clipboard-copy\"\n  ],\n  \"tags\": [\n    \"copy\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M8 4h12v12h-4v-2h2V6h-8v2H8V4z M4 8h12v12H4V8zm2 2v8h8v-8H6z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconCopy - Copy\n * Pixel icon for copy; base form.\n * Canonical: PXIconCopy\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconCopy = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconCopyDefinition} {...props} />;\n  }\n);\n\nPXIconCopy.displayName = \"PXIconCopy\";\n\nexport default PXIconCopy;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-copy.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "copy",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "duplicate",
+          "clone",
+          "replicate",
+          "clipboard-copy"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/copy.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-copy-circle",
+      "type": "registry:ui",
+      "title": "PXIconCopyCircle",
+      "description": "Pixel icon for copy; circular container.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-copy-circle.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/copy-circle.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconCopyCircleDefinition: PXIconDefinition = {\n  \"name\": \"PXIconCopyCircle\",\n  \"slug\": \"px-copy-circle\",\n  \"title\": \"Copy Circle\",\n  \"description\": \"Pixel icon for copy; circular container.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"copy\",\n  \"aliases\": [\n    \"duplicate-circle\",\n    \"clone-circle\",\n    \"copy-round\"\n  ],\n  \"tags\": [\n    \"copy\",\n    \"circle\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M8 2h8v1h2v1h2v1h1v3h1v8h-1v3h-1v1h-2v1h-2v1H8v-1H6v-1H4v-1H3v-3H2V8h1V5h1V4h2V3h2V2z M10 7h7v7h-3v-2h1V9h-3v1h-2V7z M7 10h7v7H7v-7zm2 2v3h3v-3H9z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconCopyCircle - Copy Circle\n * Pixel icon for copy; circular container.\n * Canonical: PXIconCopyCircle\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconCopyCircle = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconCopyCircleDefinition} {...props} />;\n  }\n);\n\nPXIconCopyCircle.displayName = \"PXIconCopyCircle\";\n\nexport default PXIconCopyCircle;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-copy-circle.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "copy",
+          "circle",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "duplicate-circle",
+          "clone-circle",
+          "copy-round"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/copy-circle.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-copy-square",
+      "type": "registry:ui",
+      "title": "PXIconCopySquare",
+      "description": "Pixel icon for copy; square container.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-copy-square.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/copy-square.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconCopySquareDefinition: PXIconDefinition = {\n  \"name\": \"PXIconCopySquare\",\n  \"slug\": \"px-copy-square\",\n  \"title\": \"Copy Square\",\n  \"description\": \"Pixel icon for copy; square container.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"copy\",\n  \"aliases\": [\n    \"duplicate-square\",\n    \"clone-square\",\n    \"copy-box\"\n  ],\n  \"tags\": [\n    \"copy\",\n    \"square\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M5 3h14v2h2v14h-2v2H5v-2H3V5h2V3z M10 7h7v7h-3v-2h1V9h-3v1h-2V7z M7 10h7v7H7v-7zm2 2v3h3v-3H9z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconCopySquare - Copy Square\n * Pixel icon for copy; square container.\n * Canonical: PXIconCopySquare\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconCopySquare = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconCopySquareDefinition} {...props} />;\n  }\n);\n\nPXIconCopySquare.displayName = \"PXIconCopySquare\";\n\nexport default PXIconCopySquare;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-copy-square.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "copy",
+          "square",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "duplicate-square",
+          "clone-square",
+          "copy-box"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/copy-square.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-copy-small",
+      "type": "registry:ui",
+      "title": "PXIconCopySmall",
+      "description": "Pixel icon for copy; compact variant.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-copy-small.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/copy-small.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconCopySmallDefinition: PXIconDefinition = {\n  \"name\": \"PXIconCopySmall\",\n  \"slug\": \"px-copy-small\",\n  \"title\": \"Copy Small\",\n  \"description\": \"Pixel icon for copy; compact variant.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"copy\",\n  \"aliases\": [\n    \"duplicate-small\",\n    \"clone-small\",\n    \"copy-compact\"\n  ],\n  \"tags\": [\n    \"copy\",\n    \"small\",\n    \"compact\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M9 6h9v9h-3v-2h1V8h-5v1H9V6z M6 9h9v9H6V9zm2 2v5h5v-5H8z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconCopySmall - Copy Small\n * Pixel icon for copy; compact variant.\n * Canonical: PXIconCopySmall\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconCopySmall = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconCopySmallDefinition} {...props} />;\n  }\n);\n\nPXIconCopySmall.displayName = \"PXIconCopySmall\";\n\nexport default PXIconCopySmall;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-copy-small.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "copy",
+          "small",
+          "compact",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "duplicate-small",
+          "clone-small",
+          "copy-compact"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/copy-small.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-copy-large",
+      "type": "registry:ui",
+      "title": "PXIconCopyLarge",
+      "description": "Pixel icon for copy; large-emphasis variant.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-copy-large.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/copy-large.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconCopyLargeDefinition: PXIconDefinition = {\n  \"name\": \"PXIconCopyLarge\",\n  \"slug\": \"px-copy-large\",\n  \"title\": \"Copy Large\",\n  \"description\": \"Pixel icon for copy; large-emphasis variant.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"copy\",\n  \"aliases\": [\n    \"duplicate-large\",\n    \"clone-large\",\n    \"copy-expanded\"\n  ],\n  \"tags\": [\n    \"copy\",\n    \"large\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M7 2h15v15h-5v-2h3V4H9v3H7V2z M2 7h15v15H2V7zm2 2v11h11V9H4z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconCopyLarge - Copy Large\n * Pixel icon for copy; large-emphasis variant.\n * Canonical: PXIconCopyLarge\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconCopyLarge = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconCopyLargeDefinition} {...props} />;\n  }\n);\n\nPXIconCopyLarge.displayName = \"PXIconCopyLarge\";\n\nexport default PXIconCopyLarge;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-copy-large.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "copy",
+          "large",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "duplicate-large",
+          "clone-large",
+          "copy-expanded"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/copy-large.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-copy-left",
+      "type": "registry:ui",
+      "title": "PXIconCopyLeft",
+      "description": "Pixel icon for copy; left-oriented variant.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-copy-left.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/copy-left.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconCopyLeftDefinition: PXIconDefinition = {\n  \"name\": \"PXIconCopyLeft\",\n  \"slug\": \"px-copy-left\",\n  \"title\": \"Copy Left\",\n  \"description\": \"Pixel icon for copy; left-oriented variant.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"copy\",\n  \"aliases\": [\n    \"duplicate-left\",\n    \"clone-left\",\n    \"copy-before\"\n  ],\n  \"tags\": [\n    \"copy\",\n    \"left\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M8 11H6V9H4v2H2v2h2v2h2v-2h2v-2z M14 5h8v10h-4v-2h2V7h-4v2h-2V5z M10 9h8v10h-8V9zm2 2v6h4v-6h-4z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconCopyLeft - Copy Left\n * Pixel icon for copy; left-oriented variant.\n * Canonical: PXIconCopyLeft\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconCopyLeft = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconCopyLeftDefinition} {...props} />;\n  }\n);\n\nPXIconCopyLeft.displayName = \"PXIconCopyLeft\";\n\nexport default PXIconCopyLeft;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-copy-left.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "copy",
+          "left",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "duplicate-left",
+          "clone-left",
+          "copy-before"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/copy-left.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-copy-right",
+      "type": "registry:ui",
+      "title": "PXIconCopyRight",
+      "description": "Pixel icon for copy; right-oriented variant.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-copy-right.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/copy-right.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconCopyRightDefinition: PXIconDefinition = {\n  \"name\": \"PXIconCopyRight\",\n  \"slug\": \"px-copy-right\",\n  \"title\": \"Copy Right\",\n  \"description\": \"Pixel icon for copy; right-oriented variant.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"copy\",\n  \"aliases\": [\n    \"duplicate-right\",\n    \"clone-right\",\n    \"copy-after\"\n  ],\n  \"tags\": [\n    \"copy\",\n    \"right\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M16 11h2V9h2v2h2v2h-2v2h-2v-2h-2v-2z M10 5H2v10h4v-2H4V7h4v2h2V5z M14 9H6v10h8V9zm-2 2v6H8v-6h4z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconCopyRight - Copy Right\n * Pixel icon for copy; right-oriented variant.\n * Canonical: PXIconCopyRight\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconCopyRight = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconCopyRightDefinition} {...props} />;\n  }\n);\n\nPXIconCopyRight.displayName = \"PXIconCopyRight\";\n\nexport default PXIconCopyRight;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-copy-right.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "copy",
+          "right",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "duplicate-right",
+          "clone-right",
+          "copy-after"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/copy-right.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-copy-up",
+      "type": "registry:ui",
+      "title": "PXIconCopyUp",
+      "description": "Pixel icon for copy; up-oriented variant.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-copy-up.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/copy-up.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconCopyUpDefinition: PXIconDefinition = {\n  \"name\": \"PXIconCopyUp\",\n  \"slug\": \"px-copy-up\",\n  \"title\": \"Copy Up\",\n  \"description\": \"Pixel icon for copy; up-oriented variant.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"copy\",\n  \"aliases\": [\n    \"duplicate-up\",\n    \"clone-up\",\n    \"copy-above\"\n  ],\n  \"tags\": [\n    \"copy\",\n    \"up\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M11 8V6H9V4h2V2h2v2h2v2h-2v2h-2z M9 10h10v8h-4v-2h2v-4h-6v2H9v-4z M5 14h10v8H5v-8zm2 2v4h6v-4H7z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconCopyUp - Copy Up\n * Pixel icon for copy; up-oriented variant.\n * Canonical: PXIconCopyUp\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconCopyUp = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconCopyUpDefinition} {...props} />;\n  }\n);\n\nPXIconCopyUp.displayName = \"PXIconCopyUp\";\n\nexport default PXIconCopyUp;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-copy-up.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "copy",
+          "up",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "duplicate-up",
+          "clone-up",
+          "copy-above"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/copy-up.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-copy-down",
+      "type": "registry:ui",
+      "title": "PXIconCopyDown",
+      "description": "Pixel icon for copy; down-oriented variant.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-copy-down.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/copy-down.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconCopyDownDefinition: PXIconDefinition = {\n  \"name\": \"PXIconCopyDown\",\n  \"slug\": \"px-copy-down\",\n  \"title\": \"Copy Down\",\n  \"description\": \"Pixel icon for copy; down-oriented variant.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"copy\",\n  \"aliases\": [\n    \"duplicate-down\",\n    \"clone-down\",\n    \"copy-below\"\n  ],\n  \"tags\": [\n    \"copy\",\n    \"down\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M11 16v2H9v2h2v2h2v-2h2v-2h-2v-2h-2z M9 14h10V6h-4v2h2v4h-6v-2H9v4z M5 10h10V2H5v8zm2-2V4h6v4H7z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconCopyDown - Copy Down\n * Pixel icon for copy; down-oriented variant.\n * Canonical: PXIconCopyDown\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconCopyDown = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconCopyDownDefinition} {...props} />;\n  }\n);\n\nPXIconCopyDown.displayName = \"PXIconCopyDown\";\n\nexport default PXIconCopyDown;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-copy-down.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "copy",
+          "down",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "duplicate-down",
+          "clone-down",
+          "copy-below"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/copy-down.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-copy-active",
+      "type": "registry:ui",
+      "title": "PXIconCopyActive",
+      "description": "Pixel icon for copy; active state.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-copy-active.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/copy-active.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconCopyActiveDefinition: PXIconDefinition = {\n  \"name\": \"PXIconCopyActive\",\n  \"slug\": \"px-copy-active\",\n  \"title\": \"Copy Active\",\n  \"description\": \"Pixel icon for copy; active state.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"copy\",\n  \"aliases\": [\n    \"duplicate-active\",\n    \"clone-active\",\n    \"copy-on\",\n    \"copied\"\n  ],\n  \"tags\": [\n    \"copy\",\n    \"active\",\n    \"state\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M8 4h12v12h-4v-2h2V6h-8v2H8V4z M4 8h12v12H4V8zm2 2v8h8v-8H6zm2 2h4v4H8v-4z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconCopyActive - Copy Active\n * Pixel icon for copy; active state.\n * Canonical: PXIconCopyActive\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconCopyActive = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconCopyActiveDefinition} {...props} />;\n  }\n);\n\nPXIconCopyActive.displayName = \"PXIconCopyActive\";\n\nexport default PXIconCopyActive;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-copy-active.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "copy",
+          "active",
+          "state",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "duplicate-active",
+          "clone-active",
+          "copy-on",
+          "copied"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/copy-active.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-save",
+      "type": "registry:ui",
+      "title": "PXIconSave",
+      "description": "Pixel icon for save; base form.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-save.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/save.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconSaveDefinition: PXIconDefinition = {\n  \"name\": \"PXIconSave\",\n  \"slug\": \"px-save\",\n  \"title\": \"Save\",\n  \"description\": \"Pixel icon for save; base form.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"save\",\n  \"aliases\": [\n    \"store\",\n    \"persist\",\n    \"disk\",\n    \"floppy\",\n    \"commit\"\n  ],\n  \"tags\": [\n    \"save\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M4 4h14v1h1v1h1v14H4V4zm3 2h8v3H7V6zm1 6h8v6H8v-6zm2 2v2h4v-2h-4z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconSave - Save\n * Pixel icon for save; base form.\n * Canonical: PXIconSave\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconSave = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconSaveDefinition} {...props} />;\n  }\n);\n\nPXIconSave.displayName = \"PXIconSave\";\n\nexport default PXIconSave;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-save.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "save",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "store",
+          "persist",
+          "disk",
+          "floppy",
+          "commit"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/save.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-save-circle",
+      "type": "registry:ui",
+      "title": "PXIconSaveCircle",
+      "description": "Pixel icon for save; circular container.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-save-circle.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/save-circle.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconSaveCircleDefinition: PXIconDefinition = {\n  \"name\": \"PXIconSaveCircle\",\n  \"slug\": \"px-save-circle\",\n  \"title\": \"Save Circle\",\n  \"description\": \"Pixel icon for save; circular container.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"save\",\n  \"aliases\": [\n    \"store-circle\",\n    \"persist-circle\",\n    \"disk-circle\"\n  ],\n  \"tags\": [\n    \"save\",\n    \"circle\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M8 2h8v1h2v1h2v1h1v3h1v8h-1v3h-1v1h-2v1h-2v1H8v-1H6v-1H4v-1H3v-3H2V8h1V5h1V4h2V3h2V2z M7 7h9v1h1v9H7V7zm2 2h5v2H9V9zm1 4h5v3h-5v-3z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconSaveCircle - Save Circle\n * Pixel icon for save; circular container.\n * Canonical: PXIconSaveCircle\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconSaveCircle = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconSaveCircleDefinition} {...props} />;\n  }\n);\n\nPXIconSaveCircle.displayName = \"PXIconSaveCircle\";\n\nexport default PXIconSaveCircle;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-save-circle.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "save",
+          "circle",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "store-circle",
+          "persist-circle",
+          "disk-circle"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/save-circle.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-save-square",
+      "type": "registry:ui",
+      "title": "PXIconSaveSquare",
+      "description": "Pixel icon for save; square container.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-save-square.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/save-square.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconSaveSquareDefinition: PXIconDefinition = {\n  \"name\": \"PXIconSaveSquare\",\n  \"slug\": \"px-save-square\",\n  \"title\": \"Save Square\",\n  \"description\": \"Pixel icon for save; square container.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"save\",\n  \"aliases\": [\n    \"store-square\",\n    \"persist-square\",\n    \"disk-square\"\n  ],\n  \"tags\": [\n    \"save\",\n    \"square\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M5 3h14v2h2v14h-2v2H5v-2H3V5h2V3z M7 7h9v1h1v9H7V7zm2 2h5v2H9V9zm1 4h5v3h-5v-3z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconSaveSquare - Save Square\n * Pixel icon for save; square container.\n * Canonical: PXIconSaveSquare\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconSaveSquare = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconSaveSquareDefinition} {...props} />;\n  }\n);\n\nPXIconSaveSquare.displayName = \"PXIconSaveSquare\";\n\nexport default PXIconSaveSquare;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-save-square.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "save",
+          "square",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "store-square",
+          "persist-square",
+          "disk-square"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/save-square.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-save-small",
+      "type": "registry:ui",
+      "title": "PXIconSaveSmall",
+      "description": "Pixel icon for save; compact variant.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-save-small.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/save-small.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconSaveSmallDefinition: PXIconDefinition = {\n  \"name\": \"PXIconSaveSmall\",\n  \"slug\": \"px-save-small\",\n  \"title\": \"Save Small\",\n  \"description\": \"Pixel icon for save; compact variant.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"save\",\n  \"aliases\": [\n    \"store-small\",\n    \"persist-small\",\n    \"disk-small\",\n    \"save-compact\"\n  ],\n  \"tags\": [\n    \"save\",\n    \"small\",\n    \"compact\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M6 6h11v1h1v11H6V6zm2 2h6v2H8V8zm1 4h6v4H9v-4z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconSaveSmall - Save Small\n * Pixel icon for save; compact variant.\n * Canonical: PXIconSaveSmall\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconSaveSmall = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconSaveSmallDefinition} {...props} />;\n  }\n);\n\nPXIconSaveSmall.displayName = \"PXIconSaveSmall\";\n\nexport default PXIconSaveSmall;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-save-small.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "save",
+          "small",
+          "compact",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "store-small",
+          "persist-small",
+          "disk-small",
+          "save-compact"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/save-small.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-save-large",
+      "type": "registry:ui",
+      "title": "PXIconSaveLarge",
+      "description": "Pixel icon for save; large-emphasis variant.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-save-large.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/save-large.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconSaveLargeDefinition: PXIconDefinition = {\n  \"name\": \"PXIconSaveLarge\",\n  \"slug\": \"px-save-large\",\n  \"title\": \"Save Large\",\n  \"description\": \"Pixel icon for save; large-emphasis variant.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"save\",\n  \"aliases\": [\n    \"store-large\",\n    \"persist-large\",\n    \"disk-large\",\n    \"save-expanded\"\n  ],\n  \"tags\": [\n    \"save\",\n    \"large\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M2 2h18v1h1v1h1v18H2V2zm4 3h10v4H6V5zm2 7h10v8H8v-8zm2 2v4h6v-4h-6z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconSaveLarge - Save Large\n * Pixel icon for save; large-emphasis variant.\n * Canonical: PXIconSaveLarge\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconSaveLarge = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconSaveLargeDefinition} {...props} />;\n  }\n);\n\nPXIconSaveLarge.displayName = \"PXIconSaveLarge\";\n\nexport default PXIconSaveLarge;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-save-large.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "save",
+          "large",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "store-large",
+          "persist-large",
+          "disk-large",
+          "save-expanded"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/save-large.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-save-left",
+      "type": "registry:ui",
+      "title": "PXIconSaveLeft",
+      "description": "Pixel icon for save; left-oriented variant.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-save-left.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/save-left.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconSaveLeftDefinition: PXIconDefinition = {\n  \"name\": \"PXIconSaveLeft\",\n  \"slug\": \"px-save-left\",\n  \"title\": \"Save Left\",\n  \"description\": \"Pixel icon for save; left-oriented variant.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"save\",\n  \"aliases\": [\n    \"store-left\",\n    \"persist-left\",\n    \"disk-left\"\n  ],\n  \"tags\": [\n    \"save\",\n    \"left\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M8 11H6V9H4v2H2v2h2v2h2v-2h2v-2z M10 5h10v1h1v1h1v12H10V5zm3 2h5v2h-5V7zm1 5h5v5h-5v-5z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconSaveLeft - Save Left\n * Pixel icon for save; left-oriented variant.\n * Canonical: PXIconSaveLeft\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconSaveLeft = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconSaveLeftDefinition} {...props} />;\n  }\n);\n\nPXIconSaveLeft.displayName = \"PXIconSaveLeft\";\n\nexport default PXIconSaveLeft;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-save-left.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "save",
+          "left",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "store-left",
+          "persist-left",
+          "disk-left"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/save-left.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-save-right",
+      "type": "registry:ui",
+      "title": "PXIconSaveRight",
+      "description": "Pixel icon for save; right-oriented variant.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-save-right.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/save-right.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconSaveRightDefinition: PXIconDefinition = {\n  \"name\": \"PXIconSaveRight\",\n  \"slug\": \"px-save-right\",\n  \"title\": \"Save Right\",\n  \"description\": \"Pixel icon for save; right-oriented variant.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"save\",\n  \"aliases\": [\n    \"store-right\",\n    \"persist-right\",\n    \"disk-right\"\n  ],\n  \"tags\": [\n    \"save\",\n    \"right\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M16 11h2V9h2v2h2v2h-2v2h-2v-2h-2v-2z M14 5H4v1H3v1H2v12h12V5zm-3 2H6v2h5V7zm-1 5H5v5h5v-5z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconSaveRight - Save Right\n * Pixel icon for save; right-oriented variant.\n * Canonical: PXIconSaveRight\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconSaveRight = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconSaveRightDefinition} {...props} />;\n  }\n);\n\nPXIconSaveRight.displayName = \"PXIconSaveRight\";\n\nexport default PXIconSaveRight;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-save-right.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "save",
+          "right",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "store-right",
+          "persist-right",
+          "disk-right"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/save-right.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-save-up",
+      "type": "registry:ui",
+      "title": "PXIconSaveUp",
+      "description": "Pixel icon for save; up-oriented variant.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-save-up.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/save-up.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconSaveUpDefinition: PXIconDefinition = {\n  \"name\": \"PXIconSaveUp\",\n  \"slug\": \"px-save-up\",\n  \"title\": \"Save Up\",\n  \"description\": \"Pixel icon for save; up-oriented variant.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"save\",\n  \"aliases\": [\n    \"store-up\",\n    \"persist-up\",\n    \"disk-up\",\n    \"save-upload\"\n  ],\n  \"tags\": [\n    \"save\",\n    \"up\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M11 8V6H9V4h2V2h2v2h2v2h-2v2h-2z M5 10h12v1h1v1h1v10H5V10zm3 2h7v2H8v-2zm1 4h7v4H9v-4z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconSaveUp - Save Up\n * Pixel icon for save; up-oriented variant.\n * Canonical: PXIconSaveUp\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconSaveUp = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconSaveUpDefinition} {...props} />;\n  }\n);\n\nPXIconSaveUp.displayName = \"PXIconSaveUp\";\n\nexport default PXIconSaveUp;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-save-up.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "save",
+          "up",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "store-up",
+          "persist-up",
+          "disk-up",
+          "save-upload"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/save-up.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-save-down",
+      "type": "registry:ui",
+      "title": "PXIconSaveDown",
+      "description": "Pixel icon for save; down-oriented variant.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-save-down.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/save-down.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconSaveDownDefinition: PXIconDefinition = {\n  \"name\": \"PXIconSaveDown\",\n  \"slug\": \"px-save-down\",\n  \"title\": \"Save Down\",\n  \"description\": \"Pixel icon for save; down-oriented variant.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"save\",\n  \"aliases\": [\n    \"store-down\",\n    \"persist-down\",\n    \"disk-down\",\n    \"save-download\"\n  ],\n  \"tags\": [\n    \"save\",\n    \"down\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M11 16v2H9v2h2v2h2v-2h2v-2h-2v-2h-2z M5 14h12v-1h1v-1h1V2H5v12zm3-2h7v-2H8v2zm1-4h7V4H9v4z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconSaveDown - Save Down\n * Pixel icon for save; down-oriented variant.\n * Canonical: PXIconSaveDown\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconSaveDown = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconSaveDownDefinition} {...props} />;\n  }\n);\n\nPXIconSaveDown.displayName = \"PXIconSaveDown\";\n\nexport default PXIconSaveDown;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-save-down.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "save",
+          "down",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "store-down",
+          "persist-down",
+          "disk-down",
+          "save-download"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/save-down.ts"
+      }
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "px-save-active",
+      "type": "registry:ui",
+      "title": "PXIconSaveActive",
+      "description": "Pixel icon for save; active state.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [
+        "http://localhost:3000/r/px-icon-base.json"
+      ],
+      "files": [
+        {
+          "path": "components/pxui/px-save-active.tsx",
+          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions-controls/save-active.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconSaveActiveDefinition: PXIconDefinition = {\n  \"name\": \"PXIconSaveActive\",\n  \"slug\": \"px-save-active\",\n  \"title\": \"Save Active\",\n  \"description\": \"Pixel icon for save; active state.\",\n  \"category\": \"actions-controls\",\n  \"family\": \"save\",\n  \"aliases\": [\n    \"store-active\",\n    \"persist-active\",\n    \"disk-active\",\n    \"saved\"\n  ],\n  \"tags\": [\n    \"save\",\n    \"active\",\n    \"state\",\n    \"action\",\n    \"control\",\n    \"ui\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M4 4h14v1h1v1h1v14H4V4zm3 2h8v3H7V6zm1 6h8v6H8v-6zm1 1v4h6v-4H9z\",\n        \"fillRule\": \"evenodd\"\n      }\n    ]\n  },\n  \"status\": \"experimental\"\n};\n\n/**\n * PXIconSaveActive - Save Active\n * Pixel icon for save; active state.\n * Canonical: PXIconSaveActive\n * Package: @pxui/react\n * Category: actions-controls\n * Grid: 24x24\n */\nexport const PXIconSaveActive = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconSaveActiveDefinition} {...props} />;\n  }\n);\n\nPXIconSaveActive.displayName = \"PXIconSaveActive\";\n\nexport default PXIconSaveActive;\n",
+          "type": "registry:ui",
+          "target": "components/pxui/px-save-active.tsx"
+        }
+      ],
+      "categories": [
+        "actions-controls"
+      ],
+      "meta": {
+        "tags": [
+          "save",
+          "active",
+          "state",
+          "action",
+          "control",
+          "ui"
+        ],
+        "aliases": [
+          "store-active",
+          "persist-active",
+          "disk-active",
+          "saved"
+        ],
+        "grid": 24,
+        "animated": false,
+        "hasFilled": false,
+        "source": "icons/source/actions-controls/save-active.ts"
       }
     },
     {
@@ -2438,46 +3269,6 @@
         "animated": false,
         "hasFilled": true,
         "source": "icons/source/actions/trash.ts"
-      }
-    },
-    {
-      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-      "name": "px-copy",
-      "type": "registry:ui",
-      "title": "PXIconCopy",
-      "description": "Dual layered documents representing clipboard copy and duplication.",
-      "dependencies": [],
-      "devDependencies": [],
-      "registryDependencies": [
-        "http://localhost:3000/r/px-icon-base.json"
-      ],
-      "files": [
-        {
-          "path": "components/pxui/px-copy.tsx",
-          "content": "/**\n * AUTO-GENERATED BY PXUI.\n *\n * Do not edit this file manually.\n * Source: icons/source/actions/copy.ts\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { PXIconBase } from \"@/components/icons/px-icon-base\";\nimport type { PXIconProps, PXIconDefinition } from \"@pxui/core\";\n\nexport const PXIconCopyDefinition: PXIconDefinition = {\n  \"name\": \"PXIconCopy\",\n  \"slug\": \"px-copy\",\n  \"title\": \"Copy\",\n  \"description\": \"Dual layered documents representing clipboard copy and duplication.\",\n  \"category\": \"actions\",\n  \"family\": \"copy\",\n  \"aliases\": [\n    \"duplicate\",\n    \"clone\",\n    \"clipboard\"\n  ],\n  \"tags\": [\n    \"duplicate\",\n    \"clipboard\",\n    \"clone\",\n    \"paste\"\n  ],\n  \"geometry\": {\n    \"grid\": 24,\n    \"paths\": [\n      {\n        \"d\": \"M4 4h10v2H6v12H4V4zm4 4h12v14H8V8zm2 2v10h8V10h-8z\"\n      }\n    ],\n    \"filled\": [\n      {\n        \"d\": \"M4 4h10v2H6v12H4V4zm4 4h12v14H8V8z\"\n      }\n    ]\n  },\n  \"status\": \"stable\"\n};\n\n/**\n * PXIconCopy - Copy\n * Dual layered documents representing clipboard copy and duplication.\n * Canonical: PXIconCopy\n * Package: @pxui/react\n * Category: actions\n * Grid: 24x24\n */\nexport const PXIconCopy = React.forwardRef<SVGSVGElement, PXIconProps>(\n  (props, ref) => {\n    return <PXIconBase ref={ref} definition={PXIconCopyDefinition} {...props} />;\n  }\n);\n\nPXIconCopy.displayName = \"PXIconCopy\";\n\nexport default PXIconCopy;\n",
-          "type": "registry:ui",
-          "target": "components/pxui/px-copy.tsx"
-        }
-      ],
-      "categories": [
-        "actions"
-      ],
-      "meta": {
-        "tags": [
-          "duplicate",
-          "clipboard",
-          "clone",
-          "paste"
-        ],
-        "aliases": [
-          "duplicate",
-          "clone",
-          "clipboard"
-        ],
-        "grid": 24,
-        "animated": false,
-        "hasFilled": true,
-        "source": "icons/source/actions/copy.ts"
       }
     },
     {

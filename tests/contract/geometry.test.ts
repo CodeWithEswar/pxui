@@ -1,6 +1,7 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { ICONS_CATALOG } from "../../lib/icons/catalog";
+import { CANONICAL_ICONS } from "../../icons/source";
 import {
   analyzeIconPinToPin,
   getPXIconGeometry,
@@ -143,7 +144,7 @@ describe("PXUI Canonical Geometry & Pin-to-Pin Engine", () => {
     assert.strictEqual(missing, null);
   });
 
-  it("should pass bounds and canvas validation across all 148 icons", () => {
+  it("should pass bounds and canvas validation across all icons in catalog", () => {
     for (const icon of ICONS_CATALOG) {
       const analysis = analyzeIconPinToPin(icon);
       assert.strictEqual(
@@ -161,6 +162,88 @@ describe("PXUI Canonical Geometry & Pin-to-Pin Engine", () => {
         `Zero area path in '${icon.name}'`
       );
     }
+  });
+
+  it("should verify Edit family canonical consistency and container clearance", () => {
+    const editCircle = CANONICAL_ICONS.find((i) => i.slug === "px-edit-circle");
+    const editSquare = CANONICAL_ICONS.find((i) => i.slug === "px-edit-square");
+    assert.ok(editCircle && editSquare);
+
+    // Both containers use identical inner pencil primitive:
+    const innerPencil = "M15 7h2v1h-2z M14 8h1v1h-1z M16 8h1v1h-1z M12 9h4v2h-4z M10 11h4v2h-4z M9 13h1v1h-1z M11 13h1v1h-1z M8 14h2v1h-2z M7 15h2v2h-2z";
+    assert.ok(editCircle.geometry.paths[0].d.includes(innerPencil));
+    assert.ok(editSquare.geometry.paths[0].d.includes(innerPencil));
+
+    // Edit locked has decoupled top-left pencil and bottom-right padlock
+    const editLocked = CANONICAL_ICONS.find((i) => i.slug === "px-edit-locked");
+    assert.ok(editLocked);
+    const lockedAnalysis = analyzeIconPinToPin(editLocked);
+    assert.strictEqual(lockedAnalysis.validation.declaredBoundsMatch, true);
+    assert.strictEqual(lockedAnalysis.validation.insideCanvas, true);
+  });
+
+  it("should verify Batch 006 Copy and Save family size hierarchy", () => {
+    const copySmall = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === "px-copy-small")!);
+    const copyBase = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === "px-copy")!);
+    const copyLarge = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === "px-copy-large")!);
+
+    assert.ok(
+      copySmall.occupiedCellCount < copyBase.occupiedCellCount,
+      `CopySmall (${copySmall.occupiedCellCount}) should be < CopyBase (${copyBase.occupiedCellCount})`
+    );
+    assert.ok(
+      copyBase.occupiedCellCount < copyLarge.occupiedCellCount,
+      `CopyBase (${copyBase.occupiedCellCount}) should be < CopyLarge (${copyLarge.occupiedCellCount})`
+    );
+
+    const saveSmall = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === "px-save-small")!);
+    const saveBase = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === "px-save")!);
+    const saveLarge = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === "px-save-large")!);
+
+    assert.ok(
+      saveSmall.occupiedCellCount < saveBase.occupiedCellCount,
+      `SaveSmall (${saveSmall.occupiedCellCount}) should be < SaveBase (${saveBase.occupiedCellCount})`
+    );
+    assert.ok(
+      saveBase.occupiedCellCount < saveLarge.occupiedCellCount,
+      `SaveBase (${saveBase.occupiedCellCount}) should be < SaveLarge (${saveLarge.occupiedCellCount})`
+    );
+  });
+
+  it("should verify Batch 006 directional pairs reflection symmetry", () => {
+    const copyLeft = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === "px-copy-left")!);
+    const copyRight = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === "px-copy-right")!);
+    assert.strictEqual(copyLeft.occupiedCellCount, copyRight.occupiedCellCount, "CopyLeft and CopyRight cell count mismatch");
+
+    const copyUp = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === "px-copy-up")!);
+    const copyDown = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === "px-copy-down")!);
+    assert.strictEqual(copyUp.occupiedCellCount, copyDown.occupiedCellCount, "CopyUp and CopyDown cell count mismatch");
+
+    const saveLeft = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === "px-save-left")!);
+    const saveRight = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === "px-save-right")!);
+    assert.strictEqual(saveLeft.occupiedCellCount, saveRight.occupiedCellCount, "SaveLeft and SaveRight cell count mismatch");
+
+    const saveUp = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === "px-save-up")!);
+    const saveDown = analyzeIconPinToPin(CANONICAL_ICONS.find((i) => i.slug === "px-save-down")!);
+    assert.strictEqual(saveUp.occupiedCellCount, saveDown.occupiedCellCount, "SaveUp and SaveDown cell count mismatch");
+  });
+
+  it("should verify Batch 006 container consistency", () => {
+    const copyCircle = CANONICAL_ICONS.find((i) => i.slug === "px-copy-circle");
+    const copySquare = CANONICAL_ICONS.find((i) => i.slug === "px-copy-square");
+    assert.ok(copyCircle && copySquare);
+
+    const innerCopy = "M10 7h7v7h-3v-2h1V9h-3v1h-2V7z M7 10h7v7H7v-7zm2 2v3h3v-3H9z";
+    assert.ok(copyCircle.geometry.paths[0].d.includes(innerCopy));
+    assert.ok(copySquare.geometry.paths[0].d.includes(innerCopy));
+
+    const saveCircle = CANONICAL_ICONS.find((i) => i.slug === "px-save-circle");
+    const saveSquare = CANONICAL_ICONS.find((i) => i.slug === "px-save-square");
+    assert.ok(saveCircle && saveSquare);
+
+    const innerSave = "M7 7h9v1h1v9H7V7zm2 2h5v2H9V9zm1 4h5v3h-5v-3z";
+    assert.ok(saveCircle.geometry.paths[0].d.includes(innerSave));
+    assert.ok(saveSquare.geometry.paths[0].d.includes(innerSave));
   });
 
   it("should tokenize path and resolve subpaths accurately", () => {

@@ -262,6 +262,12 @@ export const ICON_FAMILIES: Record<string, PXFamilyDefinition> = {
     description: "Dual layered documents representing clipboard copy and duplication.",
     rootIcon: "copy",
   },
+  "save": {
+    id: "save",
+    name: "Save",
+    description: "Floppy disk storage medium representing saving, persisting, and recording state.",
+    rootIcon: "save",
+  },
   "download": {
     id: "download",
     name: "Download",

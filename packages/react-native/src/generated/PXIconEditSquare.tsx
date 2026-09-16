@@ -29,7 +29,7 @@ export const PXIconEditSquare: React.FC<PXIconEditSquareProps> = ({
 
   return (
     <Svg width={dimension} height={dimension} viewBox="0 0 24 24">
-      <Path d="M5 3h14v2h2v14h-2v2H5v-2H3V5h2V3z M7 17h2v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h2V7h-2v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v2H7v2z" fill={color} fillRule="evenodd" />
+      <Path d="M5 3h14v2h2v14h-2v2H5v-2H3V5h2V3z M15 7h2v1h-2z M14 8h1v1h-1z M16 8h1v1h-1z M12 9h4v2h-4z M10 11h4v2h-4z M9 13h1v1h-1z M11 13h1v1h-1z M8 14h2v1h-2z M7 15h2v2h-2z" fill={color} fillRule="evenodd" />
     </Svg>
   );
 };

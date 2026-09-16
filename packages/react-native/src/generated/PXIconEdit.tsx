@@ -29,7 +29,7 @@ export const PXIconEdit: React.FC<PXIconEditProps> = ({
 
   return (
     <Svg width={dimension} height={dimension} viewBox="0 0 24 24">
-      <Path d="M3 21h2v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h2V3h-2v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v2H3v2z" fill={color} />
+      <Path d="M17 4h2v1h-2z M16 5h1v1h-1z M18 5h1v1h-1z M14 6h4v2h-4z M12 8h4v2h-4z M10 10h4v2h-4z M8 12h4v2h-4z M6 14h4v2h-4z M5 16h1v1h-1z M7 16h1v1h-1z M4 17h2v2h-2z" fill={color} />
     </Svg>
   );
 };

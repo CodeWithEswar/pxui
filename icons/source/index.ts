@@ -65,6 +65,29 @@ import { editTable as PXIconEditTableDef } from "./actions-controls/edit-table";
 import { editSelection as PXIconEditSelectionDef } from "./actions-controls/edit-selection";
 import { editLocked as PXIconEditLockedDef } from "./actions-controls/edit-locked";
 
+// Production Batch 06 (0051–0070): Copy & Save Families
+import { copy as PXIconCopyDef } from "./actions-controls/copy";
+import { copyCircle as PXIconCopyCircleDef } from "./actions-controls/copy-circle";
+import { copySquare as PXIconCopySquareDef } from "./actions-controls/copy-square";
+import { copySmall as PXIconCopySmallDef } from "./actions-controls/copy-small";
+import { copyLarge as PXIconCopyLargeDef } from "./actions-controls/copy-large";
+import { copyLeft as PXIconCopyLeftDef } from "./actions-controls/copy-left";
+import { copyRight as PXIconCopyRightDef } from "./actions-controls/copy-right";
+import { copyUp as PXIconCopyUpDef } from "./actions-controls/copy-up";
+import { copyDown as PXIconCopyDownDef } from "./actions-controls/copy-down";
+import { copyActive as PXIconCopyActiveDef } from "./actions-controls/copy-active";
+
+import { save as PXIconSaveDef } from "./actions-controls/save";
+import { saveCircle as PXIconSaveCircleDef } from "./actions-controls/save-circle";
+import { saveSquare as PXIconSaveSquareDef } from "./actions-controls/save-square";
+import { saveSmall as PXIconSaveSmallDef } from "./actions-controls/save-small";
+import { saveLarge as PXIconSaveLargeDef } from "./actions-controls/save-large";
+import { saveLeft as PXIconSaveLeftDef } from "./actions-controls/save-left";
+import { saveRight as PXIconSaveRightDef } from "./actions-controls/save-right";
+import { saveUp as PXIconSaveUpDef } from "./actions-controls/save-up";
+import { saveDown as PXIconSaveDownDef } from "./actions-controls/save-down";
+import { saveActive as PXIconSaveActiveDef } from "./actions-controls/save-active";
+
 import { home as PXIconHomeDef } from "./navigation/home";
 import { search as PXIconSearchDef } from "./navigation/search";
 import { settings as PXIconSettingsDef } from "./actions/settings";
@@ -72,7 +95,6 @@ import { x as PXIconXDef } from "./actions/x";
 import { plus as PXIconPlusDef } from "./actions/plus";
 import { minus as PXIconMinusDef } from "./actions/minus";
 import { trash as PXIconTrashDef } from "./actions/trash";
-import { copy as PXIconCopyDef } from "./actions/copy";
 import { download as PXIconDownloadDef } from "./actions/download";
 import { upload as PXIconUploadDef } from "./actions/upload";
 import { share as PXIconShareDef } from "./actions/share";
@@ -225,6 +247,29 @@ export const CANONICAL_ICONS: PXIconDefinition[] = [
   PXIconEditSelectionDef,
   PXIconEditLockedDef,
 
+  // Production Batch 06: Copy & Save Families (0051–0070)
+  PXIconCopyDef,
+  PXIconCopyCircleDef,
+  PXIconCopySquareDef,
+  PXIconCopySmallDef,
+  PXIconCopyLargeDef,
+  PXIconCopyLeftDef,
+  PXIconCopyRightDef,
+  PXIconCopyUpDef,
+  PXIconCopyDownDef,
+  PXIconCopyActiveDef,
+
+  PXIconSaveDef,
+  PXIconSaveCircleDef,
+  PXIconSaveSquareDef,
+  PXIconSaveSmallDef,
+  PXIconSaveLargeDef,
+  PXIconSaveLeftDef,
+  PXIconSaveRightDef,
+  PXIconSaveUpDef,
+  PXIconSaveDownDef,
+  PXIconSaveActiveDef,
+
   PXIconHomeDef,
   PXIconSearchDef,
   PXIconSettingsDef,
@@ -232,7 +277,6 @@ export const CANONICAL_ICONS: PXIconDefinition[] = [
   PXIconPlusDef,
   PXIconMinusDef,
   PXIconTrashDef,
-  PXIconCopyDef,
   PXIconDownloadDef,
   PXIconUploadDef,
   PXIconShareDef,

@@ -19,6 +19,7 @@ import {
   CANVAS_SAFE_MARGIN,
 } from "@pxui/core";
 import { IconDefinition } from "../icons/schema";
+import { PXIconDefinition } from "../../icons/schemas/icon.schema";
 import { ICONS_CATALOG } from "../icons/catalog";
 
 export interface PXPoint {
@@ -380,7 +381,7 @@ function computePolygonCentroid(vertices: PXPoint[]): { cx: number; cy: number; 
 /**
  * Complete Pin-to-Pin Geometry Analysis for a canonical icon definition.
  */
-export function analyzeIconPinToPin(icon: IconDefinition): PXGeometryAnalysis {
+export function analyzeIconPinToPin(icon: IconDefinition | PXIconDefinition): PXGeometryAnalysis {
   const allSubpaths: Array<{
     d: string;
     vertices: PXPoint[];
@@ -388,7 +389,12 @@ export function analyzeIconPinToPin(icon: IconDefinition): PXGeometryAnalysis {
     isClosed: boolean;
   }> = [];
 
-  const rawPaths = icon.geometry?.paths || icon.paths || [];
+  const rawPaths =
+    "geometry" in icon && icon.geometry?.paths
+      ? icon.geometry.paths
+      : "paths" in icon && icon.paths
+      ? icon.paths
+      : [];
 
   let totalMinX = Infinity;
   let totalMinY = Infinity;
@@ -485,7 +491,8 @@ export function analyzeIconPinToPin(icon: IconDefinition): PXGeometryAnalysis {
     height: totalMaxY - totalMinY,
   };
 
-  const declaredBounds: PXBounds = icon.geometry?.bounds
+  const declaredBounds: PXBounds =
+    "geometry" in icon && icon.geometry?.bounds
     ? {
         minX: icon.geometry.bounds.minX,
         minY: icon.geometry.bounds.minY,

@@ -13,7 +13,7 @@ export const editDocument = defineIcon({
     grid: 24,
     paths: [
       {
-        d: "M4 3h10v1h1v1h1v1h1v6h-2V7h-1V6h-1V5H6v14h5v2H4V3zm10 0v3h3l-3-3z M13 21h3v-1h1v-1h1v-1h1v-1h2v-2h-1v-1h-2v2h-1v1h-1v1h-1v1h-2v2z",
+        d: "M4 3h10v1h1v1h1v1h1v5h-2V7h-1V6h-1V5H6v14h4v2H4V3zm10 0v3h3l-3-3z M19 11h2v1h-2z M18 12h1v1h-1z M20 12h1v1h-1z M16 13h4v2h-4z M14 15h4v2h-4z M13 17h1v1h-1z M15 17h1v1h-1z M12 18h2v1h-2z M11 19h2v2h-2z",
       },
     ],
     bounds: { minX: 4, minY: 3, maxX: 21, maxY: 21 },

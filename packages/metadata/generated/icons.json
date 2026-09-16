@@ -1875,6 +1875,737 @@
     "deprecated": false
   },
   {
+    "name": "PXIconCopy",
+    "canonicalName": "copy",
+    "slug": "px-copy",
+    "componentName": "PXIconCopy",
+    "title": "Copy",
+    "description": "Pixel icon for copy; base form.",
+    "category": "actions-controls",
+    "family": "copy",
+    "tags": [
+      "copy",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "duplicate",
+      "clone",
+      "replicate",
+      "clipboard-copy"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCopyCircle",
+    "canonicalName": "copy-circle",
+    "slug": "px-copy-circle",
+    "componentName": "PXIconCopyCircle",
+    "title": "Copy Circle",
+    "description": "Pixel icon for copy; circular container.",
+    "category": "actions-controls",
+    "family": "copy",
+    "tags": [
+      "copy",
+      "circle",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "duplicate-circle",
+      "clone-circle",
+      "copy-round"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCopySquare",
+    "canonicalName": "copy-square",
+    "slug": "px-copy-square",
+    "componentName": "PXIconCopySquare",
+    "title": "Copy Square",
+    "description": "Pixel icon for copy; square container.",
+    "category": "actions-controls",
+    "family": "copy",
+    "tags": [
+      "copy",
+      "square",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "duplicate-square",
+      "clone-square",
+      "copy-box"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCopySmall",
+    "canonicalName": "copy-small",
+    "slug": "px-copy-small",
+    "componentName": "PXIconCopySmall",
+    "title": "Copy Small",
+    "description": "Pixel icon for copy; compact variant.",
+    "category": "actions-controls",
+    "family": "copy",
+    "tags": [
+      "copy",
+      "small",
+      "compact",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "duplicate-small",
+      "clone-small",
+      "copy-compact"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCopyLarge",
+    "canonicalName": "copy-large",
+    "slug": "px-copy-large",
+    "componentName": "PXIconCopyLarge",
+    "title": "Copy Large",
+    "description": "Pixel icon for copy; large-emphasis variant.",
+    "category": "actions-controls",
+    "family": "copy",
+    "tags": [
+      "copy",
+      "large",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "duplicate-large",
+      "clone-large",
+      "copy-expanded"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCopyLeft",
+    "canonicalName": "copy-left",
+    "slug": "px-copy-left",
+    "componentName": "PXIconCopyLeft",
+    "title": "Copy Left",
+    "description": "Pixel icon for copy; left-oriented variant.",
+    "category": "actions-controls",
+    "family": "copy",
+    "tags": [
+      "copy",
+      "left",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "duplicate-left",
+      "clone-left",
+      "copy-before"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCopyRight",
+    "canonicalName": "copy-right",
+    "slug": "px-copy-right",
+    "componentName": "PXIconCopyRight",
+    "title": "Copy Right",
+    "description": "Pixel icon for copy; right-oriented variant.",
+    "category": "actions-controls",
+    "family": "copy",
+    "tags": [
+      "copy",
+      "right",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "duplicate-right",
+      "clone-right",
+      "copy-after"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCopyUp",
+    "canonicalName": "copy-up",
+    "slug": "px-copy-up",
+    "componentName": "PXIconCopyUp",
+    "title": "Copy Up",
+    "description": "Pixel icon for copy; up-oriented variant.",
+    "category": "actions-controls",
+    "family": "copy",
+    "tags": [
+      "copy",
+      "up",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "duplicate-up",
+      "clone-up",
+      "copy-above"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCopyDown",
+    "canonicalName": "copy-down",
+    "slug": "px-copy-down",
+    "componentName": "PXIconCopyDown",
+    "title": "Copy Down",
+    "description": "Pixel icon for copy; down-oriented variant.",
+    "category": "actions-controls",
+    "family": "copy",
+    "tags": [
+      "copy",
+      "down",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "duplicate-down",
+      "clone-down",
+      "copy-below"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCopyActive",
+    "canonicalName": "copy-active",
+    "slug": "px-copy-active",
+    "componentName": "PXIconCopyActive",
+    "title": "Copy Active",
+    "description": "Pixel icon for copy; active state.",
+    "category": "actions-controls",
+    "family": "copy",
+    "tags": [
+      "copy",
+      "active",
+      "state",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "duplicate-active",
+      "clone-active",
+      "copy-on",
+      "copied"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSave",
+    "canonicalName": "save",
+    "slug": "px-save",
+    "componentName": "PXIconSave",
+    "title": "Save",
+    "description": "Pixel icon for save; base form.",
+    "category": "actions-controls",
+    "family": "save",
+    "tags": [
+      "save",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "store",
+      "persist",
+      "disk",
+      "floppy",
+      "commit"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSaveCircle",
+    "canonicalName": "save-circle",
+    "slug": "px-save-circle",
+    "componentName": "PXIconSaveCircle",
+    "title": "Save Circle",
+    "description": "Pixel icon for save; circular container.",
+    "category": "actions-controls",
+    "family": "save",
+    "tags": [
+      "save",
+      "circle",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "store-circle",
+      "persist-circle",
+      "disk-circle"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSaveSquare",
+    "canonicalName": "save-square",
+    "slug": "px-save-square",
+    "componentName": "PXIconSaveSquare",
+    "title": "Save Square",
+    "description": "Pixel icon for save; square container.",
+    "category": "actions-controls",
+    "family": "save",
+    "tags": [
+      "save",
+      "square",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "store-square",
+      "persist-square",
+      "disk-square"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSaveSmall",
+    "canonicalName": "save-small",
+    "slug": "px-save-small",
+    "componentName": "PXIconSaveSmall",
+    "title": "Save Small",
+    "description": "Pixel icon for save; compact variant.",
+    "category": "actions-controls",
+    "family": "save",
+    "tags": [
+      "save",
+      "small",
+      "compact",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "store-small",
+      "persist-small",
+      "disk-small",
+      "save-compact"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSaveLarge",
+    "canonicalName": "save-large",
+    "slug": "px-save-large",
+    "componentName": "PXIconSaveLarge",
+    "title": "Save Large",
+    "description": "Pixel icon for save; large-emphasis variant.",
+    "category": "actions-controls",
+    "family": "save",
+    "tags": [
+      "save",
+      "large",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "store-large",
+      "persist-large",
+      "disk-large",
+      "save-expanded"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSaveLeft",
+    "canonicalName": "save-left",
+    "slug": "px-save-left",
+    "componentName": "PXIconSaveLeft",
+    "title": "Save Left",
+    "description": "Pixel icon for save; left-oriented variant.",
+    "category": "actions-controls",
+    "family": "save",
+    "tags": [
+      "save",
+      "left",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "store-left",
+      "persist-left",
+      "disk-left"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSaveRight",
+    "canonicalName": "save-right",
+    "slug": "px-save-right",
+    "componentName": "PXIconSaveRight",
+    "title": "Save Right",
+    "description": "Pixel icon for save; right-oriented variant.",
+    "category": "actions-controls",
+    "family": "save",
+    "tags": [
+      "save",
+      "right",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "store-right",
+      "persist-right",
+      "disk-right"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSaveUp",
+    "canonicalName": "save-up",
+    "slug": "px-save-up",
+    "componentName": "PXIconSaveUp",
+    "title": "Save Up",
+    "description": "Pixel icon for save; up-oriented variant.",
+    "category": "actions-controls",
+    "family": "save",
+    "tags": [
+      "save",
+      "up",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "store-up",
+      "persist-up",
+      "disk-up",
+      "save-upload"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSaveDown",
+    "canonicalName": "save-down",
+    "slug": "px-save-down",
+    "componentName": "PXIconSaveDown",
+    "title": "Save Down",
+    "description": "Pixel icon for save; down-oriented variant.",
+    "category": "actions-controls",
+    "family": "save",
+    "tags": [
+      "save",
+      "down",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "store-down",
+      "persist-down",
+      "disk-down",
+      "save-download"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSaveActive",
+    "canonicalName": "save-active",
+    "slug": "px-save-active",
+    "componentName": "PXIconSaveActive",
+    "title": "Save Active",
+    "description": "Pixel icon for save; active state.",
+    "category": "actions-controls",
+    "family": "save",
+    "tags": [
+      "save",
+      "active",
+      "state",
+      "action",
+      "control",
+      "ui"
+    ],
+    "aliases": [
+      "store-active",
+      "persist-active",
+      "disk-active",
+      "saved"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
     "name": "PXIconHome",
     "canonicalName": "home",
     "slug": "px-home",
@@ -2109,42 +2840,6 @@
       "delete",
       "remove",
       "bin"
-    ],
-    "grid": 24,
-    "variants": [
-      "outline",
-      "filled"
-    ],
-    "animated": false,
-    "platforms": [
-      "react",
-      "react-native",
-      "registry",
-      "svg"
-    ],
-    "status": "stable",
-    "introduced": "1.0.0",
-    "deprecated": false
-  },
-  {
-    "name": "PXIconCopy",
-    "canonicalName": "copy",
-    "slug": "px-copy",
-    "componentName": "PXIconCopy",
-    "title": "Copy",
-    "description": "Dual layered documents representing clipboard copy and duplication.",
-    "category": "actions",
-    "family": "copy",
-    "tags": [
-      "duplicate",
-      "clipboard",
-      "clone",
-      "paste"
-    ],
-    "aliases": [
-      "duplicate",
-      "clone",
-      "clipboard"
     ],
     "grid": 24,
     "variants": [

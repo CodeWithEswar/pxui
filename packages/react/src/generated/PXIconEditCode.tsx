@@ -36,7 +36,7 @@ export const PXIconEditCodeDefinition: PXIconDefinition = {
     "grid": 24,
     "paths": [
       {
-        "d": "M7 7h2v2H7V7zm-2 2h2v2H5V9zm-2 2h2v2H3v-2zm2 2h2v2H5v-2zm2 2h2v2H7v-2z M15 7h2v2h-2V7zm2 2h2v2h-2V9z M13 21h3v-1h1v-1h1v-1h1v-1h2v-2h-1v-1h-2v2h-1v1h-1v1h-1v1h-2v2z"
+        "d": "M7 7h2v2H7V7zm-2 2h2v2H5V9zm-2 2h2v2H3v-2zm2 2h2v2H5v-2zm2 2h2v2H7v-2z M13 7h2v2h-2V7zm2 2h2v2h-2V9zm2 2h2v2h-2v-2zm-2 2h2v2h-2v-2zm-2 2h2v2h-2v-2z M19 11h2v1h-2z M18 12h1v1h-1z M20 12h1v1h-1z M16 13h4v2h-4z M14 15h4v2h-4z M13 17h1v1h-1z M15 17h1v1h-1z M12 18h2v1h-2z M11 19h2v2h-2z"
       }
     ]
   },
