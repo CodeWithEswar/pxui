@@ -1,0 +1,60 @@
+{
+  "essentials": {
+    "id": "essentials",
+    "name": "Essentials Starter",
+    "description": "Core interface icons required by every modern application",
+    "iconSlugs": [
+      "px-home",
+      "px-search",
+      "px-settings",
+      "px-bell",
+      "px-user",
+      "px-check",
+      "px-x",
+      "px-menu"
+    ]
+  },
+  "navigation": {
+    "id": "navigation",
+    "name": "Navigation System",
+    "description": "Wayfinding, arrows, chevrons, compass, and orientation",
+    "iconSlugs": [
+      "px-arrow-left",
+      "px-arrow-right",
+      "px-arrow-up",
+      "px-arrow-down",
+      "px-chevron-left",
+      "px-chevron-right",
+      "px-compass",
+      "px-map-pin"
+    ]
+  },
+  "developer": {
+    "id": "developer",
+    "name": "Developer & Terminal",
+    "description": "Code blocks, terminals, git branches, commits, bugs, and hardware",
+    "iconSlugs": [
+      "px-terminal",
+      "px-code",
+      "px-git-branch",
+      "px-git-commit",
+      "px-bug",
+      "px-database",
+      "px-cpu"
+    ]
+  },
+  "animated": {
+    "id": "animated",
+    "name": "Discrete Motion",
+    "description": "Icons featuring pixel-native frame choreography",
+    "iconSlugs": [
+      "px-bell",
+      "px-heart",
+      "px-refresh",
+      "px-sparkles",
+      "px-download",
+      "px-loader",
+      "px-zap"
+    ]
+  }
+}

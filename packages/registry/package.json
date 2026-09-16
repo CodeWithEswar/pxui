@@ -1,0 +1,9 @@
+{
+  "name": "@pxui/registry",
+  "version": "0.1.0",
+  "description": "Official shadcn/ui Registry generator and artifacts for PXUI",
+  "main": "./generated/registry.json",
+  "keywords": ["shadcn", "registry", "pixel", "icon", "pxui"],
+  "author": "PXUI Team",
+  "license": "MIT"
+}

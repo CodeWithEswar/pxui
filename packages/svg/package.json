@@ -1,0 +1,9 @@
+{
+  "name": "@pxui/svg",
+  "version": "0.1.0",
+  "description": "Deterministic raw SVG pixel icon assets",
+  "main": "./manifest.json",
+  "keywords": ["pixel", "icon", "svg", "pxui"],
+  "author": "PXUI Team",
+  "license": "MIT"
+}

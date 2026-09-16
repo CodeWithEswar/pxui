@@ -1,0 +1,9 @@
+{
+  "name": "@pxui/metadata",
+  "version": "0.1.0",
+  "description": "Generated discovery, search indices, and taxonomy metadata for PXUI",
+  "main": "./generated/manifest.json",
+  "keywords": ["pixel", "icon", "metadata", "search", "pxui"],
+  "author": "PXUI Team",
+  "license": "MIT"
+}

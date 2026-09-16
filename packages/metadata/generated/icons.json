@@ -1,0 +1,5347 @@
+[
+  {
+    "name": "PXIconAdd",
+    "canonicalName": "add",
+    "slug": "px-add",
+    "componentName": "PXIconAdd",
+    "title": "Add",
+    "description": "Adds or creates a new item, record, element, or object.",
+    "category": "actions-controls",
+    "family": "add",
+    "tags": [
+      "action",
+      "creation",
+      "control",
+      "toolbar",
+      "add"
+    ],
+    "aliases": [
+      "plus",
+      "create",
+      "new",
+      "insert"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconAddCircle",
+    "canonicalName": "add-circle",
+    "slug": "px-add-circle",
+    "componentName": "PXIconAddCircle",
+    "title": "Add Circle",
+    "description": "Add action presented inside a circular container for compact controls and state-oriented UI.",
+    "category": "actions-controls",
+    "family": "add",
+    "tags": [
+      "action",
+      "circle",
+      "container",
+      "create",
+      "add"
+    ],
+    "aliases": [
+      "plus-circle",
+      "create-circle",
+      "new-circle"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconAddSquare",
+    "canonicalName": "add-square",
+    "slug": "px-add-square",
+    "componentName": "PXIconAddSquare",
+    "title": "Add Square",
+    "description": "Add action contained within a square module or bounded interface region.",
+    "category": "actions-controls",
+    "family": "add",
+    "tags": [
+      "action",
+      "square",
+      "container",
+      "create",
+      "add"
+    ],
+    "aliases": [
+      "plus-square",
+      "create-square",
+      "new-box"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconInsertLeft",
+    "canonicalName": "insert-left",
+    "slug": "px-insert-left",
+    "componentName": "PXIconInsertLeft",
+    "title": "Insert Left",
+    "description": "Inserts an element immediately before or to the left of an existing element.",
+    "category": "actions-controls",
+    "family": "insert",
+    "tags": [
+      "insert",
+      "layout",
+      "left",
+      "before",
+      "prepend"
+    ],
+    "aliases": [
+      "prepend",
+      "insert-before",
+      "add-left"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconInsertRight",
+    "canonicalName": "insert-right",
+    "slug": "px-insert-right",
+    "componentName": "PXIconInsertRight",
+    "title": "Insert Right",
+    "description": "Inserts an element immediately after or to the right of an existing element.",
+    "category": "actions-controls",
+    "family": "insert",
+    "tags": [
+      "insert",
+      "layout",
+      "right",
+      "after",
+      "append"
+    ],
+    "aliases": [
+      "append",
+      "insert-after",
+      "add-right"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconInsertAbove",
+    "canonicalName": "insert-above",
+    "slug": "px-insert-above",
+    "componentName": "PXIconInsertAbove",
+    "title": "Insert Above",
+    "description": "Inserts a new element above an existing element.",
+    "category": "actions-controls",
+    "family": "insert",
+    "tags": [
+      "insert",
+      "layout",
+      "above",
+      "top",
+      "up"
+    ],
+    "aliases": [
+      "insert-top",
+      "insert-up",
+      "add-above"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconInsertBelow",
+    "canonicalName": "insert-below",
+    "slug": "px-insert-below",
+    "componentName": "PXIconInsertBelow",
+    "title": "Insert Below",
+    "description": "Inserts a new element below an existing element.",
+    "category": "actions-controls",
+    "family": "insert",
+    "tags": [
+      "insert",
+      "layout",
+      "below",
+      "bottom",
+      "down"
+    ],
+    "aliases": [
+      "insert-bottom",
+      "insert-down",
+      "add-below"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconRemove",
+    "canonicalName": "remove",
+    "slug": "px-remove",
+    "componentName": "PXIconRemove",
+    "title": "Remove",
+    "description": "Removes, subtracts, or decreases an item or value.",
+    "category": "actions-controls",
+    "family": "remove",
+    "tags": [
+      "action",
+      "subtraction",
+      "control",
+      "remove",
+      "delete"
+    ],
+    "aliases": [
+      "minus",
+      "subtract",
+      "decrease",
+      "delete"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconRemoveCircle",
+    "canonicalName": "remove-circle",
+    "slug": "px-remove-circle",
+    "componentName": "PXIconRemoveCircle",
+    "title": "Remove Circle",
+    "description": "Removal/subtraction action represented inside a circular container.",
+    "category": "actions-controls",
+    "family": "remove",
+    "tags": [
+      "action",
+      "circle",
+      "container",
+      "remove",
+      "delete"
+    ],
+    "aliases": [
+      "minus-circle",
+      "subtract-circle",
+      "delete-circle"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconClose",
+    "canonicalName": "close",
+    "slug": "px-close",
+    "componentName": "PXIconClose",
+    "title": "Close",
+    "description": "Closes, dismisses, cancels, or clears the current surface or context.",
+    "category": "actions-controls",
+    "family": "close",
+    "tags": [
+      "action",
+      "dismiss",
+      "cancel",
+      "close",
+      "clear",
+      "dialog"
+    ],
+    "aliases": [
+      "dismiss",
+      "cancel",
+      "x",
+      "exit",
+      "clear"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconRemoveSquare",
+    "canonicalName": "remove-square",
+    "slug": "px-remove-square",
+    "componentName": "PXIconRemoveSquare",
+    "title": "Remove Square",
+    "description": "Removes or subtracts an item using a compact square-contained action symbol.",
+    "category": "actions-controls",
+    "family": "remove",
+    "tags": [
+      "remove",
+      "control",
+      "decrease",
+      "square"
+    ],
+    "aliases": [
+      "minus-square",
+      "subtract-square"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSubtract",
+    "canonicalName": "subtract",
+    "slug": "px-subtract",
+    "componentName": "PXIconSubtract",
+    "title": "Subtract",
+    "description": "Represents numerical subtraction or decreasing a quantity or value.",
+    "category": "actions-controls",
+    "family": "subtract",
+    "tags": [
+      "subtract",
+      "minus",
+      "decrease",
+      "math",
+      "value",
+      "quantity",
+      "calculation"
+    ],
+    "aliases": [
+      "minus",
+      "decrease",
+      "math",
+      "decrement"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSubtractCircle",
+    "canonicalName": "subtract-circle",
+    "slug": "px-subtract-circle",
+    "componentName": "PXIconSubtractCircle",
+    "title": "Subtract Circle",
+    "description": "Subtraction or decrement action contained within a circular control.",
+    "category": "actions-controls",
+    "family": "subtract",
+    "tags": [
+      "subtract",
+      "minus",
+      "circle",
+      "decrease",
+      "decrement",
+      "math",
+      "value"
+    ],
+    "aliases": [
+      "minus-circle",
+      "decrease-circle",
+      "decrement-circle"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSubtractSquare",
+    "canonicalName": "subtract-square",
+    "slug": "px-subtract-square",
+    "componentName": "PXIconSubtractSquare",
+    "title": "Subtract Square",
+    "description": "Subtraction or decrement action displayed inside a bounded square control.",
+    "category": "actions-controls",
+    "family": "subtract",
+    "tags": [
+      "subtract",
+      "minus",
+      "square",
+      "decrement",
+      "decrease",
+      "math",
+      "control"
+    ],
+    "aliases": [
+      "minus-square-math",
+      "decrement-square"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconRemoveRow",
+    "canonicalName": "remove-row",
+    "slug": "px-remove-row",
+    "componentName": "PXIconRemoveRow",
+    "title": "Remove Row",
+    "description": "Removes a horizontal row from a table, grid, list, or structured layout.",
+    "category": "actions-controls",
+    "family": "remove",
+    "tags": [
+      "table",
+      "grid",
+      "layout",
+      "row",
+      "remove"
+    ],
+    "aliases": [
+      "delete-row",
+      "table-remove-row"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconRemoveColumn",
+    "canonicalName": "remove-column",
+    "slug": "px-remove-column",
+    "componentName": "PXIconRemoveColumn",
+    "title": "Remove Column",
+    "description": "Removes a vertical column from a table, grid, or structured layout.",
+    "category": "actions-controls",
+    "family": "remove",
+    "tags": [
+      "table",
+      "grid",
+      "layout",
+      "column",
+      "remove"
+    ],
+    "aliases": [
+      "delete-column",
+      "table-remove-column"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconClear",
+    "canonicalName": "clear",
+    "slug": "px-clear",
+    "componentName": "PXIconClear",
+    "title": "Clear",
+    "description": "Clears transient content, input, selection, or temporary state without implying permanent deletion.",
+    "category": "actions-controls",
+    "family": "clear",
+    "tags": [
+      "clear",
+      "reset",
+      "empty",
+      "dismiss",
+      "erase",
+      "input",
+      "selection"
+    ],
+    "aliases": [
+      "reset",
+      "empty",
+      "erase-input"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconClearCircle",
+    "canonicalName": "clear-circle",
+    "slug": "px-clear-circle",
+    "componentName": "PXIconClearCircle",
+    "title": "Clear Circle",
+    "description": "Clears or resets a temporary value or state from a circular control context.",
+    "category": "actions-controls",
+    "family": "clear",
+    "tags": [
+      "clear",
+      "circle",
+      "reset",
+      "dismiss",
+      "input",
+      "erase",
+      "cancel"
+    ],
+    "aliases": [
+      "reset-circle",
+      "cancel-circle"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconClearSquare",
+    "canonicalName": "clear-square",
+    "slug": "px-clear-square",
+    "componentName": "PXIconClearSquare",
+    "title": "Clear Square",
+    "description": "Clears or resets transient content within a square or modular interface context.",
+    "category": "actions-controls",
+    "family": "clear",
+    "tags": [
+      "clear",
+      "square",
+      "reset",
+      "input",
+      "state",
+      "module",
+      "erase"
+    ],
+    "aliases": [
+      "reset-square",
+      "cancel-square"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconDelete",
+    "canonicalName": "delete",
+    "slug": "px-delete",
+    "componentName": "PXIconDelete",
+    "title": "Delete",
+    "description": "Permanently deletes an item, record, or resource.",
+    "category": "actions-controls",
+    "family": "delete",
+    "tags": [
+      "destructive",
+      "remove",
+      "trash",
+      "record",
+      "resource",
+      "delete"
+    ],
+    "aliases": [
+      "destroy",
+      "discard",
+      "purge"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCloseCircle",
+    "canonicalName": "close-circle",
+    "slug": "px-close-circle",
+    "componentName": "PXIconCloseCircle",
+    "title": "Close Circle",
+    "description": "Closes or dismisses a surface using a circular contained action.",
+    "category": "actions-controls",
+    "family": "close",
+    "tags": [
+      "close",
+      "dismiss",
+      "control",
+      "circle",
+      "x",
+      "action"
+    ],
+    "aliases": [
+      "dismiss-circle",
+      "cancel-circle",
+      "x-circle",
+      "exit-circle"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCloseSquare",
+    "canonicalName": "close-square",
+    "slug": "px-close-square",
+    "componentName": "PXIconCloseSquare",
+    "title": "Close Square",
+    "description": "Closes or dismisses content using a square-contained action symbol.",
+    "category": "actions-controls",
+    "family": "close",
+    "tags": [
+      "close",
+      "dismiss",
+      "square",
+      "control",
+      "x",
+      "module",
+      "window"
+    ],
+    "aliases": [
+      "dismiss-square",
+      "cancel-square",
+      "x-square",
+      "exit-square"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconClosePanelLeft",
+    "canonicalName": "close-panel-left",
+    "slug": "px-close-panel-left",
+    "componentName": "PXIconClosePanelLeft",
+    "title": "Close Panel Left",
+    "description": "Closes or dismisses a panel attached to the left side of the interface.",
+    "category": "actions-controls",
+    "family": "close-layout",
+    "tags": [
+      "close",
+      "panel",
+      "left",
+      "sidebar",
+      "drawer",
+      "dismiss",
+      "layout"
+    ],
+    "aliases": [
+      "close-sidebar-left",
+      "dismiss-left-panel",
+      "collapse-left-panel"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconClosePanelRight",
+    "canonicalName": "close-panel-right",
+    "slug": "px-close-panel-right",
+    "componentName": "PXIconClosePanelRight",
+    "title": "Close Panel Right",
+    "description": "Closes a panel attached to the right edge of an application or workspace.",
+    "category": "actions-controls",
+    "family": "close-layout",
+    "tags": [
+      "close",
+      "panel",
+      "right",
+      "sidebar",
+      "drawer",
+      "dismiss",
+      "layout",
+      "inspector"
+    ],
+    "aliases": [
+      "close-sidebar-right",
+      "dismiss-right-panel",
+      "collapse-right-panel"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconClosePanelTop",
+    "canonicalName": "close-panel-top",
+    "slug": "px-close-panel-top",
+    "componentName": "PXIconClosePanelTop",
+    "title": "Close Panel Top",
+    "description": "Closes a panel or region attached to the top of an interface.",
+    "category": "actions-controls",
+    "family": "close-layout",
+    "tags": [
+      "close",
+      "panel",
+      "top",
+      "header",
+      "drawer",
+      "dismiss",
+      "layout"
+    ],
+    "aliases": [
+      "close-header-panel",
+      "dismiss-top-panel",
+      "collapse-top-panel"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconClosePanelBottom",
+    "canonicalName": "close-panel-bottom",
+    "slug": "px-close-panel-bottom",
+    "componentName": "PXIconClosePanelBottom",
+    "title": "Close Panel Bottom",
+    "description": "Closes a panel, tray, or drawer attached to the bottom edge of an interface.",
+    "category": "actions-controls",
+    "family": "close-layout",
+    "tags": [
+      "close",
+      "panel",
+      "bottom",
+      "drawer",
+      "tray",
+      "sheet",
+      "dismiss",
+      "layout"
+    ],
+    "aliases": [
+      "close-bottom-panel",
+      "dismiss-tray",
+      "collapse-dock",
+      "close-terminal"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCloseTab",
+    "canonicalName": "close-tab",
+    "slug": "px-close-tab",
+    "componentName": "PXIconCloseTab",
+    "title": "Close Tab",
+    "description": "Closes an active document, browser, editor, or workspace tab.",
+    "category": "actions-controls",
+    "family": "close",
+    "tags": [
+      "close",
+      "tab",
+      "document",
+      "editor",
+      "browser",
+      "dismiss",
+      "workspace"
+    ],
+    "aliases": [
+      "close-editor-tab",
+      "close-document",
+      "dismiss-tab"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCloseWindow",
+    "canonicalName": "close-window",
+    "slug": "px-close-window",
+    "componentName": "PXIconCloseWindow",
+    "title": "Close Window",
+    "description": "Closes an application, floating window, dialog, or independent surface.",
+    "category": "actions-controls",
+    "family": "close",
+    "tags": [
+      "close",
+      "window",
+      "application",
+      "dialog",
+      "surface",
+      "dismiss",
+      "exit"
+    ],
+    "aliases": [
+      "close-application",
+      "close-dialog",
+      "close-modal",
+      "window-exit"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconDismiss",
+    "canonicalName": "dismiss",
+    "slug": "px-dismiss",
+    "componentName": "PXIconDismiss",
+    "title": "Dismiss",
+    "description": "Dismisses temporary interface content without implying destructive deletion.",
+    "category": "actions-controls",
+    "family": "close",
+    "tags": [
+      "dismiss",
+      "close",
+      "hide",
+      "remove",
+      "notification",
+      "toast",
+      "banner",
+      "temporary"
+    ],
+    "aliases": [
+      "dismiss-toast",
+      "dismiss-notification",
+      "hide-banner",
+      "dismiss-alert"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCancel",
+    "canonicalName": "cancel",
+    "slug": "px-cancel",
+    "componentName": "PXIconCancel",
+    "title": "Cancel",
+    "description": "Stops or aborts an operation before it completes.",
+    "category": "actions-controls",
+    "family": "cancel",
+    "tags": [
+      "cancel",
+      "stop",
+      "abort",
+      "operation",
+      "process",
+      "dismiss",
+      "terminate",
+      "interrupt"
+    ],
+    "aliases": [
+      "abort",
+      "stop-operation",
+      "cancel-upload",
+      "interrupt-process"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCheck",
+    "canonicalName": "check",
+    "slug": "px-check",
+    "componentName": "PXIconCheck",
+    "title": "Check",
+    "description": "Indicates successful completion, confirmation, acceptance, or a positive state.",
+    "category": "actions-controls",
+    "family": "check",
+    "tags": [
+      "confirmation",
+      "completion",
+      "positive",
+      "action",
+      "status",
+      "control"
+    ],
+    "aliases": [
+      "tick",
+      "done",
+      "complete",
+      "success",
+      "confirmed",
+      "accepted"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCheckCircle",
+    "canonicalName": "check-circle",
+    "slug": "px-check-circle",
+    "componentName": "PXIconCheckCircle",
+    "title": "Check Circle",
+    "description": "Represents successful completion or confirmation within a circular contained state.",
+    "category": "actions-controls",
+    "family": "check",
+    "tags": [
+      "success",
+      "confirmation",
+      "circle",
+      "status",
+      "complete"
+    ],
+    "aliases": [
+      "success-circle",
+      "confirmed-circle",
+      "complete-circle",
+      "tick-circle"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCheckSquare",
+    "canonicalName": "check-square",
+    "slug": "px-check-square",
+    "componentName": "PXIconCheckSquare",
+    "title": "Check Square",
+    "description": "Indicates confirmation or successful completion within a square-contained state.",
+    "category": "actions-controls",
+    "family": "check",
+    "tags": [
+      "confirmation",
+      "success",
+      "square",
+      "status",
+      "complete"
+    ],
+    "aliases": [
+      "success-square",
+      "complete-square",
+      "tick-square",
+      "confirmed-square"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCheckDouble",
+    "canonicalName": "check-double",
+    "slug": "px-check-double",
+    "componentName": "PXIconCheckDouble",
+    "title": "Check Double",
+    "description": "Indicates a second level of completion, acknowledgement, or double confirmation.",
+    "category": "actions-controls",
+    "family": "check",
+    "tags": [
+      "check",
+      "confirmation",
+      "complete",
+      "double",
+      "acknowledgement"
+    ],
+    "aliases": [
+      "double-check",
+      "double-tick",
+      "acknowledged",
+      "confirmed-twice"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCheckAll",
+    "canonicalName": "check-all",
+    "slug": "px-check-all",
+    "componentName": "PXIconCheckAll",
+    "title": "Check All",
+    "description": "Complete or confirm every item in a group, collection, or batch.",
+    "category": "actions-controls",
+    "family": "check",
+    "tags": [
+      "check",
+      "complete",
+      "confirm",
+      "batch",
+      "all",
+      "group"
+    ],
+    "aliases": [
+      "complete-all",
+      "confirm-all",
+      "mark-all",
+      "select-complete"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCheckboxChecked",
+    "canonicalName": "checkbox-checked",
+    "slug": "px-checkbox-checked",
+    "componentName": "PXIconCheckboxChecked",
+    "title": "Checkbox Checked",
+    "description": "Represents a checkbox control in its selected state.",
+    "category": "actions-controls",
+    "family": "checkbox",
+    "tags": [
+      "form",
+      "selection",
+      "control",
+      "boolean",
+      "checked"
+    ],
+    "aliases": [
+      "checkbox",
+      "checked",
+      "selected-checkbox",
+      "checkbox-on"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCheckboxIndeterminate",
+    "canonicalName": "checkbox-indeterminate",
+    "slug": "px-checkbox-indeterminate",
+    "componentName": "PXIconCheckboxIndeterminate",
+    "title": "Checkbox Indeterminate",
+    "description": "Represents a checkbox containing a mixed or partially selected state.",
+    "category": "actions-controls",
+    "family": "checkbox",
+    "tags": [
+      "checkbox",
+      "partial",
+      "selection",
+      "mixed",
+      "form",
+      "control"
+    ],
+    "aliases": [
+      "mixed",
+      "partial",
+      "checkbox-mixed",
+      "indeterminate"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconRadioChecked",
+    "canonicalName": "radio-checked",
+    "slug": "px-radio-checked",
+    "componentName": "PXIconRadioChecked",
+    "title": "Radio Checked",
+    "description": "Represents a radio control in its selected state.",
+    "category": "actions-controls",
+    "family": "radio",
+    "tags": [
+      "radio",
+      "selection",
+      "single-choice",
+      "form",
+      "control"
+    ],
+    "aliases": [
+      "radio-selected",
+      "radio-on",
+      "option-selected"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSelectionCheck",
+    "canonicalName": "selection-check",
+    "slug": "px-selection-check",
+    "componentName": "PXIconSelectionCheck",
+    "title": "Selection Check",
+    "description": "Confirms a selected object, region, range, or collection.",
+    "category": "actions-controls",
+    "family": "check",
+    "tags": [
+      "selection",
+      "check",
+      "confirm",
+      "bounding-box",
+      "editor",
+      "control"
+    ],
+    "aliases": [
+      "selected",
+      "confirm-selection",
+      "selection-complete"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconConfirm",
+    "canonicalName": "confirm",
+    "slug": "px-confirm",
+    "componentName": "PXIconConfirm",
+    "title": "Confirm",
+    "description": "Explicitly confirms or accepts a proposed action or decision.",
+    "category": "actions-controls",
+    "family": "check",
+    "tags": [
+      "action",
+      "decision",
+      "confirmation",
+      "accept",
+      "submit"
+    ],
+    "aliases": [
+      "accept",
+      "approve",
+      "okay",
+      "proceed",
+      "commit"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconEdit",
+    "canonicalName": "edit",
+    "slug": "px-edit",
+    "componentName": "PXIconEdit",
+    "title": "Edit",
+    "description": "Modifies or updates an existing item, value, object, or piece of content.",
+    "category": "actions-controls",
+    "family": "edit",
+    "tags": [
+      "editing",
+      "action",
+      "content",
+      "toolbar",
+      "modify"
+    ],
+    "aliases": [
+      "modify",
+      "change",
+      "update",
+      "revise",
+      "pencil",
+      "write"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconEditCircle",
+    "canonicalName": "edit-circle",
+    "slug": "px-edit-circle",
+    "componentName": "PXIconEditCircle",
+    "title": "Edit Circle",
+    "description": "Represents an editing or modification action inside a circular control.",
+    "category": "actions-controls",
+    "family": "edit",
+    "tags": [
+      "edit",
+      "modify",
+      "circle",
+      "control",
+      "pencil"
+    ],
+    "aliases": [
+      "modify-circle",
+      "pencil-circle",
+      "update-circle"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconEditSquare",
+    "canonicalName": "edit-square",
+    "slug": "px-edit-square",
+    "componentName": "PXIconEditSquare",
+    "title": "Edit Square",
+    "description": "Represents an editing action within a square or modular interface control.",
+    "category": "actions-controls",
+    "family": "edit",
+    "tags": [
+      "edit",
+      "modify",
+      "square",
+      "control",
+      "pencil",
+      "module"
+    ],
+    "aliases": [
+      "modify-square",
+      "pencil-square",
+      "update-square"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconEditText",
+    "canonicalName": "edit-text",
+    "slug": "px-edit-text",
+    "componentName": "PXIconEditText",
+    "title": "Edit Text",
+    "description": "Modifies text, labels, copy, or other textual content.",
+    "category": "actions-controls",
+    "family": "edit",
+    "tags": [
+      "text",
+      "typography",
+      "content",
+      "writing",
+      "label",
+      "editor"
+    ],
+    "aliases": [
+      "text-edit",
+      "modify-text",
+      "copy-edit",
+      "rewrite"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconEditDocument",
+    "canonicalName": "edit-document",
+    "slug": "px-edit-document",
+    "componentName": "PXIconEditDocument",
+    "title": "Edit Document",
+    "description": "Modifies the contents or properties of a document or file.",
+    "category": "actions-controls",
+    "family": "edit",
+    "tags": [
+      "document",
+      "file",
+      "content",
+      "editor",
+      "modify"
+    ],
+    "aliases": [
+      "edit-file",
+      "document-edit",
+      "modify-document",
+      "file-pencil"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconEditImage",
+    "canonicalName": "edit-image",
+    "slug": "px-edit-image",
+    "componentName": "PXIconEditImage",
+    "title": "Edit Image",
+    "description": "Edits or modifies an image, photograph, artwork, or media asset.",
+    "category": "actions-controls",
+    "family": "edit",
+    "tags": [
+      "image",
+      "photo",
+      "media",
+      "creative",
+      "editor",
+      "asset"
+    ],
+    "aliases": [
+      "image-edit",
+      "photo-edit",
+      "modify-image",
+      "picture-edit"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconEditCode",
+    "canonicalName": "edit-code",
+    "slug": "px-edit-code",
+    "componentName": "PXIconEditCode",
+    "title": "Edit Code",
+    "description": "Modifies source code, markup, configuration, or programmable content.",
+    "category": "actions-controls",
+    "family": "edit",
+    "tags": [
+      "code",
+      "developer",
+      "source",
+      "programming",
+      "editor",
+      "markup"
+    ],
+    "aliases": [
+      "code-edit",
+      "modify-code",
+      "source-edit",
+      "program-edit"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconEditTable",
+    "canonicalName": "edit-table",
+    "slug": "px-edit-table",
+    "componentName": "PXIconEditTable",
+    "title": "Edit Table",
+    "description": "Modifies rows, columns, cells, or values in tabular or grid-based content.",
+    "category": "actions-controls",
+    "family": "edit",
+    "tags": [
+      "table",
+      "grid",
+      "row",
+      "column",
+      "cell",
+      "cells",
+      "data"
+    ],
+    "aliases": [
+      "table-edit",
+      "grid-edit",
+      "edit-cell",
+      "edit-cells",
+      "modify-table"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconEditSelection",
+    "canonicalName": "edit-selection",
+    "slug": "px-edit-selection",
+    "componentName": "PXIconEditSelection",
+    "title": "Edit Selection",
+    "description": "Modifies the currently selected object, region, layer, or group.",
+    "category": "actions-controls",
+    "family": "edit",
+    "tags": [
+      "selection",
+      "editor",
+      "design",
+      "region",
+      "object",
+      "transform"
+    ],
+    "aliases": [
+      "edit-selection",
+      "modify-selection",
+      "selected-edit",
+      "edit-region"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconEditLocked",
+    "canonicalName": "edit-locked",
+    "slug": "px-edit-locked",
+    "componentName": "PXIconEditLocked",
+    "title": "Edit Locked",
+    "description": "Indicates that editable content exists but modification is currently locked or permission-restricted.",
+    "category": "actions-controls",
+    "family": "edit",
+    "tags": [
+      "edit",
+      "lock",
+      "permission",
+      "read-only",
+      "restricted",
+      "protected"
+    ],
+    "aliases": [
+      "read-only",
+      "editing-locked",
+      "cannot-edit",
+      "protected-edit"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "experimental",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconHome",
+    "canonicalName": "home",
+    "slug": "px-home",
+    "componentName": "PXIconHome",
+    "title": "Home",
+    "description": "Main dashboard or homepage representation with roof, chimney, and door.",
+    "category": "navigation",
+    "family": "home",
+    "tags": [
+      "house",
+      "main",
+      "dashboard",
+      "index",
+      "root"
+    ],
+    "aliases": [
+      "house",
+      "main"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSearch",
+    "canonicalName": "search",
+    "slug": "px-search",
+    "componentName": "PXIconSearch",
+    "title": "Search",
+    "description": "Pixel-native magnifying glass for discovery and query inputs.",
+    "category": "navigation",
+    "family": "search",
+    "tags": [
+      "find",
+      "magnifier",
+      "lookup",
+      "explore",
+      "query"
+    ],
+    "aliases": [
+      "magnifier",
+      "find",
+      "lookup"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSettings",
+    "canonicalName": "settings",
+    "slug": "px-settings",
+    "componentName": "PXIconSettings",
+    "title": "Settings",
+    "description": "Stepped pixel gear icon for system configuration, preferences, and controls.",
+    "category": "actions",
+    "family": "settings",
+    "tags": [
+      "gear",
+      "options",
+      "preferences",
+      "config",
+      "setup"
+    ],
+    "aliases": [
+      "gear",
+      "preferences",
+      "config"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconX",
+    "canonicalName": "x",
+    "slug": "px-x",
+    "componentName": "PXIconX",
+    "title": "X (Close)",
+    "description": "Stepped pixel diagonal cross for dismissal, cancel, or deletion.",
+    "category": "actions",
+    "family": "x",
+    "tags": [
+      "close",
+      "cancel",
+      "remove",
+      "dismiss",
+      "delete",
+      "cross"
+    ],
+    "aliases": [
+      "close",
+      "cancel",
+      "cross"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconPlus",
+    "canonicalName": "plus",
+    "slug": "px-plus",
+    "componentName": "PXIconPlus",
+    "title": "Plus",
+    "description": "Stepped plus symbol for adding, creating, or expanding items.",
+    "category": "actions",
+    "family": "plus",
+    "tags": [
+      "add",
+      "new",
+      "create",
+      "expand",
+      "increment"
+    ],
+    "aliases": [
+      "add",
+      "create",
+      "new"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconMinus",
+    "canonicalName": "minus",
+    "slug": "px-minus",
+    "componentName": "PXIconMinus",
+    "title": "Minus",
+    "description": "Stepped minus horizontal bar for removing, collapsing, or decrementing.",
+    "category": "actions",
+    "family": "minus",
+    "tags": [
+      "remove",
+      "collapse",
+      "decrement",
+      "dash"
+    ],
+    "aliases": [
+      "remove",
+      "subtract"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconTrash",
+    "canonicalName": "trash",
+    "slug": "px-trash",
+    "componentName": "PXIconTrash",
+    "title": "Trash",
+    "description": "Wastebasket container with handle and lid for discarding items.",
+    "category": "actions",
+    "family": "trash",
+    "tags": [
+      "delete",
+      "remove",
+      "bin",
+      "garbage",
+      "discard"
+    ],
+    "aliases": [
+      "delete",
+      "remove",
+      "bin"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCopy",
+    "canonicalName": "copy",
+    "slug": "px-copy",
+    "componentName": "PXIconCopy",
+    "title": "Copy",
+    "description": "Dual layered documents representing clipboard copy and duplication.",
+    "category": "actions",
+    "family": "copy",
+    "tags": [
+      "duplicate",
+      "clipboard",
+      "clone",
+      "paste"
+    ],
+    "aliases": [
+      "duplicate",
+      "clone",
+      "clipboard"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconDownload",
+    "canonicalName": "download",
+    "slug": "px-download",
+    "componentName": "PXIconDownload",
+    "title": "Download",
+    "description": "Stepped down arrow into a receptor tray for downloading files.",
+    "category": "actions",
+    "family": "download",
+    "tags": [
+      "save",
+      "fetch",
+      "receive",
+      "export",
+      "arrow-down"
+    ],
+    "aliases": [
+      "save",
+      "receive"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": true,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconUpload",
+    "canonicalName": "upload",
+    "slug": "px-upload",
+    "componentName": "PXIconUpload",
+    "title": "Upload",
+    "description": "Stepped up arrow out of a tray for uploading data or assets.",
+    "category": "actions",
+    "family": "upload",
+    "tags": [
+      "send",
+      "push",
+      "transfer",
+      "arrow-up"
+    ],
+    "aliases": [
+      "send",
+      "push"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconShare",
+    "canonicalName": "share",
+    "slug": "px-share",
+    "componentName": "PXIconShare",
+    "title": "Share",
+    "description": "Interconnected nodes representing sharing across destinations.",
+    "category": "actions",
+    "family": "share",
+    "tags": [
+      "export",
+      "network",
+      "nodes",
+      "social",
+      "send"
+    ],
+    "aliases": [
+      "export",
+      "distribute"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconRefresh",
+    "canonicalName": "refresh",
+    "slug": "px-refresh",
+    "componentName": "PXIconRefresh",
+    "title": "Refresh",
+    "description": "Dual circular pixel arrows for reloading or synchronizing data.",
+    "category": "actions",
+    "family": "refresh",
+    "tags": [
+      "reload",
+      "sync",
+      "cycle",
+      "rotate",
+      "repeat"
+    ],
+    "aliases": [
+      "reload",
+      "sync"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": true,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconPower",
+    "canonicalName": "power",
+    "slug": "px-power",
+    "componentName": "PXIconPower",
+    "title": "Power",
+    "description": "Circular power switch with top vertical break for system on/off.",
+    "category": "actions",
+    "family": "power",
+    "tags": [
+      "shutdown",
+      "on",
+      "off",
+      "standby",
+      "reboot"
+    ],
+    "aliases": [
+      "shutdown",
+      "switch",
+      "toggle"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSliders",
+    "canonicalName": "sliders",
+    "slug": "px-sliders",
+    "componentName": "PXIconSliders",
+    "title": "Sliders",
+    "description": "Multi-track horizontal adjustment bars with stepped sliders.",
+    "category": "actions",
+    "family": "sliders",
+    "tags": [
+      "filter",
+      "controls",
+      "tune",
+      "parameters",
+      "adjust"
+    ],
+    "aliases": [
+      "tune",
+      "filters",
+      "adjust"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconToggleLeft",
+    "canonicalName": "toggle-left",
+    "slug": "px-toggle-left",
+    "componentName": "PXIconToggleLeft",
+    "title": "Toggle Left",
+    "description": "Pill switch toggled to the left off position.",
+    "category": "actions",
+    "family": "toggle",
+    "tags": [
+      "switch",
+      "off",
+      "disabled",
+      "state"
+    ],
+    "aliases": [
+      "switch-off"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconToggleRight",
+    "canonicalName": "toggle-right",
+    "slug": "px-toggle-right",
+    "componentName": "PXIconToggleRight",
+    "title": "Toggle Right",
+    "description": "Pill switch toggled to the right active on position.",
+    "category": "actions",
+    "family": "toggle",
+    "tags": [
+      "switch",
+      "on",
+      "enabled",
+      "active"
+    ],
+    "aliases": [
+      "switch-on"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCursor",
+    "canonicalName": "cursor",
+    "slug": "px-cursor",
+    "componentName": "PXIconCursor",
+    "title": "Cursor",
+    "description": "Classic stepped retro pointer arrow for mouse and pointing actions.",
+    "category": "actions",
+    "family": "cursor",
+    "tags": [
+      "pointer",
+      "mouse",
+      "click",
+      "select",
+      "arrow"
+    ],
+    "aliases": [
+      "pointer",
+      "mouse"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconMenu",
+    "canonicalName": "menu",
+    "slug": "px-menu",
+    "componentName": "PXIconMenu",
+    "title": "Menu",
+    "description": "Three parallel horizontal pixel bars for navigation drawer toggle.",
+    "category": "actions",
+    "family": "menu",
+    "tags": [
+      "hamburger",
+      "bars",
+      "drawer",
+      "navigation",
+      "list"
+    ],
+    "aliases": [
+      "hamburger",
+      "bars"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconMaximize",
+    "canonicalName": "maximize",
+    "slug": "px-maximize",
+    "componentName": "PXIconMaximize",
+    "title": "Maximize",
+    "description": "Four corner markers pointing outward for expanding to fullscreen.",
+    "category": "actions",
+    "family": "maximize",
+    "tags": [
+      "fullscreen",
+      "expand",
+      "grow",
+      "window"
+    ],
+    "aliases": [
+      "fullscreen",
+      "expand"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconMinimize",
+    "canonicalName": "minimize",
+    "slug": "px-minimize",
+    "componentName": "PXIconMinimize",
+    "title": "Minimize",
+    "description": "Four corner markers pointing inward for exiting fullscreen.",
+    "category": "actions",
+    "family": "minimize",
+    "tags": [
+      "collapse",
+      "shrink",
+      "window",
+      "restore"
+    ],
+    "aliases": [
+      "collapse",
+      "restore"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconArrowLeft",
+    "canonicalName": "arrow-left",
+    "slug": "px-arrow-left",
+    "componentName": "PXIconArrowLeft",
+    "title": "Arrow Left",
+    "description": "Stepped pixel arrow pointing toward the left.",
+    "category": "arrows",
+    "family": "arrow",
+    "tags": [
+      "left",
+      "back",
+      "previous",
+      "direction"
+    ],
+    "aliases": [
+      "back",
+      "left"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconArrowRight",
+    "canonicalName": "arrow-right",
+    "slug": "px-arrow-right",
+    "componentName": "PXIconArrowRight",
+    "title": "Arrow Right",
+    "description": "Stepped pixel arrow pointing toward the right.",
+    "category": "arrows",
+    "family": "arrow",
+    "tags": [
+      "right",
+      "forward",
+      "next",
+      "direction"
+    ],
+    "aliases": [
+      "forward",
+      "right",
+      "next"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconArrowUp",
+    "canonicalName": "arrow-up",
+    "slug": "px-arrow-up",
+    "componentName": "PXIconArrowUp",
+    "title": "Arrow Up",
+    "description": "Stepped pixel arrow pointing upward.",
+    "category": "arrows",
+    "family": "arrow",
+    "tags": [
+      "up",
+      "top",
+      "direction",
+      "north"
+    ],
+    "aliases": [
+      "up",
+      "top"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconArrowDown",
+    "canonicalName": "arrow-down",
+    "slug": "px-arrow-down",
+    "componentName": "PXIconArrowDown",
+    "title": "Arrow Down",
+    "description": "Stepped pixel arrow pointing downward.",
+    "category": "arrows",
+    "family": "arrow",
+    "tags": [
+      "down",
+      "bottom",
+      "direction",
+      "south"
+    ],
+    "aliases": [
+      "down",
+      "bottom"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconChevronLeft",
+    "canonicalName": "chevron-left",
+    "slug": "px-chevron-left",
+    "componentName": "PXIconChevronLeft",
+    "title": "Chevron Left",
+    "description": "Stepped pixel chevron angle bracket pointing left.",
+    "category": "arrows",
+    "family": "chevron",
+    "tags": [
+      "left",
+      "angle",
+      "back",
+      "breadcrumb"
+    ],
+    "aliases": [
+      "angle-left"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconChevronRight",
+    "canonicalName": "chevron-right",
+    "slug": "px-chevron-right",
+    "componentName": "PXIconChevronRight",
+    "title": "Chevron Right",
+    "description": "Stepped pixel chevron angle bracket pointing right.",
+    "category": "arrows",
+    "family": "chevron",
+    "tags": [
+      "right",
+      "angle",
+      "next",
+      "breadcrumb"
+    ],
+    "aliases": [
+      "angle-right"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconChevronUp",
+    "canonicalName": "chevron-up",
+    "slug": "px-chevron-up",
+    "componentName": "PXIconChevronUp",
+    "title": "Chevron Up",
+    "description": "Stepped pixel chevron angle bracket pointing up.",
+    "category": "arrows",
+    "family": "chevron",
+    "tags": [
+      "up",
+      "angle",
+      "collapse",
+      "accordion"
+    ],
+    "aliases": [
+      "angle-up"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconChevronDown",
+    "canonicalName": "chevron-down",
+    "slug": "px-chevron-down",
+    "componentName": "PXIconChevronDown",
+    "title": "Chevron Down",
+    "description": "Stepped pixel chevron angle bracket pointing down.",
+    "category": "arrows",
+    "family": "chevron",
+    "tags": [
+      "down",
+      "angle",
+      "expand",
+      "dropdown"
+    ],
+    "aliases": [
+      "angle-down",
+      "dropdown"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconFolder",
+    "canonicalName": "folder",
+    "slug": "px-folder",
+    "componentName": "PXIconFolder",
+    "title": "Folder",
+    "description": "File directory container with top left tab.",
+    "category": "files",
+    "family": "folder",
+    "tags": [
+      "directory",
+      "storage",
+      "files",
+      "documents"
+    ],
+    "aliases": [
+      "directory"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconFolderOpen",
+    "canonicalName": "folder-open",
+    "slug": "px-folder-open",
+    "componentName": "PXIconFolderOpen",
+    "title": "Folder Open",
+    "description": "Directory folder in an open state revealing contents.",
+    "category": "files",
+    "family": "folder",
+    "tags": [
+      "directory",
+      "active",
+      "open",
+      "browse"
+    ],
+    "aliases": [
+      "open-folder"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconFile",
+    "canonicalName": "file",
+    "slug": "px-file",
+    "componentName": "PXIconFile",
+    "title": "File",
+    "description": "Single paper document with folded top right corner.",
+    "category": "files",
+    "family": "file",
+    "tags": [
+      "document",
+      "page",
+      "blank",
+      "note"
+    ],
+    "aliases": [
+      "document",
+      "page"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconFileText",
+    "canonicalName": "file-text",
+    "slug": "px-file-text",
+    "componentName": "PXIconFileText",
+    "title": "File Text",
+    "description": "Document file with horizontal lines representing text content.",
+    "category": "files",
+    "family": "file",
+    "tags": [
+      "document",
+      "article",
+      "readme",
+      "lines",
+      "copy"
+    ],
+    "aliases": [
+      "document-text",
+      "article"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconFileCode",
+    "canonicalName": "file-code",
+    "slug": "px-file-code",
+    "componentName": "PXIconFileCode",
+    "title": "File Code",
+    "description": "Source code document file featuring stepped pixel brackets.",
+    "category": "files",
+    "family": "file",
+    "tags": [
+      "code",
+      "source",
+      "script",
+      "developer",
+      "syntax"
+    ],
+    "aliases": [
+      "code-file",
+      "source-file"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconArchive",
+    "canonicalName": "archive",
+    "slug": "px-archive",
+    "componentName": "PXIconArchive",
+    "title": "Archive",
+    "description": "Storage chest or archive box with front pull handle.",
+    "category": "files",
+    "family": "archive",
+    "tags": [
+      "box",
+      "backup",
+      "vault",
+      "history",
+      "store"
+    ],
+    "aliases": [
+      "backup",
+      "box"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconMail",
+    "canonicalName": "mail",
+    "slug": "px-mail",
+    "componentName": "PXIconMail",
+    "title": "Mail",
+    "description": "Postal envelope with stepped diagonal envelope flap.",
+    "category": "communication",
+    "family": "mail",
+    "tags": [
+      "email",
+      "message",
+      "inbox",
+      "letter",
+      "contact"
+    ],
+    "aliases": [
+      "email",
+      "letter",
+      "inbox"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconMessageSquare",
+    "canonicalName": "message-square",
+    "slug": "px-message-square",
+    "componentName": "PXIconMessageSquare",
+    "title": "Message Square",
+    "description": "Pixel speech bubble for comments, chat, and dialogs.",
+    "category": "communication",
+    "family": "message",
+    "tags": [
+      "chat",
+      "comment",
+      "talk",
+      "bubble",
+      "feedback"
+    ],
+    "aliases": [
+      "chat",
+      "comment",
+      "bubble"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconBell",
+    "canonicalName": "bell",
+    "slug": "px-bell",
+    "componentName": "PXIconBell",
+    "title": "Bell",
+    "description": "Notification alert bell with clapper, supports stepped wiggle animation.",
+    "category": "communication",
+    "family": "bell",
+    "tags": [
+      "alert",
+      "notification",
+      "alarm",
+      "reminder",
+      "ring"
+    ],
+    "aliases": [
+      "notification",
+      "alert",
+      "alarm"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": true,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconUser",
+    "canonicalName": "user",
+    "slug": "px-user",
+    "componentName": "PXIconUser",
+    "title": "User",
+    "description": "Single user silhouette featuring head and shoulder contours.",
+    "category": "people",
+    "family": "user",
+    "tags": [
+      "profile",
+      "account",
+      "person",
+      "avatar",
+      "member"
+    ],
+    "aliases": [
+      "profile",
+      "account",
+      "person"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconUsers",
+    "canonicalName": "users",
+    "slug": "px-users",
+    "componentName": "PXIconUsers",
+    "title": "Users",
+    "description": "Group profile representing team, multiple members, or social circles.",
+    "category": "people",
+    "family": "users",
+    "tags": [
+      "team",
+      "group",
+      "members",
+      "community",
+      "social"
+    ],
+    "aliases": [
+      "team",
+      "group"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconHeart",
+    "canonicalName": "heart",
+    "slug": "px-heart",
+    "componentName": "PXIconHeart",
+    "title": "Heart",
+    "description": "Stepped pixel heart shape, supports pulse animation.",
+    "category": "people",
+    "family": "heart",
+    "tags": [
+      "love",
+      "like",
+      "favorite",
+      "health",
+      "wishlist"
+    ],
+    "aliases": [
+      "like",
+      "favorite",
+      "love"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": true,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconThumbsUp",
+    "canonicalName": "thumbs-up",
+    "slug": "px-thumbs-up",
+    "componentName": "PXIconThumbsUp",
+    "title": "Thumbs Up",
+    "description": "Hand gesture with thumb raised upward indicating approval.",
+    "category": "people",
+    "family": "thumbs",
+    "tags": [
+      "approve",
+      "agree",
+      "upvote",
+      "recommend"
+    ],
+    "aliases": [
+      "like",
+      "upvote",
+      "approve"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconMonitor",
+    "canonicalName": "monitor",
+    "slug": "px-monitor",
+    "componentName": "PXIconMonitor",
+    "title": "Monitor",
+    "description": "Desktop computer monitor screen resting on a center stand.",
+    "category": "devices",
+    "family": "monitor",
+    "tags": [
+      "screen",
+      "display",
+      "desktop",
+      "tv",
+      "workstation"
+    ],
+    "aliases": [
+      "display",
+      "screen"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSmartphone",
+    "canonicalName": "smartphone",
+    "slug": "px-smartphone",
+    "componentName": "PXIconSmartphone",
+    "title": "Smartphone",
+    "description": "Handheld mobile phone device with touch screen and home indicator.",
+    "category": "devices",
+    "family": "smartphone",
+    "tags": [
+      "phone",
+      "mobile",
+      "ios",
+      "android",
+      "device"
+    ],
+    "aliases": [
+      "phone",
+      "mobile"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconLaptop",
+    "canonicalName": "laptop",
+    "slug": "px-laptop",
+    "componentName": "PXIconLaptop",
+    "title": "Laptop",
+    "description": "Portable clamshell notebook computer with keyboard base.",
+    "category": "devices",
+    "family": "laptop",
+    "tags": [
+      "notebook",
+      "macbook",
+      "computer",
+      "portable"
+    ],
+    "aliases": [
+      "notebook",
+      "macbook"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconHardDrive",
+    "canonicalName": "hard-drive",
+    "slug": "px-hard-drive",
+    "componentName": "PXIconHardDrive",
+    "title": "Hard Drive",
+    "description": "Internal disk drive unit with front status activity indicator LEDs.",
+    "category": "devices",
+    "family": "hard",
+    "tags": [
+      "disk",
+      "storage",
+      "ssd",
+      "hdd",
+      "hardware"
+    ],
+    "aliases": [
+      "disk",
+      "drive"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCpu",
+    "canonicalName": "cpu",
+    "slug": "px-cpu",
+    "componentName": "PXIconCpu",
+    "title": "CPU",
+    "description": "Central processing unit semiconductor chip with peripheral connection pins.",
+    "category": "devices",
+    "family": "cpu",
+    "tags": [
+      "chip",
+      "processor",
+      "hardware",
+      "soc",
+      "silicon"
+    ],
+    "aliases": [
+      "processor",
+      "chip"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconBattery",
+    "canonicalName": "battery",
+    "slug": "px-battery",
+    "componentName": "PXIconBattery",
+    "title": "Battery",
+    "description": "Horizontal battery cell container with positive anode terminal.",
+    "category": "devices",
+    "family": "battery",
+    "tags": [
+      "charge",
+      "power",
+      "energy",
+      "cell",
+      "level"
+    ],
+    "aliases": [
+      "power-cell",
+      "charge"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconWifi",
+    "canonicalName": "wifi",
+    "slug": "px-wifi",
+    "componentName": "PXIconWifi",
+    "title": "Wi-Fi",
+    "description": "Stepped wireless frequency broadcast waves emanating from origin point.",
+    "category": "devices",
+    "family": "wifi",
+    "tags": [
+      "network",
+      "internet",
+      "wireless",
+      "signal",
+      "radio"
+    ],
+    "aliases": [
+      "wireless",
+      "network",
+      "internet"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCode",
+    "canonicalName": "code",
+    "slug": "px-code",
+    "componentName": "PXIconCode",
+    "title": "Code",
+    "description": "Stepped angle brackets representing code syntax, HTML, and programming.",
+    "category": "development",
+    "family": "code",
+    "tags": [
+      "brackets",
+      "syntax",
+      "html",
+      "developer",
+      "markup"
+    ],
+    "aliases": [
+      "brackets",
+      "syntax",
+      "developer"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconTerminal",
+    "canonicalName": "terminal",
+    "slug": "px-terminal",
+    "componentName": "PXIconTerminal",
+    "title": "Terminal",
+    "description": "Console command line shell with command prompt and blinking cursor.",
+    "category": "development",
+    "family": "terminal",
+    "tags": [
+      "console",
+      "cli",
+      "shell",
+      "bash",
+      "command"
+    ],
+    "aliases": [
+      "console",
+      "cli",
+      "shell"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconGitBranch",
+    "canonicalName": "git-branch",
+    "slug": "px-git-branch",
+    "componentName": "PXIconGitBranch",
+    "title": "Git Branch",
+    "description": "Version control branching nodes and bifurcation workflow.",
+    "category": "development",
+    "family": "git",
+    "tags": [
+      "git",
+      "vcs",
+      "fork",
+      "merge",
+      "versioning"
+    ],
+    "aliases": [
+      "branch",
+      "vcs"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconGitCommit",
+    "canonicalName": "git-commit",
+    "slug": "px-git-commit",
+    "componentName": "PXIconGitCommit",
+    "title": "Git Commit",
+    "description": "Individual revision commit point on continuous pipeline track.",
+    "category": "development",
+    "family": "git",
+    "tags": [
+      "git",
+      "commit",
+      "revision",
+      "hash",
+      "snapshot"
+    ],
+    "aliases": [
+      "commit"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconBug",
+    "canonicalName": "bug",
+    "slug": "px-bug",
+    "componentName": "PXIconBug",
+    "title": "Bug",
+    "description": "Beetle insect representing software errors, debugging, and issue tracking.",
+    "category": "development",
+    "family": "bug",
+    "tags": [
+      "error",
+      "defect",
+      "debug",
+      "issue",
+      "crash"
+    ],
+    "aliases": [
+      "error",
+      "defect",
+      "debug"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconDatabase",
+    "canonicalName": "database",
+    "slug": "px-database",
+    "componentName": "PXIconDatabase",
+    "title": "Database",
+    "description": "Stacked cylindrical storage platters representing database tables and SQL.",
+    "category": "development",
+    "family": "database",
+    "tags": [
+      "sql",
+      "data",
+      "storage",
+      "server",
+      "postgres"
+    ],
+    "aliases": [
+      "sql",
+      "storage",
+      "db"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconPlay",
+    "canonicalName": "play",
+    "slug": "px-play",
+    "componentName": "PXIconPlay",
+    "title": "Play",
+    "description": "Stepped pixel equilateral triangle pointing right for media playback.",
+    "category": "media",
+    "family": "play",
+    "tags": [
+      "start",
+      "video",
+      "audio",
+      "resume",
+      "stream"
+    ],
+    "aliases": [
+      "start",
+      "resume"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconPause",
+    "canonicalName": "pause",
+    "slug": "px-pause",
+    "componentName": "PXIconPause",
+    "title": "Pause",
+    "description": "Dual vertical pixel columns for halting media playback.",
+    "category": "media",
+    "family": "pause",
+    "tags": [
+      "halt",
+      "stop",
+      "hold",
+      "freeze",
+      "break"
+    ],
+    "aliases": [
+      "halt",
+      "freeze"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconVolume2",
+    "canonicalName": "volume-2",
+    "slug": "px-volume-2",
+    "componentName": "PXIconVolume2",
+    "title": "Volume High",
+    "description": "Speaker horn with stepped sonic waves for loud sound playback.",
+    "category": "media",
+    "family": "volume",
+    "tags": [
+      "audio",
+      "sound",
+      "speaker",
+      "loud",
+      "music"
+    ],
+    "aliases": [
+      "sound",
+      "audio",
+      "speaker"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconVolumeX",
+    "canonicalName": "volume-x",
+    "slug": "px-volume-x",
+    "componentName": "PXIconVolumeX",
+    "title": "Volume Mute",
+    "description": "Speaker horn with an adjacent cross indicating muted audio output.",
+    "category": "media",
+    "family": "volume",
+    "tags": [
+      "mute",
+      "silent",
+      "quiet",
+      "off",
+      "sound"
+    ],
+    "aliases": [
+      "mute",
+      "silent"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCamera",
+    "canonicalName": "camera",
+    "slug": "px-camera",
+    "componentName": "PXIconCamera",
+    "title": "Camera",
+    "description": "Handheld photography camera body with lens ring and flash nub.",
+    "category": "media",
+    "family": "camera",
+    "tags": [
+      "photo",
+      "picture",
+      "lens",
+      "capture",
+      "snapshot"
+    ],
+    "aliases": [
+      "photo",
+      "capture"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconImage",
+    "canonicalName": "image",
+    "slug": "px-image",
+    "componentName": "PXIconImage",
+    "title": "Image",
+    "description": "Framed artwork with stepped mountains and sun disc.",
+    "category": "media",
+    "family": "image",
+    "tags": [
+      "photo",
+      "picture",
+      "gallery",
+      "scenery",
+      "wallpaper"
+    ],
+    "aliases": [
+      "photo",
+      "picture",
+      "gallery"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconMusic",
+    "canonicalName": "music",
+    "slug": "px-music",
+    "componentName": "PXIconMusic",
+    "title": "Music",
+    "description": "Interconnected beamed eighth musical notes representing song and audio.",
+    "category": "media",
+    "family": "music",
+    "tags": [
+      "song",
+      "melody",
+      "tune",
+      "sound",
+      "track"
+    ],
+    "aliases": [
+      "audio",
+      "song",
+      "note"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconShield",
+    "canonicalName": "shield",
+    "slug": "px-shield",
+    "componentName": "PXIconShield",
+    "title": "Shield",
+    "description": "Protective security shield contour for safeguarding data and privacy.",
+    "category": "security",
+    "family": "shield",
+    "tags": [
+      "protect",
+      "guard",
+      "security",
+      "safe",
+      "defense"
+    ],
+    "aliases": [
+      "protect",
+      "guard",
+      "security"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconShieldCheck",
+    "canonicalName": "shield-check",
+    "slug": "px-shield-check",
+    "componentName": "PXIconShieldCheck",
+    "title": "Shield Check",
+    "description": "Defensive shield bearing an interior verification checkmark.",
+    "category": "security",
+    "family": "shield",
+    "tags": [
+      "verified",
+      "secure",
+      "trusted",
+      "safety",
+      "approved"
+    ],
+    "aliases": [
+      "verified",
+      "trusted"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconLock",
+    "canonicalName": "lock",
+    "slug": "px-lock",
+    "componentName": "PXIconLock",
+    "title": "Lock",
+    "description": "Secured padlock with closed curved shackle and body keyhole.",
+    "category": "security",
+    "family": "lock",
+    "tags": [
+      "padlock",
+      "secure",
+      "private",
+      "encrypted",
+      "protection"
+    ],
+    "aliases": [
+      "padlock",
+      "secure",
+      "private"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconUnlock",
+    "canonicalName": "unlock",
+    "slug": "px-unlock",
+    "componentName": "PXIconUnlock",
+    "title": "Unlock",
+    "description": "Padlock with open lifted shackle indicating unrestricted access.",
+    "category": "security",
+    "family": "unlock",
+    "tags": [
+      "open",
+      "unlocked",
+      "access",
+      "public",
+      "decrypted"
+    ],
+    "aliases": [
+      "open-lock",
+      "accessible"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconKey",
+    "canonicalName": "key",
+    "slug": "px-key",
+    "componentName": "PXIconKey",
+    "title": "Key",
+    "description": "Classic skeleton key with bow ring and stepped ward teeth.",
+    "category": "security",
+    "family": "key",
+    "tags": [
+      "auth",
+      "token",
+      "credential",
+      "password",
+      "access"
+    ],
+    "aliases": [
+      "auth",
+      "credential",
+      "password"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconEye",
+    "canonicalName": "eye",
+    "slug": "px-eye",
+    "componentName": "PXIconEye",
+    "title": "Eye",
+    "description": "Stepped pixel ocular eyelid silhouette with central iris pupil.",
+    "category": "security",
+    "family": "eye",
+    "tags": [
+      "view",
+      "visible",
+      "show",
+      "watch",
+      "preview"
+    ],
+    "aliases": [
+      "view",
+      "visible",
+      "show"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconEyeOff",
+    "canonicalName": "eye-off",
+    "slug": "px-eye-off",
+    "componentName": "PXIconEyeOff",
+    "title": "Eye Off",
+    "description": "Eye silhouette traversed by a diagonal slash line indicating hidden state.",
+    "category": "security",
+    "family": "eye",
+    "tags": [
+      "hide",
+      "hidden",
+      "private",
+      "mask",
+      "secret"
+    ],
+    "aliases": [
+      "hide",
+      "hidden",
+      "secret"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconClock",
+    "canonicalName": "clock",
+    "slug": "px-clock",
+    "componentName": "PXIconClock",
+    "title": "Clock",
+    "description": "Analog watch dial with circular border and hands at 3:00.",
+    "category": "time",
+    "family": "clock",
+    "tags": [
+      "time",
+      "hours",
+      "schedule",
+      "history",
+      "recent"
+    ],
+    "aliases": [
+      "time",
+      "history",
+      "recent"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCalendar",
+    "canonicalName": "calendar",
+    "slug": "px-calendar",
+    "componentName": "PXIconCalendar",
+    "title": "Calendar",
+    "description": "Sheet calendar with binder rings and interior date grid blocks.",
+    "category": "time",
+    "family": "calendar",
+    "tags": [
+      "date",
+      "month",
+      "schedule",
+      "event",
+      "agenda"
+    ],
+    "aliases": [
+      "date",
+      "event",
+      "schedule"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconTimer",
+    "canonicalName": "timer",
+    "slug": "px-timer",
+    "componentName": "PXIconTimer",
+    "title": "Timer",
+    "description": "Precision stopwatch with top activation pusher stem.",
+    "category": "time",
+    "family": "timer",
+    "tags": [
+      "stopwatch",
+      "countdown",
+      "seconds",
+      "duration",
+      "interval"
+    ],
+    "aliases": [
+      "stopwatch",
+      "countdown"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconHourglass",
+    "canonicalName": "hourglass",
+    "slug": "px-hourglass",
+    "componentName": "PXIconHourglass",
+    "title": "Hourglass",
+    "description": "Stepped glass sand timer with upper and lower chambers.",
+    "category": "time",
+    "family": "hourglass",
+    "tags": [
+      "wait",
+      "sand",
+      "loading",
+      "pending",
+      "duration"
+    ],
+    "aliases": [
+      "sandtimer",
+      "wait"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconMapPin",
+    "canonicalName": "map-pin",
+    "slug": "px-map-pin",
+    "componentName": "PXIconMapPin",
+    "title": "Map Pin",
+    "description": "Point-of-interest location marker pin with central aperture.",
+    "category": "navigation",
+    "family": "map",
+    "tags": [
+      "location",
+      "place",
+      "spot",
+      "marker",
+      "gps"
+    ],
+    "aliases": [
+      "location",
+      "marker",
+      "place"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCompass",
+    "canonicalName": "compass",
+    "slug": "px-compass",
+    "componentName": "PXIconCompass",
+    "title": "Compass",
+    "description": "Navigation compass casing with 4 directional stepped needle points.",
+    "category": "navigation",
+    "family": "compass",
+    "tags": [
+      "direction",
+      "orient",
+      "north",
+      "explore",
+      "navigate"
+    ],
+    "aliases": [
+      "navigate",
+      "explore"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconGlobe",
+    "canonicalName": "globe",
+    "slug": "px-globe",
+    "componentName": "PXIconGlobe",
+    "title": "Globe",
+    "description": "Earth sphere with equator and meridian longitude lines.",
+    "category": "navigation",
+    "family": "globe",
+    "tags": [
+      "world",
+      "earth",
+      "international",
+      "planet",
+      "web"
+    ],
+    "aliases": [
+      "world",
+      "earth",
+      "international"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSparkles",
+    "canonicalName": "sparkles",
+    "slug": "px-sparkles",
+    "componentName": "PXIconSparkles",
+    "title": "Sparkles",
+    "description": "Pixel-native sparkle cluster representing artificial intelligence and magic.",
+    "category": "actions",
+    "family": "sparkles",
+    "tags": [
+      "ai",
+      "magic",
+      "generate",
+      "stars",
+      "intelligence"
+    ],
+    "aliases": [
+      "magic",
+      "generate",
+      "ai"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": true,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconBot",
+    "canonicalName": "bot",
+    "slug": "px-bot",
+    "componentName": "PXIconBot",
+    "title": "Bot",
+    "description": "Stepped robot head with top sensor antenna and dual digital eyes.",
+    "category": "actions",
+    "family": "bot",
+    "tags": [
+      "robot",
+      "assistant",
+      "ai",
+      "machine",
+      "agent"
+    ],
+    "aliases": [
+      "robot",
+      "agent",
+      "assistant"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconSun",
+    "canonicalName": "sun",
+    "slug": "px-sun",
+    "componentName": "PXIconSun",
+    "title": "Sun",
+    "description": "Central solar disc surrounded by 8 stepped radiating light beams.",
+    "category": "weather",
+    "family": "sun",
+    "tags": [
+      "light",
+      "day",
+      "warmth",
+      "bright",
+      "weather"
+    ],
+    "aliases": [
+      "light",
+      "day",
+      "bright"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconMoon",
+    "canonicalName": "moon",
+    "slug": "px-moon",
+    "componentName": "PXIconMoon",
+    "title": "Moon",
+    "description": "Stepped pixel crescent moon representing nighttime and dark mode.",
+    "category": "weather",
+    "family": "moon",
+    "tags": [
+      "dark",
+      "night",
+      "lunar",
+      "sleep",
+      "theme"
+    ],
+    "aliases": [
+      "night",
+      "dark",
+      "lunar"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCloud",
+    "canonicalName": "cloud",
+    "slug": "px-cloud",
+    "componentName": "PXIconCloud",
+    "title": "Cloud",
+    "description": "Pixel cloud contour representing remote storage and meteorology.",
+    "category": "weather",
+    "family": "cloud",
+    "tags": [
+      "weather",
+      "cloud-storage",
+      "sync",
+      "sky",
+      "overcast"
+    ],
+    "aliases": [
+      "cloud-storage",
+      "weather"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconZap",
+    "canonicalName": "zap",
+    "slug": "px-zap",
+    "componentName": "PXIconZap",
+    "title": "Zap",
+    "description": "Sharp stepped lightning bolt symbolizing electric charge, energy, and speed.",
+    "category": "weather",
+    "family": "zap",
+    "tags": [
+      "lightning",
+      "electricity",
+      "energy",
+      "fast",
+      "speed"
+    ],
+    "aliases": [
+      "lightning",
+      "energy",
+      "flash"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconShoppingCart",
+    "canonicalName": "shopping-cart",
+    "slug": "px-shopping-cart",
+    "componentName": "PXIconShoppingCart",
+    "title": "Shopping Cart",
+    "description": "Wheeled supermarket trolley for e-commerce checkout and baskets.",
+    "category": "commerce",
+    "family": "shopping",
+    "tags": [
+      "store",
+      "basket",
+      "buy",
+      "ecommerce",
+      "purchase"
+    ],
+    "aliases": [
+      "cart",
+      "store",
+      "buy"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconCreditCard",
+    "canonicalName": "credit-card",
+    "slug": "px-credit-card",
+    "componentName": "PXIconCreditCard",
+    "title": "Credit Card",
+    "description": "Plastic payment card with magnetic strip and security chip.",
+    "category": "commerce",
+    "family": "credit",
+    "tags": [
+      "payment",
+      "bank",
+      "finance",
+      "money",
+      "visa"
+    ],
+    "aliases": [
+      "card",
+      "payment"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconTag",
+    "canonicalName": "tag",
+    "slug": "px-tag",
+    "componentName": "PXIconTag",
+    "title": "Tag",
+    "description": "Merchandise sales price tag with ribbon thread eyelet.",
+    "category": "commerce",
+    "family": "tag",
+    "tags": [
+      "label",
+      "price",
+      "discount",
+      "sale",
+      "metadata"
+    ],
+    "aliases": [
+      "label",
+      "badge",
+      "sale"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconBriefcase",
+    "canonicalName": "briefcase",
+    "slug": "px-briefcase",
+    "componentName": "PXIconBriefcase",
+    "title": "Briefcase",
+    "description": "Executive attache case with top leather handle and dual latches.",
+    "category": "business",
+    "family": "briefcase",
+    "tags": [
+      "work",
+      "job",
+      "career",
+      "corporate",
+      "portfolio"
+    ],
+    "aliases": [
+      "work",
+      "job",
+      "case"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconTrendingUp",
+    "canonicalName": "trending-up",
+    "slug": "px-trending-up",
+    "componentName": "PXIconTrendingUp",
+    "title": "Trending Up",
+    "description": "Stepped diagonal growth graph rising from bottom left to top right.",
+    "category": "business",
+    "family": "trending",
+    "tags": [
+      "growth",
+      "increase",
+      "metrics",
+      "chart",
+      "analytics"
+    ],
+    "aliases": [
+      "growth",
+      "chart",
+      "analytics"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconDollarSign",
+    "canonicalName": "dollar-sign",
+    "slug": "px-dollar-sign",
+    "componentName": "PXIconDollarSign",
+    "title": "Dollar Sign",
+    "description": "Currency dollar glyph bisected by a centered vertical pixel spine.",
+    "category": "business",
+    "family": "dollar",
+    "tags": [
+      "money",
+      "currency",
+      "usd",
+      "price",
+      "finance"
+    ],
+    "aliases": [
+      "money",
+      "currency",
+      "usd"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconStar",
+    "canonicalName": "star",
+    "slug": "px-star",
+    "componentName": "PXIconStar",
+    "title": "Star",
+    "description": "5-pointed stepped pixel star for ratings, bookmarks, and favorites.",
+    "category": "actions",
+    "family": "star",
+    "tags": [
+      "rating",
+      "favorite",
+      "bookmark",
+      "score",
+      "highlight"
+    ],
+    "aliases": [
+      "favorite",
+      "rating"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconBookmark",
+    "canonicalName": "bookmark",
+    "slug": "px-bookmark",
+    "componentName": "PXIconBookmark",
+    "title": "Bookmark",
+    "description": "Vertical ribbon marker with triangular notched tail for reading points.",
+    "category": "actions",
+    "family": "bookmark",
+    "tags": [
+      "save",
+      "read-later",
+      "marker",
+      "favorite",
+      "tag"
+    ],
+    "aliases": [
+      "save-mark",
+      "pin"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconFlag",
+    "canonicalName": "flag",
+    "slug": "px-flag",
+    "componentName": "PXIconFlag",
+    "title": "Flag",
+    "description": "Vertical flagpole supporting a rectangular pennant banner.",
+    "category": "actions",
+    "family": "flag",
+    "tags": [
+      "report",
+      "marker",
+      "country",
+      "banner",
+      "checkpoint"
+    ],
+    "aliases": [
+      "report",
+      "banner"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconFilter",
+    "canonicalName": "filter",
+    "slug": "px-filter",
+    "componentName": "PXIconFilter",
+    "title": "Filter",
+    "description": "Funnel shaped device for sorting, narrowing, and query refinement.",
+    "category": "actions",
+    "family": "filter",
+    "tags": [
+      "sort",
+      "funnel",
+      "refine",
+      "criteria",
+      "narrow"
+    ],
+    "aliases": [
+      "funnel",
+      "refine"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconLink",
+    "canonicalName": "link",
+    "slug": "px-link",
+    "componentName": "PXIconLink",
+    "title": "Link",
+    "description": "Interlocked oval chain links signifying hyperlinking and connection.",
+    "category": "actions",
+    "family": "link",
+    "tags": [
+      "url",
+      "hyperlink",
+      "chain",
+      "connect",
+      "attachment"
+    ],
+    "aliases": [
+      "url",
+      "chain",
+      "hyperlink"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconUnlink",
+    "canonicalName": "unlink",
+    "slug": "px-unlink",
+    "componentName": "PXIconUnlink",
+    "title": "Unlink",
+    "description": "Severed chain links showing broken connections or disconnected URLs.",
+    "category": "actions",
+    "family": "unlink",
+    "tags": [
+      "disconnect",
+      "broken",
+      "separate",
+      "break"
+    ],
+    "aliases": [
+      "disconnect",
+      "broken-link"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconExternalLink",
+    "canonicalName": "external-link",
+    "slug": "px-external-link",
+    "componentName": "PXIconExternalLink",
+    "title": "External Link",
+    "description": "Open window with upper right departing stepped arrow.",
+    "category": "actions",
+    "family": "external",
+    "tags": [
+      "new-tab",
+      "outbound",
+      "redirect",
+      "href",
+      "popout"
+    ],
+    "aliases": [
+      "new-tab",
+      "outbound"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconZoomIn",
+    "canonicalName": "zoom-in",
+    "slug": "px-zoom-in",
+    "componentName": "PXIconZoomIn",
+    "title": "Zoom In",
+    "description": "Magnifier lens containing a stepped plus sign for scaling upward.",
+    "category": "actions",
+    "family": "zoom",
+    "tags": [
+      "magnify",
+      "enlarge",
+      "scale-up",
+      "plus"
+    ],
+    "aliases": [
+      "magnify-plus",
+      "enlarge"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconZoomOut",
+    "canonicalName": "zoom-out",
+    "slug": "px-zoom-out",
+    "componentName": "PXIconZoomOut",
+    "title": "Zoom Out",
+    "description": "Magnifier lens containing a stepped minus sign for scaling downward.",
+    "category": "actions",
+    "family": "zoom",
+    "tags": [
+      "shrink",
+      "scale-down",
+      "minus",
+      "reduce"
+    ],
+    "aliases": [
+      "magnify-minus",
+      "shrink"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconLoader",
+    "canonicalName": "loader",
+    "slug": "px-loader",
+    "componentName": "PXIconLoader",
+    "title": "Loader",
+    "description": "Circular segmented ticker wheel for asynchronous wait and processing states.",
+    "category": "actions",
+    "family": "loader",
+    "tags": [
+      "spinner",
+      "loading",
+      "wait",
+      "progress",
+      "busy"
+    ],
+    "aliases": [
+      "spinner",
+      "loading"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline"
+    ],
+    "animated": true,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  },
+  {
+    "name": "PXIconPin",
+    "canonicalName": "pin",
+    "slug": "px-pin",
+    "componentName": "PXIconPin",
+    "title": "Pin",
+    "description": "Stepped thumbtack pushpin for pinning items to boards.",
+    "category": "actions",
+    "family": "pin",
+    "tags": [
+      "thumbtack",
+      "board",
+      "attach",
+      "stick",
+      "fasten"
+    ],
+    "aliases": [
+      "thumbtack",
+      "attach"
+    ],
+    "grid": 24,
+    "variants": [
+      "outline",
+      "filled"
+    ],
+    "animated": false,
+    "platforms": [
+      "react",
+      "react-native",
+      "registry",
+      "svg"
+    ],
+    "status": "stable",
+    "introduced": "1.0.0",
+    "deprecated": false
+  }
+]
