@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { DocsToc } from "@/components/docs/docs-toc";
-import { PXIconArrowRight, PXIconPlay, PXIconSearch } from "@/components/icons";
+import { PXIconPlay } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Design Principles — PXUI",

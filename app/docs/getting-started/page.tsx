@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { DocsToc } from "@/components/docs/docs-toc";
 import { SyntaxHighlighter } from "@/components/ui/syntax-highlighter";
-import { PXIconArrowRight, PXIconCheck } from "@/components/icons";
+import { PXIconArrowRight } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Getting Started — PXUI",
