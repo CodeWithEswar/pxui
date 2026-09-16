@@ -1,0 +1,39 @@
+import { defineIcon } from "../../schemas/icon.schema";
+
+export const eyeOff = defineIcon({
+  "name": "PXIconEyeOff",
+  "slug": "px-eye-off",
+  "title": "Eye Off",
+  "description": "Eye silhouette traversed by a diagonal slash line indicating hidden state.",
+  "category": "security",
+  "family": "eye",
+  "aliases": [
+    "hide",
+    "hidden",
+    "secret"
+  ],
+  "tags": [
+    "hide",
+    "hidden",
+    "private",
+    "mask",
+    "secret"
+  ],
+  "geometry": {
+    "grid": 24,
+    "paths": [
+      {
+        "d": "M2.7 2L1.3 3.4l3.2 3.2C3.1 7.9 1.9 9.8 1 12c1.7 4.4 6 7.5 11 7.5 2.3 0 4.4-.6 6.2-1.7l2.4 2.4 1.4-1.4L2.7 2zM12 17.5c-3.8 0-7.1-2.4-8.7-5.5.7-1.4 1.8-2.6 3.1-3.6l2.3 2.3a3 3 0 0 0 4.1 4.1l1.6 1.6c-.8.6-1.6 1.1-2.4 1.1zm9-5.5c-.8 2-2.1 3.7-3.8 4.9l-1.5-1.5c1.3-.9 2.4-2.1 3-3.4-1.6-3.1-4.9-5.5-8.7-5.5-1.1 0-2.1.2-3.1.6L5.4 5.6C7.4 4.9 9.6 4.5 12 4.5c5 0 9.3 3.1 11 7.5z"
+      }
+    ],
+    "bounds": {
+      "minX": 0,
+      "minY": 0,
+      "maxX": 24,
+      "maxY": 24
+    }
+  },
+  "status": "stable",
+  "introducedVersion": "1.0.0"
+});
+export default eyeOff;
