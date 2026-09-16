@@ -190,4 +190,38 @@ describe("PXUI Search Engine", () => {
     const results = searchIcons(ICONS_CATALOG, { query: "read only edit" });
     assert.ok(results.some((r) => r.name === "edit-locked"));
   });
+
+  // Batch D.06 (0051–0070): Copy & Save Families Search Acceptance
+  it("should prioritize copy family for 'copy'", () => {
+    const results = searchIcons(ICONS_CATALOG, { query: "copy" });
+    assert.strictEqual(results[0]?.name, "copy");
+    const top4 = results.slice(0, 4).map((r) => r.name);
+    assert.ok(top4.includes("copy-circle"));
+    assert.ok(top4.includes("copy-square"));
+  });
+
+  it("should find copy by 'duplicate' and 'clipboard-copy'", () => {
+    const r1 = searchIcons(ICONS_CATALOG, { query: "duplicate" });
+    assert.ok(r1.some((r) => r.name === "copy"));
+    const r2 = searchIcons(ICONS_CATALOG, { query: "clipboard-copy" });
+    assert.ok(r2.some((r) => r.name === "copy"));
+  });
+
+  it("should prioritize save family for 'save'", () => {
+    const results = searchIcons(ICONS_CATALOG, { query: "save" });
+    assert.strictEqual(results[0]?.name, "save");
+    const top4 = results.slice(0, 4).map((r) => r.name);
+    assert.ok(top4.includes("save-circle"));
+    assert.ok(top4.includes("save-square"));
+  });
+
+  it("should find save by 'persist', 'floppy', and 'commit'", () => {
+    const r1 = searchIcons(ICONS_CATALOG, { query: "persist" });
+    assert.ok(r1.some((r) => r.name === "save"));
+    const r2 = searchIcons(ICONS_CATALOG, { query: "floppy" });
+    assert.ok(r2.some((r) => r.name === "save"));
+    const r3 = searchIcons(ICONS_CATALOG, { query: "commit" });
+    assert.ok(r3.some((r) => r.name === "save"));
+  });
 });
+
