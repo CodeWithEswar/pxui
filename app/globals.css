@@ -1,0 +1,467 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark, .dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans), Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: var(--font-serif), "Copernicus", "Tiempos Headline", "Cormorant Garamond", Garamond, Georgia, serif;
+  --font-display: var(--font-serif), "Copernicus", "Tiempos Headline", "Cormorant Garamond", Garamond, Georgia, serif;
+  --font-mono: var(--font-mono), "JetBrains Mono", ui-monospace, monospace;
+  --font-heading: var(--font-serif), "Copernicus", "Tiempos Headline", "Cormorant Garamond", serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: #252320;
+  --color-chart-4: #e8a55a;
+  --color-chart-3: #5db8a6;
+  --color-chart-2: #a9583e;
+  --color-chart-1: #cc785c;
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+
+  /* Specific Claude Design Tokens */
+  --color-canvas: var(--canvas);
+  --color-surface-soft: var(--surface-soft);
+  --color-surface-card: var(--surface-card);
+  --color-surface-cream-strong: var(--surface-cream-strong);
+  --color-surface-dark: var(--surface-dark);
+  --color-surface-dark-elevated: var(--surface-dark-elevated);
+  --color-surface-dark-soft: var(--surface-dark-soft);
+  --color-coral: #cc785c;
+  --color-coral-active: #a9583e;
+  --color-coral-disabled: #e6dfd8;
+  --color-ink: #141413;
+  --color-body: #3d3d3a;
+  --color-body-strong: #252523;
+  --color-hairline: #e6dfd8;
+  --color-hairline-soft: #ebe6df;
+  --color-accent-teal: #5db8a6;
+  --color-accent-amber: #e8a55a;
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-pill: 9999px;
+  --radius-full: 9999px;
+}
+
+:root {
+  /* PXUI Technical Paper Canvas System */
+  --paper: #faf9f5;
+  --paper-soft: #f7f3ec;
+  --paper-warm: #f3ede3;
+  --paper-deep: #eee6d9;
+
+  --grid-line-minor: rgba(20, 20, 19, 0.038);
+  --grid-line-major: rgba(20, 20, 19, 0.075);
+  --grid-line-specimen: rgba(20, 20, 19, 0.095);
+
+  /* Claude Editorial Warm Palette */
+  --canvas: #faf9f5;
+  --surface-soft: #f5f0e8;
+  --surface-card: #efe9de;
+  --surface-cream-strong: #e8e0d2;
+  --surface-dark: #181715;
+  --surface-dark-elevated: #252320;
+  --surface-dark-soft: #1f1e1b;
+  
+  --coral: #cc785c;
+  --coral-active: #a9583e;
+  --coral-disabled: #e6dfd8;
+  
+  --ink: #141413;
+  --body: #3d3d3a;
+  --body-strong: #252523;
+  --muted-text: #6c6a64;
+  --muted-soft: #8e8b82;
+  --hairline: #e6dfd8;
+  --hairline-soft: #ebe6df;
+
+  /* shadcn UI semantic mapping */
+  --background: #faf9f5;
+  --foreground: #141413;
+  --card: #efe9de;
+  --card-foreground: #141413;
+  --popover: #faf9f5;
+  --popover-foreground: #141413;
+  --primary: #cc785c;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f0e8;
+  --secondary-foreground: #141413;
+  --muted: #f5f0e8;
+  --muted-foreground: #6c6a64;
+  --accent: #efe9de;
+  --accent-foreground: #141413;
+  --destructive: #c64545;
+  --destructive-foreground: #ffffff;
+  --border: #e6dfd8;
+  --input: #e6dfd8;
+  --ring: #cc785c;
+  --radius: 0.5rem;
+
+  --sidebar: #f5f0e8;
+  --sidebar-foreground: #141413;
+  --sidebar-primary: #cc785c;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #efe9de;
+  --sidebar-accent-foreground: #141413;
+  --sidebar-border: #e6dfd8;
+  --sidebar-ring: #cc785c;
+
+  /* Theme-adaptive custom scrollbar */
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: #d5cebf;
+  --scrollbar-thumb-hover: #cc785c;
+}
+
+.dark {
+  /* PXUI Technical Paper Canvas System Dark */
+  --paper: #181715;
+  --paper-soft: #1f1e1b;
+  --paper-warm: #252320;
+  --paper-deep: #2e2c28;
+
+  --grid-line-minor: rgba(250, 249, 245, 0.045);
+  --grid-line-major: rgba(250, 249, 245, 0.08);
+  --grid-line-specimen: rgba(250, 249, 245, 0.12);
+
+  --canvas: #181715;
+  --surface-soft: #1f1e1b;
+  --surface-card: #1f1e1b;
+  --surface-cream-strong: #252320;
+  --surface-dark: #141413;
+  --surface-dark-elevated: #252320;
+  --surface-dark-soft: #1f1e1b;
+
+  --background: #181715;
+  --foreground: #faf9f5;
+  --card: #1f1e1b;
+  --card-foreground: #faf9f5;
+  --popover: #252320;
+  --popover-foreground: #faf9f5;
+  --primary: #cc785c;
+  --primary-foreground: #ffffff;
+  --secondary: #252320;
+  --secondary-foreground: #faf9f5;
+  --muted: #252320;
+  --muted-foreground: #a09d96;
+  --accent: #252320;
+  --accent-foreground: #faf9f5;
+  --destructive: #c64545;
+  --destructive-foreground: #ffffff;
+  --border: #2e2c28;
+  --input: #2e2c28;
+  --ring: #cc785c;
+
+  --sidebar: #1f1e1b;
+  --sidebar-foreground: #faf9f5;
+  --sidebar-primary: #cc785c;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #252320;
+  --sidebar-accent-foreground: #faf9f5;
+  --sidebar-border: #2e2c28;
+  --sidebar-ring: #cc785c;
+
+  /* Theme-adaptive custom scrollbar dark */
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: #3a3732;
+  --scrollbar-thumb-hover: #cc785c;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans selection:bg-[#cc785c] selection:text-white;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  /* Custom WebKit Scrollbar replacing default OS chunky scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    transition: background-color 0.15s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background-color: var(--color-coral-active, #a9583e);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+
+/* Utilities to completely hide scrollbar while preserving scrollability */
+.no-scrollbar::-webkit-scrollbar,
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar,
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle 4-6px Workspace Scrollbar matching PXUI warm-neutral palette */
+.workspace-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+.workspace-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.workspace-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.workspace-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 9999px;
+  transition: background-color 0.15s ease;
+}
+
+.workspace-scrollbar:hover::-webkit-scrollbar-thumb,
+.workspace-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+/* PXUI Design System Utilities */
+.pixel-crisp {
+  shape-rendering: crispEdges;
+  image-rendering: pixelated;
+}
+
+/* Continuous Technical Paper Canvas Surface (Theme Adaptive) */
+.bg-paper-canvas {
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(circle at 14% 6%, rgba(204, 120, 92, 0.055) 0%, transparent 28%),
+    radial-gradient(circle at 86% 22%, rgba(232, 224, 210, 0.4) 0%, transparent 32%),
+    radial-gradient(circle at 50% 60%, rgba(204, 120, 92, 0.025) 0%, transparent 40%),
+    linear-gradient(180deg, var(--paper) 0%, var(--paper-soft) 35%, var(--paper) 70%, var(--paper-warm) 100%);
+}
+
+.dark .bg-paper-canvas,
+:is(.dark) .bg-paper-canvas {
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(circle at 14% 6%, rgba(204, 120, 92, 0.08) 0%, transparent 28%),
+    radial-gradient(circle at 86% 22%, rgba(37, 35, 32, 0.6) 0%, transparent 32%),
+    radial-gradient(circle at 50% 60%, rgba(204, 120, 92, 0.035) 0%, transparent 40%),
+    linear-gradient(180deg, var(--paper) 0%, var(--paper-soft) 35%, var(--paper) 70%, var(--paper-warm) 100%);
+}
+
+/* Subtle Restrained Material Grain (~1.5% opacity) */
+.bg-paper-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Architectural Dual-Tier 24px/96px Pixel Grid */
+.bg-paper-grid {
+  background-image:
+    linear-gradient(to right, var(--grid-line-minor) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-minor) 1px, transparent 1px),
+    linear-gradient(to right, var(--grid-line-major) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-major) 1px, transparent 1px);
+  background-size: 24px 24px, 24px 24px, 96px 96px, 96px 96px;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+}
+
+.bg-paper-grid-focal {
+  background-image:
+    linear-gradient(to right, var(--grid-line-specimen) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-specimen) 1px, transparent 1px),
+    linear-gradient(to right, var(--grid-line-major) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-major) 1px, transparent 1px);
+  background-size: 24px 24px, 24px 24px, 96px 96px, 96px 96px;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+}
+
+/* Reusable Architectural Pixel Corner Cuts */
+.pixel-corner-cut {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 6px) 0,
+    100% 6px,
+    100% 100%,
+    6px 100%,
+    0 calc(100% - 6px)
+  );
+}
+
+.pixel-corner-tr {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 6px) 0,
+    100% 6px,
+    100% 100%,
+    0 100%
+  );
+}
+
+.bg-pixel-dots {
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 16px 16px;
+  background-position: -8px -8px;
+}
+
+.bg-pixel-grid {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, currentColor 1px, transparent 1px),
+    linear-gradient(to bottom, currentColor 1px, transparent 1px);
+}
+
+.pixel-border {
+  box-shadow: 
+    -1px 0 0 0 currentColor,
+    1px 0 0 0 currentColor,
+    0 -1px 0 0 currentColor,
+    0 1px 0 0 currentColor;
+}
+
+/* Stepped micro-animations preserving pixel aesthetic */
+@keyframes px-spin {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(90deg); }
+  50% { transform: rotate(180deg); }
+  75% { transform: rotate(270deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes px-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.16); }
+}
+
+@keyframes px-bounce-down {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
+@keyframes px-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-12deg); }
+  75% { transform: rotate(12deg); }
+}
+
+@keyframes px-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.animate-px-spin {
+  animation: px-spin 0.8s steps(4) infinite;
+}
+
+.animate-px-pulse {
+  animation: px-pulse 0.6s steps(2) infinite;
+}
+
+.animate-px-bounce {
+  animation: px-bounce-down 0.6s steps(3) infinite;
+}
+
+.animate-px-wiggle {
+  animation: px-wiggle 0.5s steps(3) infinite;
+}
+
+.animate-px-blink {
+  animation: px-blink 1s steps(2) infinite;
+}
+
+@keyframes px-signal-run {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  45% {
+    transform: translate(var(--sig-h, 192px), 0);
+  }
+  50% {
+    transform: translate(var(--sig-h, 192px), 0);
+  }
+  85% {
+    transform: translate(var(--sig-h, 192px), var(--sig-v, 96px));
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+    transform: translate(var(--sig-h, 192px), var(--sig-v, 96px));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  .animate-px-spin,
+  .animate-px-pulse,
+  .animate-px-bounce,
+  .animate-px-wiggle,
+  .animate-px-blink,
+  [style*="px-signal-run"] {
+    animation: none !important;
+    transform: none !important;
+  }
+}
