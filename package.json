@@ -11,8 +11,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "lint:geometry": "tsx tooling/scripts/lint-geometry.ts",
+    "lint:families": "tsx tooling/scripts/lint-families.ts",
     "typecheck": "tsc --noEmit",
-    "verify": "npm run lint && npm run typecheck && npm run icons:validate && npm run check:generated && npm run validate:determinism && npm test && npm run build",
+    "verify": "npm run lint && npm run typecheck && npm run lint:geometry && npm run lint:families && npm run icons:validate && npm run check:generated && npm run validate:determinism && npm test && npm run build",
     "icons:validate": "tsx tooling/scripts/validate-icons.ts",
     "icons:generate": "tsx tooling/scripts/generate-all.ts",
     "generate": "tsx tooling/scripts/generate-all.ts",
@@ -22,10 +24,11 @@
     "validate:icons": "tsx tooling/scripts/validate-icons.ts",
     "validate:determinism": "tsx tooling/scripts/test-determinism.ts",
     "qa:report": "tsx tooling/scripts/qa-report.ts",
-    "test": "tsx --test tests/icons.test.ts tests/registry.test.ts tests/search.test.ts tests/consumer-registry.test.ts tests/contract/react.test.ts tests/contract/metadata.test.ts tests/contract/registry.test.ts tests/contract/treesaking.test.ts tests/contract/accessibility.test.ts tests/contract/motion.test.ts tests/contract/determinism.test.ts tests/contract/specification.test.ts tests/contract/product-pages.test.ts tests/unit/naming-governance.test.ts tests/contract/platform-parity.test.ts tests/scale/catalog-scale.test.ts",
+    "test": "tsx --test tests/icons.test.ts tests/registry.test.ts tests/search.test.ts tests/consumer-registry.test.ts tests/contract/react.test.ts tests/contract/metadata.test.ts tests/contract/registry.test.ts tests/contract/treesaking.test.ts tests/contract/accessibility.test.ts tests/contract/motion.test.ts tests/contract/determinism.test.ts tests/contract/specification.test.ts tests/contract/product-pages.test.ts tests/contract/geometry.test.ts tests/unit/naming-governance.test.ts tests/contract/platform-parity.test.ts tests/scale/catalog-scale.test.ts",
     "test:scale": "tsx --test tests/scale/catalog-scale.test.ts",
     "test:parity": "tsx --test tests/contract/platform-parity.test.ts",
-    "test:unit": "tsx --test tests/unit/naming-governance.test.ts"
+    "test:unit": "tsx --test tests/unit/naming-governance.test.ts",
+    "test:geometry": "tsx --test tests/contract/geometry.test.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

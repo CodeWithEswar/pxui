@@ -93,6 +93,16 @@ export interface IconDefinition {
   aliases?: string[];
   grid: 24;
   paths: IconPathDefinition[];
+  geometry?: {
+    grid: number;
+    paths: IconPathDefinition[];
+    bounds?: {
+      minX: number;
+      minY: number;
+      maxX: number;
+      maxY: number;
+    };
+  };
   filled?: IconPathDefinition[];
   variants?: string[]; // Supported canonical variants, e.g. ["outline", "filled"]
   animation?: AnimationDefinition;

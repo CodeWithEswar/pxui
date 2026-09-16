@@ -6,7 +6,6 @@ import { toPXComponentName } from "@/lib/compiler";
 import { PXIconCheck, PXIconCopy } from "@/components/icons";
 import { SyntaxHighlighter, CodeWrapButton } from "@/components/ui/syntax-highlighter";
 import { copyToClipboard } from "@/lib/clipboard";
-import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 
 interface SpecAccessibilityGuideProps {
@@ -15,8 +14,7 @@ interface SpecAccessibilityGuideProps {
 
 export function SpecAccessibilityGuide({ icon }: SpecAccessibilityGuideProps) {
   const componentName = toPXComponentName(icon.name);
-  const { resolvedTheme } = useTheme();
-  const codeTheme = resolvedTheme === "light" ? "light" : "dark";
+  const codeTheme = "auto";
   const [copiedSnippet, setCopiedSnippet] = React.useState<string | null>(null);
   const [wrapState, setWrapState] = React.useState<Record<string, boolean>>({});
 

@@ -6,7 +6,6 @@ import { toPXComponentName, generateReactNativeCode, generateSvgString } from "@
 import { PXIconCheck, PXIconCopy, PXIconDownload, PXIconSun, PXIconMoon } from "@/components/icons";
 import { SyntaxHighlighter, CodeWrapButton } from "@/components/ui/syntax-highlighter";
 import { copyToClipboard } from "@/lib/clipboard";
-import { useTheme } from "next-themes";
 import { useOrigin } from "@/lib/hooks/use-origin";
 import { cn } from "@/lib/utils";
 
@@ -17,11 +16,10 @@ interface SpecCodeSurfaceProps {
 type CodeTab = "react" | "native" | "registry" | "svg";
 
 export function SpecCodeSurface({ icon }: SpecCodeSurfaceProps) {
-  const { resolvedTheme } = useTheme();
   const [activeTab, setActiveTab] = React.useState<CodeTab>("react");
   const [copied, setCopied] = React.useState<string | null>(null);
   const [userSelectedTheme, setUserSelectedTheme] = React.useState<"dark" | "light" | null>(null);
-  const codeTheme = userSelectedTheme ?? (resolvedTheme === "light" ? "light" : "dark");
+  const codeTheme: "dark" | "light" | "auto" = userSelectedTheme ?? "auto";
   const [isWrapped, setIsWrapped] = React.useState(false);
 
   const componentName = toPXComponentName(icon.name);
@@ -81,7 +79,9 @@ export function Example() {
         "scroll-mt-24 space-y-4 rounded-xl border overflow-hidden select-none transition-colors duration-200",
         codeTheme === "dark"
           ? "bg-[#181715] text-[#faf9f5] border-[#2e2c28]"
-          : "bg-white text-[#141413] border-[#e6dfd8] shadow-xs"
+          : codeTheme === "light"
+          ? "bg-white text-[#141413] border-[#e6dfd8] shadow-xs"
+          : "bg-white dark:bg-[#181715] text-[#141413] dark:text-[#faf9f5] border-[#e6dfd8] dark:border-[#2e2c28] shadow-xs"
       )}
     >
       {/* Tab Header */}
@@ -90,7 +90,9 @@ export function Example() {
           "flex flex-wrap items-center justify-between gap-3 px-4 py-3 border-b font-mono text-xs",
           codeTheme === "dark"
             ? "bg-[#141413] border-[#2e2c28]"
-            : "bg-[#f5f0e8] border-[#e6dfd8]"
+            : codeTheme === "light"
+            ? "bg-[#f5f0e8] border-[#e6dfd8]"
+            : "bg-[#f5f0e8] dark:bg-[#141413] border-[#e6dfd8] dark:border-[#2e2c28]"
         )}
       >
         <div className="flex items-center gap-1 overflow-x-auto workspace-scrollbar max-w-full pb-0.5">
@@ -111,7 +113,9 @@ export function Example() {
                 activeTab === tab.id
                   ? codeTheme === "dark"
                     ? "bg-[#252320] text-[#faf9f5] font-semibold border border-[#383530]"
-                    : "bg-white text-[#141413] font-semibold border border-[#e6dfd8] shadow-2xs"
+                    : codeTheme === "light"
+                    ? "bg-white text-[#141413] font-semibold border border-[#e6dfd8] shadow-2xs"
+                    : "bg-white dark:bg-[#252320] text-[#141413] dark:text-[#faf9f5] font-semibold border border-[#e6dfd8] dark:border-[#383530] shadow-2xs"
                   : "text-[#8e8b82] hover:text-foreground"
               )}
             >
@@ -126,14 +130,16 @@ export function Example() {
           <div
             className={cn(
               "h-8 inline-flex items-stretch gap-0.5 border rounded-md p-0.5 box-border shrink-0 text-[10px] font-mono",
-              codeTheme === "dark" ? "border-[#2e2c28] bg-[#1d1b18]" : "border-[#e6dfd8] bg-white"
+              codeTheme === "dark"
+                ? "border-[#2e2c28] bg-[#1d1b18]"
+                : codeTheme === "light"
+                ? "border-[#e6dfd8] bg-white"
+                : "border-[#e6dfd8] dark:border-[#2e2c28] bg-[#faf9f5] dark:bg-[#1d1b18]"
             )}
           >
             <button
               type="button"
-              onClick={() => {
-                setUserSelectedTheme("dark");
-              }}
+              onClick={() => setUserSelectedTheme("dark")}
               className={cn(
                 "inline-flex items-center justify-center gap-1 px-2 rounded transition-all cursor-pointer self-stretch",
                 codeTheme === "dark"
@@ -147,9 +153,7 @@ export function Example() {
             </button>
             <button
               type="button"
-              onClick={() => {
-                setUserSelectedTheme("light");
-              }}
+              onClick={() => setUserSelectedTheme("light")}
               className={cn(
                 "inline-flex items-center justify-center gap-1 px-2 rounded transition-all cursor-pointer self-stretch",
                 codeTheme === "light"
@@ -160,6 +164,19 @@ export function Example() {
             >
               <PXIconSun size={11} className="shrink-0" />
               <span>Light</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => setUserSelectedTheme(null)}
+              className={cn(
+                "inline-flex items-center justify-center px-2 rounded uppercase transition-all cursor-pointer self-stretch",
+                codeTheme === "auto"
+                  ? "bg-[#cc785c] text-white font-bold"
+                  : "text-[#8e8b82] hover:text-foreground"
+              )}
+              title="Follow system theme"
+            >
+              Auto
             </button>
           </div>
 

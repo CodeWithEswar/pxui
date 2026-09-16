@@ -8,7 +8,7 @@ export interface CodeWrapButtonProps {
   wrapped: boolean;
   onToggle: () => void;
   className?: string;
-  theme?: "dark" | "light";
+  theme?: "dark" | "light" | "auto";
   size?: "sm" | "md";
 }
 
@@ -32,6 +32,8 @@ export function CodeWrapButton({
         size === "sm" ? "h-6 px-1.5 text-[10px]" : "h-7 sm:h-8 px-2 sm:px-2.5 text-xs",
         wrapped
           ? "bg-primary text-white border-primary font-bold shadow-2xs"
+          : theme === "auto"
+          ? "bg-white dark:bg-[#252320]/85 hover:bg-[#f5f0e8] dark:hover:bg-[#2e2c28] border-[#e6dfd8] dark:border-[#383530] text-[#6c6a64] dark:text-[#8e8b82] hover:text-[#141413] dark:hover:text-[#faf9f5]"
           : isDark
           ? "bg-[#252320]/85 hover:bg-[#2e2c28] border-[#383530] text-[#8e8b82] hover:text-[#faf9f5]"
           : "bg-white hover:bg-[#f5f0e8] border-[#e6dfd8] text-[#6c6a64] hover:text-[#141413]",
@@ -49,7 +51,7 @@ export function CodeWrapButton({
 export interface SyntaxHighlighterProps {
   code: string;
   language?: "tsx" | "react" | "bash" | "svg" | "json";
-  theme?: "dark" | "light";
+  theme?: "dark" | "light" | "auto";
   className?: string;
   showLineNumbers?: boolean;
   wrap?: boolean;
@@ -61,7 +63,7 @@ export interface SyntaxHighlighterProps {
 export function SyntaxHighlighter({
   code,
   language = "tsx",
-  theme = "dark",
+  theme = "auto",
   className,
   showLineNumbers = false,
   wrap,
@@ -70,6 +72,7 @@ export function SyntaxHighlighter({
   showWrapToggle = false,
 }: SyntaxHighlighterProps) {
   const isDark = theme === "dark";
+  const isLight = theme === "light";
 
   // Support controlled or uncontrolled wrap state
   const [internalWrap, setInternalWrap] = React.useState(defaultWrap);
@@ -83,36 +86,53 @@ export function SyntaxHighlighter({
     onWrapChange?.(next);
   };
 
-  // Palette tokens based on theme
-  const colors = isDark
-    ? {
-        keyword: "text-[#cc785c] font-semibold", // PXUI coral
-        tag: "text-[#79c0ff] font-medium", // Sky blue for components (<PXIcon...>)
-        attr: "text-[#e5c07b]", // Warm amber for props (size, className, animated)
-        string: "text-[#98c379]", // Soft green for strings ("@pxui/react")
-        number: "text-[#d19a66]", // Orange for numbers ({24})
-        boolean: "text-[#d19a66] font-semibold",
-        punct: "text-[#8e8b82]", // Muted grey for braces, brackets, semicolons
-        comment: "text-[#5c6370] italic",
-        command: "text-[#cc785c] font-bold", // bash commands (npx, add)
-        flag: "text-[#d2a8ff]", // flags (@latest)
-        url: "text-[#79c0ff] underline",
-        plain: "text-[#faf9f5]",
-      }
-    : {
-        keyword: "text-[#b85434] font-semibold", // Deep brick coral
-        tag: "text-[#0550ae] font-medium", // Deep sapphire blue
-        attr: "text-[#8250df]", // Purple for props
-        string: "text-[#116329]", // Forest green for strings
-        number: "text-[#953800]", // Burnt orange
-        boolean: "text-[#953800] font-semibold",
-        punct: "text-[#57606a]", // Slate for braces
-        comment: "text-[#6e7781] italic",
-        command: "text-[#b85434] font-bold",
-        flag: "text-[#8250df]",
-        url: "text-[#0550ae] underline",
-        plain: "text-[#141413]",
-      };
+  // Palette tokens based on theme (supports explicit dark, explicit light, and auto dual-theme)
+  const colors =
+    theme === "dark"
+      ? {
+          keyword: "text-[#cc785c] font-semibold", // PXUI coral
+          tag: "text-[#79c0ff] font-medium", // Sky blue for components (<PXIcon...>)
+          attr: "text-[#e5c07b]", // Warm amber for props (size, className, animated)
+          string: "text-[#98c379]", // Soft green for strings ("@pxui/react")
+          number: "text-[#d19a66]", // Orange for numbers ({24})
+          boolean: "text-[#d19a66] font-semibold",
+          punct: "text-[#8e8b82]", // Muted grey for braces, brackets, semicolons
+          comment: "text-[#5c6370] italic",
+          command: "text-[#cc785c] font-bold", // bash commands (npx, add)
+          flag: "text-[#d2a8ff]", // flags (@latest)
+          url: "text-[#79c0ff] underline",
+          plain: "text-[#faf9f5]",
+        }
+      : theme === "light"
+      ? {
+          keyword: "text-[#b85434] font-semibold", // Deep brick coral
+          tag: "text-[#0550ae] font-medium", // Deep sapphire blue
+          attr: "text-[#8250df]", // Purple for props
+          string: "text-[#116329]", // Forest green for strings
+          number: "text-[#953800]", // Burnt orange
+          boolean: "text-[#953800] font-semibold",
+          punct: "text-[#57606a]", // Slate for braces
+          comment: "text-[#6e7781] italic",
+          command: "text-[#b85434] font-bold",
+          flag: "text-[#8250df]",
+          url: "text-[#0550ae] underline",
+          plain: "text-[#141413]",
+        }
+      : {
+          // "auto": uses Tailwind dark: variants so SSR and client generate identical classNames
+          keyword: "text-[#b85434] dark:text-[#cc785c] font-semibold",
+          tag: "text-[#0550ae] dark:text-[#79c0ff] font-medium",
+          attr: "text-[#8250df] dark:text-[#e5c07b]",
+          string: "text-[#116329] dark:text-[#98c379]",
+          number: "text-[#953800] dark:text-[#d19a66]",
+          boolean: "text-[#953800] dark:text-[#d19a66] font-semibold",
+          punct: "text-[#57606a] dark:text-[#8e8b82]",
+          comment: "text-[#6e7781] dark:text-[#5c6370] italic",
+          command: "text-[#b85434] dark:text-[#cc785c] font-bold",
+          flag: "text-[#8250df] dark:text-[#d2a8ff]",
+          url: "text-[#0550ae] dark:text-[#79c0ff] underline",
+          plain: "text-[#141413] dark:text-[#faf9f5]",
+        };
 
   const highlightLine = (line: string): React.ReactNode[] => {
     // 1. Comments
@@ -248,7 +268,11 @@ export function SyntaxHighlighter({
       className={cn(
         "relative w-full font-mono text-xs leading-relaxed select-text",
         isWrapped ? "overflow-x-hidden" : "overflow-x-auto workspace-scrollbar",
-        isDark ? "text-[#faf9f5]" : "text-[#141413]",
+        isDark
+          ? "text-[#faf9f5]"
+          : isLight
+          ? "text-[#141413]"
+          : "text-[#141413] dark:text-[#faf9f5]",
         className
       )}
     >
@@ -258,7 +282,7 @@ export function SyntaxHighlighter({
           <CodeWrapButton
             wrapped={isWrapped}
             onToggle={handleToggleWrap}
-            theme={theme}
+            theme={isLight ? "light" : "dark"}
             size="sm"
           />
         </div>

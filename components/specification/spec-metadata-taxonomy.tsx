@@ -4,7 +4,6 @@ import * as React from "react";
 import { IconDefinition } from "@/lib/icons/schema";
 import { toPXComponentName } from "@/lib/compiler";
 import { SyntaxHighlighter, CodeWrapButton } from "@/components/ui/syntax-highlighter";
-import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 
 interface SpecMetadataTaxonomyProps {
@@ -15,8 +14,7 @@ export function SpecMetadataTaxonomy({ icon }: SpecMetadataTaxonomyProps) {
   const [showRaw, setShowRaw] = React.useState(false);
   const [rawWrapped, setRawWrapped] = React.useState(false);
   const componentName = toPXComponentName(icon.name);
-  const { resolvedTheme } = useTheme();
-  const codeTheme: "dark" | "light" = resolvedTheme === "light" ? "light" : "dark";
+  const codeTheme = "auto";
 
   return (
     <section id="metadata" className="scroll-mt-24 space-y-6">
