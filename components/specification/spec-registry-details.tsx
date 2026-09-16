@@ -9,6 +9,7 @@ import {
   PackageManagerSwitcher,
   HighlightedShadcnCommand,
   getShadcnAddCommand,
+  usePreferredPackageManager,
   type PackageManager,
 } from "@/components/icons";
 import { SyntaxHighlighter, CodeWrapButton } from "@/components/ui/syntax-highlighter";
@@ -27,24 +28,13 @@ export function SpecRegistryDetails({ icon }: SpecRegistryDetailsProps) {
   const [copiedCmd, setCopiedCmd] = React.useState(false);
   const [copiedJson, setCopiedJson] = React.useState(false);
   const [jsonWrapped, setJsonWrapped] = React.useState(false);
-  const [packageManager, setPackageManager] = React.useState<PackageManager>(() => {
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("pxui_preferred_pm") as PackageManager;
-      if (saved && ["pnpm", "npm", "yarn", "bun"].includes(saved)) {
-        return saved;
-      }
-    }
-    return "pnpm";
-  });
+  const [packageManager, setPackageManager] = usePreferredPackageManager();
 
   const componentName = toPXComponentName(icon.name);
   const origin = useOrigin();
 
   const handleSelectPkg = (pkg: PackageManager) => {
     setPackageManager(pkg);
-    if (typeof window !== "undefined") {
-      localStorage.setItem("pxui_preferred_pm", pkg);
-    }
   };
 
   const registryCmd = getShadcnAddCommand(

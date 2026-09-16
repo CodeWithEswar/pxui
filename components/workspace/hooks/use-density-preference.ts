@@ -33,26 +33,46 @@ export const DENSITY_CONFIGS: Record<DensityMode, DensityConfig> = {
 };
 
 const STORAGE_KEY = "pxui_catalog_density";
+const DENSITY_EVENT = "pxui:density-change";
+
+function subscribe(callback: () => void) {
+  if (typeof window === "undefined") {
+    return () => {};
+  }
+  window.addEventListener("storage", callback);
+  window.addEventListener(DENSITY_EVENT, callback);
+  return () => {
+    window.removeEventListener("storage", callback);
+    window.removeEventListener(DENSITY_EVENT, callback);
+  };
+}
+
+function getSnapshot(): DensityMode {
+  if (typeof window === "undefined") return "default";
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY) as DensityMode | null;
+    if (saved && (saved === "compact" || saved === "default" || saved === "comfortable")) {
+      return saved;
+    }
+  } catch {
+    // quiet fail
+  }
+  return "default";
+}
+
+function getServerSnapshot(): DensityMode {
+  return "default";
+}
 
 export function useDensityPreference() {
-  const [density, setDensityState] = React.useState<DensityMode>(() => {
-    if (typeof window !== "undefined") {
-      try {
-        const saved = localStorage.getItem(STORAGE_KEY) as DensityMode | null;
-        if (saved && (saved === "compact" || saved === "default" || saved === "comfortable")) {
-          return saved;
-        }
-      } catch {
-        // quiet fail for disabled localStorage
-      }
-    }
-    return "default";
-  });
+  const density = React.useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const setDensity = React.useCallback((mode: DensityMode) => {
-    setDensityState(mode);
     try {
       localStorage.setItem(STORAGE_KEY, mode);
+      if (typeof window !== "undefined") {
+        window.dispatchEvent(new Event(DENSITY_EVENT));
+      }
     } catch {
       // quiet fail
     }

@@ -24,6 +24,7 @@ import {
   PackageManagerSwitcher,
   HighlightedShadcnCommand,
   getShadcnAddCommand,
+  usePreferredPackageManager,
   type PackageManager,
 } from "@/components/icons";
 import { SyntaxHighlighter, CodeWrapButton } from "@/components/ui/syntax-highlighter";
@@ -52,15 +53,7 @@ export function IconCopyDialog({
   const [copiedId, setCopiedId] = React.useState<string | null>(null);
   const [selectedSize, setSelectedSize] = React.useState<number>(24);
   const [useFilled, setUseFilled] = React.useState(false);
-  const [packageManager, setPackageManager] = React.useState<PackageManager>(() => {
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("pxui_preferred_pm") as PackageManager;
-      if (saved && ["pnpm", "npm", "yarn", "bun"].includes(saved)) {
-        return saved;
-      }
-    }
-    return "pnpm";
-  });
+  const [packageManager, setPackageManager] = usePreferredPackageManager();
   const [codeTheme, setCodeTheme] = React.useState<"dark" | "light">("dark");
   const [codeWrap, setCodeWrap] = React.useState(false);
   const userSelectedThemeRef = React.useRef(false);
@@ -101,9 +94,6 @@ export function IconCopyDialog({
 
   const handleSelectPkg = (pkg: PackageManager) => {
     setPackageManager(pkg);
-    if (typeof window !== "undefined") {
-      localStorage.setItem("pxui_preferred_pm", pkg);
-    }
   };
 
   const executeCopy = async (text: string, id: string) => {

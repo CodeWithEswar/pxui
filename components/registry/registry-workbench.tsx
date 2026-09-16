@@ -14,6 +14,7 @@ import {
   PackageManagerSwitcher,
   HighlightedShadcnCommand,
   getShadcnAddCommand,
+  usePreferredPackageManager,
   type PackageManager,
 } from "@/components/icons";
 import { SyntaxHighlighter, CodeWrapButton } from "@/components/ui/syntax-highlighter";
@@ -31,23 +32,12 @@ export function RegistryWorkbench() {
   const [showRawJson, setShowRawJson] = React.useState(false);
   const [jsonWrapped, setJsonWrapped] = React.useState(false);
   const [installMethod, setInstallMethod] = React.useState<"single" | "multi" | "bundle">("single");
-  const [packageManager, setPackageManager] = React.useState<PackageManager>(() => {
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("pxui_preferred_pm") as PackageManager;
-      if (saved && ["pnpm", "npm", "yarn", "bun"].includes(saved)) {
-        return saved;
-      }
-    }
-    return "pnpm";
-  });
+  const [packageManager, setPackageManager] = usePreferredPackageManager();
 
   const origin = useOrigin();
 
   const handleSelectPkg = (pkg: PackageManager) => {
     setPackageManager(pkg);
-    if (typeof window !== "undefined") {
-      localStorage.setItem("pxui_preferred_pm", pkg);
-    }
   };
 
   const selectedIcon = React.useMemo(() => {

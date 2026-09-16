@@ -259,3 +259,53 @@ export function HighlightedShadcnCommand({
     </div>
   );
 }
+
+const PM_STORAGE_KEY = "pxui_preferred_pm";
+const PM_EVENT = "pxui:pm-change";
+
+function subscribePm(callback: () => void) {
+  if (typeof window === "undefined") {
+    return () => {};
+  }
+  window.addEventListener("storage", callback);
+  window.addEventListener(PM_EVENT, callback);
+  return () => {
+    window.removeEventListener("storage", callback);
+    window.removeEventListener(PM_EVENT, callback);
+  };
+}
+
+function getPmSnapshot(): PackageManager {
+  if (typeof window === "undefined") return "pnpm";
+  try {
+    const saved = localStorage.getItem(PM_STORAGE_KEY) as PackageManager | null;
+    if (saved && (saved === "pnpm" || saved === "npm" || saved === "yarn" || saved === "bun")) {
+      return saved;
+    }
+  } catch {
+    // quiet fail
+  }
+  return "pnpm";
+}
+
+function getPmServerSnapshot(): PackageManager {
+  return "pnpm";
+}
+
+export function usePreferredPackageManager(): [PackageManager, (pm: PackageManager) => void] {
+  const pm = React.useSyncExternalStore(subscribePm, getPmSnapshot, getPmServerSnapshot);
+
+  const setPm = React.useCallback((next: PackageManager) => {
+    try {
+      localStorage.setItem(PM_STORAGE_KEY, next);
+      if (typeof window !== "undefined") {
+        window.dispatchEvent(new Event(PM_EVENT));
+      }
+    } catch {
+      // quiet fail
+    }
+  }, []);
+
+  return [pm, setPm];
+}
+
