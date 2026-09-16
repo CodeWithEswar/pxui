@@ -56,7 +56,7 @@ export const PXIconMoonDefinition: PXIconDefinition = {
  */
 export const PXIconMoon = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconMoonDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconMoonDefinition} {...props} />;
   }
 );
 

@@ -51,7 +51,7 @@ export const PXIconShoppingCartDefinition: PXIconDefinition = {
  */
 export const PXIconShoppingCart = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconShoppingCartDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconShoppingCartDefinition} {...props} />;
   }
 );
 

@@ -50,7 +50,7 @@ export const PXIconVolumeXDefinition: PXIconDefinition = {
  */
 export const PXIconVolumeX = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconVolumeXDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconVolumeXDefinition} {...props} />;
   }
 );
 

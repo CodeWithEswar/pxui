@@ -50,7 +50,7 @@ export const PXIconHardDriveDefinition: PXIconDefinition = {
  */
 export const PXIconHardDrive = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconHardDriveDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconHardDriveDefinition} {...props} />;
   }
 );
 

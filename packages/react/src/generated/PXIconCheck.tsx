@@ -55,7 +55,7 @@ export const PXIconCheckDefinition: PXIconDefinition = {
  */
 export const PXIconCheck = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconCheckDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconCheckDefinition} {...props} />;
   }
 );
 

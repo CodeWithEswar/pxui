@@ -52,7 +52,7 @@ export const PXIconCheckDoubleDefinition: PXIconDefinition = {
  */
 export const PXIconCheckDouble = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconCheckDoubleDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconCheckDoubleDefinition} {...props} />;
   }
 );
 

@@ -51,7 +51,7 @@ export const PXIconTrendingUpDefinition: PXIconDefinition = {
  */
 export const PXIconTrendingUp = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconTrendingUpDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconTrendingUpDefinition} {...props} />;
   }
 );
 

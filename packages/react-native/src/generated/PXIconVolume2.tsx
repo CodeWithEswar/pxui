@@ -25,6 +25,7 @@ export const PXIconVolume2: React.FC<PXIconVolume2Props> = ({
   filled = false,
 }) => {
   const dimension = typeof size === 'string' ? parseInt(size, 10) || 24 : size;
+  void filled;
 
   return (
     <Svg width={dimension} height={dimension} viewBox="0 0 24 24">

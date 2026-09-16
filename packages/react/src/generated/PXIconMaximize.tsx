@@ -49,7 +49,7 @@ export const PXIconMaximizeDefinition: PXIconDefinition = {
  */
 export const PXIconMaximize = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconMaximizeDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconMaximizeDefinition} {...props} />;
   }
 );
 

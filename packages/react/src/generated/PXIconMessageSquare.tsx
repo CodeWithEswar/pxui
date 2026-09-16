@@ -56,7 +56,7 @@ export const PXIconMessageSquareDefinition: PXIconDefinition = {
  */
 export const PXIconMessageSquare = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconMessageSquareDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconMessageSquareDefinition} {...props} />;
   }
 );
 

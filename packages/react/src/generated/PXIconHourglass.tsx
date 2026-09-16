@@ -50,7 +50,7 @@ export const PXIconHourglassDefinition: PXIconDefinition = {
  */
 export const PXIconHourglass = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconHourglassDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconHourglassDefinition} {...props} />;
   }
 );
 

@@ -56,7 +56,7 @@ export const PXIconCalendarDefinition: PXIconDefinition = {
  */
 export const PXIconCalendar = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconCalendarDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconCalendarDefinition} {...props} />;
   }
 );
 

@@ -50,7 +50,7 @@ export const PXIconCreditCardDefinition: PXIconDefinition = {
  */
 export const PXIconCreditCard = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconCreditCardDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconCreditCardDefinition} {...props} />;
   }
 );
 

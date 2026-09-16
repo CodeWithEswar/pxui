@@ -50,7 +50,7 @@ export const PXIconRemoveRowDefinition: PXIconDefinition = {
  */
 export const PXIconRemoveRow = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconRemoveRowDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconRemoveRowDefinition} {...props} />;
   }
 );
 

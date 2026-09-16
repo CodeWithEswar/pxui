@@ -56,7 +56,7 @@ export const PXIconDismissDefinition: PXIconDefinition = {
  */
 export const PXIconDismiss = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconDismissDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconDismissDefinition} {...props} />;
   }
 );
 

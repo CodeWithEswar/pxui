@@ -53,7 +53,7 @@ export const PXIconCheckboxCheckedDefinition: PXIconDefinition = {
  */
 export const PXIconCheckboxChecked = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconCheckboxCheckedDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconCheckboxCheckedDefinition} {...props} />;
   }
 );
 

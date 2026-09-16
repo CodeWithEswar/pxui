@@ -54,7 +54,7 @@ export const PXIconClosePanelTopDefinition: PXIconDefinition = {
  */
 export const PXIconClosePanelTop = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconClosePanelTopDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconClosePanelTopDefinition} {...props} />;
   }
 );
 

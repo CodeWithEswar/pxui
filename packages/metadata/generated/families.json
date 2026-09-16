@@ -214,5 +214,371 @@
     "name": "Sparkles",
     "description": "AI generation, magic actions, highlights, and enhancements",
     "rootIcon": "sparkles"
+  },
+  "settings": {
+    "id": "settings",
+    "name": "Settings",
+    "description": "Stepped pixel gear icon for system configuration, preferences, and controls.",
+    "rootIcon": "settings"
+  },
+  "x": {
+    "id": "x",
+    "name": "X",
+    "description": "Stepped pixel diagonal cross for dismissal, cancel, or deletion.",
+    "rootIcon": "x"
+  },
+  "plus": {
+    "id": "plus",
+    "name": "Plus",
+    "description": "Stepped plus symbol for adding, creating, or expanding items.",
+    "rootIcon": "plus"
+  },
+  "minus": {
+    "id": "minus",
+    "name": "Minus",
+    "description": "Stepped minus horizontal bar for removing, collapsing, or decrementing.",
+    "rootIcon": "minus"
+  },
+  "trash": {
+    "id": "trash",
+    "name": "Trash",
+    "description": "Wastebasket container with handle and lid for discarding items.",
+    "rootIcon": "trash"
+  },
+  "copy": {
+    "id": "copy",
+    "name": "Copy",
+    "description": "Dual layered documents representing clipboard copy and duplication.",
+    "rootIcon": "copy"
+  },
+  "download": {
+    "id": "download",
+    "name": "Download",
+    "description": "Stepped down arrow into a receptor tray for downloading files.",
+    "rootIcon": "download"
+  },
+  "upload": {
+    "id": "upload",
+    "name": "Upload",
+    "description": "Stepped up arrow out of a tray for uploading data or assets.",
+    "rootIcon": "upload"
+  },
+  "share": {
+    "id": "share",
+    "name": "Share",
+    "description": "Interconnected nodes representing sharing across destinations.",
+    "rootIcon": "share"
+  },
+  "refresh": {
+    "id": "refresh",
+    "name": "Refresh",
+    "description": "Dual circular pixel arrows for reloading or synchronizing data.",
+    "rootIcon": "refresh"
+  },
+  "power": {
+    "id": "power",
+    "name": "Power",
+    "description": "Circular power switch with top vertical break for system on/off.",
+    "rootIcon": "power"
+  },
+  "sliders": {
+    "id": "sliders",
+    "name": "Sliders",
+    "description": "Multi-track horizontal adjustment bars with stepped sliders.",
+    "rootIcon": "sliders"
+  },
+  "toggle": {
+    "id": "toggle",
+    "name": "Toggle",
+    "description": "Pill switch toggled to the left off position.",
+    "rootIcon": "toggle-left"
+  },
+  "cursor": {
+    "id": "cursor",
+    "name": "Cursor",
+    "description": "Classic stepped retro pointer arrow for mouse and pointing actions.",
+    "rootIcon": "cursor"
+  },
+  "menu": {
+    "id": "menu",
+    "name": "Menu",
+    "description": "Three parallel horizontal pixel bars for navigation drawer toggle.",
+    "rootIcon": "menu"
+  },
+  "maximize": {
+    "id": "maximize",
+    "name": "Maximize",
+    "description": "Four corner markers pointing outward for expanding to fullscreen.",
+    "rootIcon": "maximize"
+  },
+  "minimize": {
+    "id": "minimize",
+    "name": "Minimize",
+    "description": "Four corner markers pointing inward for exiting fullscreen.",
+    "rootIcon": "minimize"
+  },
+  "archive": {
+    "id": "archive",
+    "name": "Archive",
+    "description": "Storage chest or archive box with front pull handle.",
+    "rootIcon": "archive"
+  },
+  "users": {
+    "id": "users",
+    "name": "Users",
+    "description": "Group profile representing team, multiple members, or social circles.",
+    "rootIcon": "users"
+  },
+  "thumbs": {
+    "id": "thumbs",
+    "name": "Thumbs",
+    "description": "Hand gesture with thumb raised upward indicating approval.",
+    "rootIcon": "thumbs-up"
+  },
+  "monitor": {
+    "id": "monitor",
+    "name": "Monitor",
+    "description": "Desktop computer monitor screen resting on a center stand.",
+    "rootIcon": "monitor"
+  },
+  "smartphone": {
+    "id": "smartphone",
+    "name": "Smartphone",
+    "description": "Handheld mobile phone device with touch screen and home indicator.",
+    "rootIcon": "smartphone"
+  },
+  "laptop": {
+    "id": "laptop",
+    "name": "Laptop",
+    "description": "Portable clamshell notebook computer with keyboard base.",
+    "rootIcon": "laptop"
+  },
+  "hard": {
+    "id": "hard",
+    "name": "Hard",
+    "description": "Internal disk drive unit with front status activity indicator LEDs.",
+    "rootIcon": "hard-drive"
+  },
+  "cpu": {
+    "id": "cpu",
+    "name": "Cpu",
+    "description": "Central processing unit semiconductor chip with peripheral connection pins.",
+    "rootIcon": "cpu"
+  },
+  "code": {
+    "id": "code",
+    "name": "Code",
+    "description": "Stepped angle brackets representing code syntax, HTML, and programming.",
+    "rootIcon": "code"
+  },
+  "git": {
+    "id": "git",
+    "name": "Git",
+    "description": "Version control branching nodes and bifurcation workflow.",
+    "rootIcon": "git-branch"
+  },
+  "bug": {
+    "id": "bug",
+    "name": "Bug",
+    "description": "Beetle insect representing software errors, debugging, and issue tracking.",
+    "rootIcon": "bug"
+  },
+  "play": {
+    "id": "play",
+    "name": "Play",
+    "description": "Stepped pixel equilateral triangle pointing right for media playback.",
+    "rootIcon": "play"
+  },
+  "pause": {
+    "id": "pause",
+    "name": "Pause",
+    "description": "Dual vertical pixel columns for halting media playback.",
+    "rootIcon": "pause"
+  },
+  "camera": {
+    "id": "camera",
+    "name": "Camera",
+    "description": "Handheld photography camera body with lens ring and flash nub.",
+    "rootIcon": "camera"
+  },
+  "image": {
+    "id": "image",
+    "name": "Image",
+    "description": "Framed artwork with stepped mountains and sun disc.",
+    "rootIcon": "image"
+  },
+  "music": {
+    "id": "music",
+    "name": "Music",
+    "description": "Interconnected beamed eighth musical notes representing song and audio.",
+    "rootIcon": "music"
+  },
+  "unlock": {
+    "id": "unlock",
+    "name": "Unlock",
+    "description": "Padlock with open lifted shackle indicating unrestricted access.",
+    "rootIcon": "unlock"
+  },
+  "key": {
+    "id": "key",
+    "name": "Key",
+    "description": "Classic skeleton key with bow ring and stepped ward teeth.",
+    "rootIcon": "key"
+  },
+  "eye": {
+    "id": "eye",
+    "name": "Eye",
+    "description": "Stepped pixel ocular eyelid silhouette with central iris pupil.",
+    "rootIcon": "eye"
+  },
+  "timer": {
+    "id": "timer",
+    "name": "Timer",
+    "description": "Precision stopwatch with top activation pusher stem.",
+    "rootIcon": "timer"
+  },
+  "hourglass": {
+    "id": "hourglass",
+    "name": "Hourglass",
+    "description": "Stepped glass sand timer with upper and lower chambers.",
+    "rootIcon": "hourglass"
+  },
+  "map": {
+    "id": "map",
+    "name": "Map",
+    "description": "Point-of-interest location marker pin with central aperture.",
+    "rootIcon": "map-pin"
+  },
+  "compass": {
+    "id": "compass",
+    "name": "Compass",
+    "description": "Navigation compass casing with 4 directional stepped needle points.",
+    "rootIcon": "compass"
+  },
+  "globe": {
+    "id": "globe",
+    "name": "Globe",
+    "description": "Earth sphere with equator and meridian longitude lines.",
+    "rootIcon": "globe"
+  },
+  "bot": {
+    "id": "bot",
+    "name": "Bot",
+    "description": "Stepped robot head with top sensor antenna and dual digital eyes.",
+    "rootIcon": "bot"
+  },
+  "sun": {
+    "id": "sun",
+    "name": "Sun",
+    "description": "Central solar disc surrounded by 8 stepped radiating light beams.",
+    "rootIcon": "sun"
+  },
+  "moon": {
+    "id": "moon",
+    "name": "Moon",
+    "description": "Stepped pixel crescent moon representing nighttime and dark mode.",
+    "rootIcon": "moon"
+  },
+  "zap": {
+    "id": "zap",
+    "name": "Zap",
+    "description": "Sharp stepped lightning bolt symbolizing electric charge, energy, and speed.",
+    "rootIcon": "zap"
+  },
+  "shopping": {
+    "id": "shopping",
+    "name": "Shopping",
+    "description": "Wheeled supermarket trolley for e-commerce checkout and baskets.",
+    "rootIcon": "shopping-cart"
+  },
+  "credit": {
+    "id": "credit",
+    "name": "Credit",
+    "description": "Plastic payment card with magnetic strip and security chip.",
+    "rootIcon": "credit-card"
+  },
+  "tag": {
+    "id": "tag",
+    "name": "Tag",
+    "description": "Merchandise sales price tag with ribbon thread eyelet.",
+    "rootIcon": "tag"
+  },
+  "briefcase": {
+    "id": "briefcase",
+    "name": "Briefcase",
+    "description": "Executive attache case with top leather handle and dual latches.",
+    "rootIcon": "briefcase"
+  },
+  "trending": {
+    "id": "trending",
+    "name": "Trending",
+    "description": "Stepped diagonal growth graph rising from bottom left to top right.",
+    "rootIcon": "trending-up"
+  },
+  "dollar": {
+    "id": "dollar",
+    "name": "Dollar",
+    "description": "Currency dollar glyph bisected by a centered vertical pixel spine.",
+    "rootIcon": "dollar-sign"
+  },
+  "star": {
+    "id": "star",
+    "name": "Star",
+    "description": "5-pointed stepped pixel star for ratings, bookmarks, and favorites.",
+    "rootIcon": "star"
+  },
+  "bookmark": {
+    "id": "bookmark",
+    "name": "Bookmark",
+    "description": "Vertical ribbon marker with triangular notched tail for reading points.",
+    "rootIcon": "bookmark"
+  },
+  "flag": {
+    "id": "flag",
+    "name": "Flag",
+    "description": "Vertical flagpole supporting a rectangular pennant banner.",
+    "rootIcon": "flag"
+  },
+  "filter": {
+    "id": "filter",
+    "name": "Filter",
+    "description": "Funnel shaped device for sorting, narrowing, and query refinement.",
+    "rootIcon": "filter"
+  },
+  "link": {
+    "id": "link",
+    "name": "Link",
+    "description": "Interlocked oval chain links signifying hyperlinking and connection.",
+    "rootIcon": "link"
+  },
+  "unlink": {
+    "id": "unlink",
+    "name": "Unlink",
+    "description": "Severed chain links showing broken connections or disconnected URLs.",
+    "rootIcon": "unlink"
+  },
+  "external": {
+    "id": "external",
+    "name": "External",
+    "description": "Open window with upper right departing stepped arrow.",
+    "rootIcon": "external-link"
+  },
+  "zoom": {
+    "id": "zoom",
+    "name": "Zoom",
+    "description": "Magnifier lens containing a stepped plus sign for scaling upward.",
+    "rootIcon": "zoom-in"
+  },
+  "loader": {
+    "id": "loader",
+    "name": "Loader",
+    "description": "Circular segmented ticker wheel for asynchronous wait and processing states.",
+    "rootIcon": "loader"
+  },
+  "pin": {
+    "id": "pin",
+    "name": "Pin",
+    "description": "Stepped thumbtack pushpin for pinning items to boards.",
+    "rootIcon": "pin"
   }
 }

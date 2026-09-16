@@ -53,7 +53,7 @@ export const PXIconClearSquareDefinition: PXIconDefinition = {
  */
 export const PXIconClearSquare = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconClearSquareDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconClearSquareDefinition} {...props} />;
   }
 );
 

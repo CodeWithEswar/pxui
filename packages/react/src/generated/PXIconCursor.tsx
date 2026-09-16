@@ -55,7 +55,7 @@ export const PXIconCursorDefinition: PXIconDefinition = {
  */
 export const PXIconCursor = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconCursorDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconCursorDefinition} {...props} />;
   }
 );
 

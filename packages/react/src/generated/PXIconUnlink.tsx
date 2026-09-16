@@ -49,7 +49,7 @@ export const PXIconUnlinkDefinition: PXIconDefinition = {
  */
 export const PXIconUnlink = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconUnlinkDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconUnlinkDefinition} {...props} />;
   }
 );
 

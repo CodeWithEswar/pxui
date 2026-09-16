@@ -52,7 +52,7 @@ export const PXIconEditCircleDefinition: PXIconDefinition = {
  */
 export const PXIconEditCircle = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconEditCircleDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconEditCircleDefinition} {...props} />;
   }
 );
 

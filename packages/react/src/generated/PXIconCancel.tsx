@@ -56,7 +56,7 @@ export const PXIconCancelDefinition: PXIconDefinition = {
  */
 export const PXIconCancel = React.forwardRef<SVGSVGElement, PXIconProps>(
   (props, ref) => {
-    return <PXIconBase ref={ref} definition={PXIconCancelDefinition as any} {...props} />;
+    return <PXIconBase ref={ref} definition={PXIconCancelDefinition} {...props} />;
   }
 );
 
