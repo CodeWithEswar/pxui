@@ -1,5 +1,4 @@
-import { ICONS_CATALOG } from "../lib/icons/catalog";
-import { IconDefinition } from "../lib/icons/schema";
+import { IconDefinition } from "../../lib/icons/schema";
 
 export interface ValidationResult {
   valid: boolean;
@@ -79,23 +78,4 @@ export function validateIconCatalog(icons: IconDefinition[]): ValidationResult {
     warnings,
     iconCount: icons.length,
   };
-}
-
-// If run directly via tsx
-if (process.argv[1]?.endsWith("validate-icons.ts") || process.argv[1]?.includes("validate-icons")) {
-  console.log(`\n🔍 Validating PXUI Canonical Icon Catalog...`);
-  const result = validateIconCatalog(ICONS_CATALOG);
-
-  if (result.warnings.length > 0) {
-    console.log(`\n⚠️  Warnings (${result.warnings.length}):`);
-    result.warnings.forEach((w) => console.log(`   - ${w}`));
-  }
-
-  if (!result.valid) {
-    console.error(`\n❌ Validation Failed with ${result.errors.length} errors:`);
-    result.errors.forEach((e) => console.error(`   - ${e}`));
-    process.exit(1);
-  }
-
-  console.log(`\n✅ Validation Passed! All ${result.iconCount} icons strictly conform to PXUI Design System rules.`);
 }

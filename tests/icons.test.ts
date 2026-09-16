@@ -1,8 +1,8 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { ICONS_CATALOG } from "../lib/icons/catalog";
-import { validateIconCatalog } from "../scripts/validate-icons";
-import { toPixelComponentName, toPXComponentName } from "../lib/compiler";
+import { validateIconCatalog } from "../tooling/validators/catalog";
+import { toPXComponentName } from "../lib/compiler";
 
 describe("PXUI Canonical Icon Catalog", () => {
   it("should pass all design system validation rules", () => {
