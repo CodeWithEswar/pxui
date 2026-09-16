@@ -335,7 +335,7 @@ export function SpecHeader({
                 >
                   <span className="flex items-center gap-2">
                     <PXIconShare size={13} className="text-[#8e8b82]" />
-                    Copy Specification Link
+                    {copiedAction === "share" ? "Copied Link!" : "Copy Specification Link"}
                   </span>
                 </button>
               </div>
